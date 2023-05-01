@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package br.weddinginterface.interface_principal;
-
+import java.awt.Color;
+import java.awt.Toolkit;
 /**
  *
  * @author maay_
@@ -68,13 +69,18 @@ public class Tela_Login extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(168, 168, 168)
                 .addComponent(jLabel1)
-                .addContainerGap(412, Short.MAX_VALUE))
+                .addContainerGap(912, Short.MAX_VALUE))
         );
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel2.setText("Login");
 
         jTextField1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel3.setText("Senha");
@@ -138,7 +144,7 @@ public class Tela_Login extends javax.swing.JFrame {
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel7))))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(0, 318, Short.MAX_VALUE)))
                         .addGap(195, 195, 195)
                         .addComponent(jLabel6))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -211,6 +217,48 @@ public class Tela_Login extends javax.swing.JFrame {
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         new Tela_Cadastro().setVisible(true);
     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+        
+        // bloco de teste de login
+         String usuario = jTextField1.getText();
+        String senha = jPasswordField1.getText();
+        
+                
+        int rgbcolor_red = Color.HSBtoRGB(1.0f,0.89f,0.77f);  
+        int rgbcolor_green = Color.HSBtoRGB(0.38f,0.93f,0.73f);  
+        
+        if(usuario.equals("@senacsp") && senha.equals("123456")) {
+           new Menu_Noiva().setVisible(true);
+           Tela_Login.this.dispose();
+           
+        }else if(usuario.equals("@senacsp")){
+          
+           Color coloruse = new Color(rgbcolor_green);
+           jTextField1.setBackground(coloruse);
+           
+           Color coloruse2 = new Color(rgbcolor_red);
+           jPasswordField1.setBackground(coloruse2);
+           
+        }else if(senha.equals("123456")){
+            
+           Color coloruse = new Color(rgbcolor_green);
+           jPasswordField1.setBackground(coloruse);
+           
+           Color coloruse2 = new Color(rgbcolor_red);
+           jTextField1.setBackground(coloruse2);
+           
+           
+        }else {
+            
+           Color coloruse = new Color(rgbcolor_red);
+        
+           jTextField1.setBackground(coloruse);
+           jPasswordField1.setBackground(coloruse);
+
+        }
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments

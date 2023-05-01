@@ -89,6 +89,11 @@ public class Tela_Cadastro extends javax.swing.JFrame {
 
         jTextField3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField3.setToolTipText("Informe um e-mail válido.");
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -154,7 +159,7 @@ public class Tela_Cadastro extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
                     .addComponent(jLabel7))
-                .addGap(0, 458, Short.MAX_VALUE))
+                .addGap(0, 732, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                     .addContainerGap(1172, Short.MAX_VALUE)
@@ -165,7 +170,7 @@ public class Tela_Cadastro extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 180, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -221,6 +226,11 @@ public class Tela_Cadastro extends javax.swing.JFrame {
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         new Interface_Principal().setVisible(true);
     }//GEN-LAST:event_btnVoltarActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jTextField3ActionPerformed
 
     /**
      * @param args the command line arguments

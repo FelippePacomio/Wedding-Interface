@@ -82,7 +82,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="318" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
@@ -174,7 +174,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="168" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="412" max="32767" attributes="0"/>
+                      <EmptySpace pref="912" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -204,6 +204,9 @@
               <Font name="Century Gothic" size="12" style="0"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
