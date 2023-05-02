@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package br.weddinginterface.interface_principal;
-
+import br.weddinginterface.model.*;
 import java.awt.Color;
 import javax.swing.JPanel;
 

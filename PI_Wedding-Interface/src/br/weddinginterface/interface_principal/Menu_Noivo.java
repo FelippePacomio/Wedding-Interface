@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package br.weddinginterface.interface_principal;
-
+import br.weddinginterface.model.*;
 import java.awt.Color;
 import javax.swing.JPanel;
 
@@ -439,11 +439,6 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jTextField3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField3.setToolTipText("Informe o valor gasto com o terno. (Opcional)");
         jTextField3.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
         background.add(jTextField3);
         jTextField3.setBounds(430, 390, 220, 26);
 
@@ -485,21 +480,21 @@ public class Menu_Noivo extends javax.swing.JFrame {
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel11);
-        jLabel11.setBounds(1450, 980, 0, 180);
+        jLabel11.setBounds(1450, 980, 280, 180);
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel12);
-        jLabel12.setBounds(1420, 0, 0, 320);
+        jLabel12.setBounds(1420, 0, 280, 320);
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel13.setFocusable(false);
         background.add(jLabel13);
-        jLabel13.setBounds(1440, 340, 0, 320);
+        jLabel13.setBounds(1440, 340, 280, 320);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel14);
-        jLabel14.setBounds(1450, 670, 0, 320);
+        jLabel14.setBounds(1450, 670, 280, 320);
 
         jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -634,10 +629,6 @@ btnNoivo.setBackground(myUnSelect);
     private void btnNoivoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoivoMouseClicked
        new Menu_Noivo().setVisible(true);
     }//GEN-LAST:event_btnNoivoMouseClicked
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
 
     /**
      * @param args the command line arguments
