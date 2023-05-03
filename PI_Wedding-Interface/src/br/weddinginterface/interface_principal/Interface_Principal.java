@@ -50,7 +50,7 @@ public class Interface_Principal extends javax.swing.JFrame {
         jPanel2.setRequestFocusEnabled(false);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Wedding Interface.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Wedding Interface.png")));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -66,7 +66,7 @@ public class Interface_Principal extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(145, 145, 145)
                 .addComponent(jLabel1)
-                .addContainerGap(435, Short.MAX_VALUE))
+                .addContainerGap(935, Short.MAX_VALUE))
         );
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 36)); // NOI18N
