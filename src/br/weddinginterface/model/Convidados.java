@@ -4,6 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import br.weddinginterface.controller.Conexao;
+import java.util.Objects;
 
 
 public class Convidados {
@@ -41,6 +42,34 @@ public class Convidados {
     public void setParentesco(String parentesco) {
         this.parentesco = parentesco;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + Objects.hashCode(this.nome);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Convidados other = (Convidados) obj;
+        return Objects.equals(this.nome, other.nome);
+    }
+
+    @Override
+    public String toString() {
+        return "Convidados{" + "nome=" + nome + ", restricao=" + restricao + ", telefone=" + telefone + ", parentesco=" + parentesco + '}';
+    }
+    
     
     
     public void insereConvidados(Convidados conv) {

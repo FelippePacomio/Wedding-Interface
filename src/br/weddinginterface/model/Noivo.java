@@ -40,6 +40,38 @@ public class Noivo extends Conjuge {
     public void setTransporteNoivo(double transporteNoivo) {
         this.transporteNoivo = transporteNoivo;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.terno) ^ (Double.doubleToLongBits(this.terno) >>> 32));
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Noivo other = (Noivo) obj;
+        return Double.doubleToLongBits(this.terno) == Double.doubleToLongBits(other.terno);
+    }
+
+  
+
+    @Override
+    public String toString() {
+        return "Noivo{" + "terno=" + terno + ", sapato=" + sapato + ", diaDoNoivo=" + diaDoNoivo + ", transporteNoivo=" + transporteNoivo + '}';
+    }
+    
+    
+    
     
     public void insereNoivo(Noivo noivo){
         

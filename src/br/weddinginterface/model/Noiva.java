@@ -48,6 +48,35 @@ public class Noiva extends Conjuge {
     public void setTransporteNoiva(double transporteNoiva) {
         this.transporteNoiva = transporteNoiva;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.vestido) ^ (Double.doubleToLongBits(this.vestido) >>> 32));
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Noiva other = (Noiva) obj;
+        return Double.doubleToLongBits(this.vestido) == Double.doubleToLongBits(other.vestido);
+    }
+
+    @Override
+    public String toString() {
+        return "Noiva{" + "vestido=" + vestido + ", sapato=" + sapato + ", buque=" + buque + ", diaDaNoiva=" + diaDaNoiva + ", transporteNoiva=" + transporteNoiva + '}';
+    }
+    
+    
     
     public void insereNoiva(Noiva noiva){
         
