@@ -4,6 +4,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import br.weddinginterface.controller.Conexao;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -114,6 +116,52 @@ public class Convidados {
             System.out.println(e.getMessage());
         } finally {
             conexao.fechaConexao();
+        }
+    }
+    
+      public List<Convidados> listarConvidados(String c_Nome) throws SQLException {
+        
+        Conexao con = new Conexao();
+        con.getConexao(); 
+        PreparedStatement stmt = null;
+        ResultSet resultado = null;
+
+        
+        List<Convidados> listaConvidados = new ArrayList<>();
+
+        try {
+           
+            String sql = "select * from tb_convidados WHERE c_Nome = ?";
+
+          
+            stmt = con.getConexao().prepareStatement(sql);
+            stmt.setString(1,c_Nome);
+            resultado = stmt.executeQuery();
+
+           
+            while (resultado.next()) {
+            Convidados conv = new Convidados();
+
+                conv.setNome(resultado.getString("c_Nome")); 
+                conv.setTelefone(resultado.getString("c_Telefone"));
+                conv.setRestricao(resultado.getString("c_Restricao")); 
+                conv.setParentesco(resultado.getString("c_Parentesco")); 
+              
+       
+                listaConvidados.add(conv);
+            }
+
+            return listaConvidados;
+            
+        } catch (SQLException e) { 
+            System.out.println(e.getMessage());
+            return null;
+            
+        } finally {
+           
+            resultado.close();
+            stmt.close();
+            con.getConexao().close();
         }
     }
 }
