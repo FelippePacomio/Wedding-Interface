@@ -4,6 +4,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import br.weddinginterface.controller.Conexao;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 
 public class Convidados {
@@ -41,6 +44,34 @@ public class Convidados {
     public void setParentesco(String parentesco) {
         this.parentesco = parentesco;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + Objects.hashCode(this.nome);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Convidados other = (Convidados) obj;
+        return Objects.equals(this.nome, other.nome);
+    }
+
+    @Override
+    public String toString() {
+        return "Convidados{" + "nome=" + nome + ", restricao=" + restricao + ", telefone=" + telefone + ", parentesco=" + parentesco + '}';
+    }
+    
     
     
     public void insereConvidados(Convidados conv) {
@@ -85,6 +116,52 @@ public class Convidados {
             System.out.println(e.getMessage());
         } finally {
             conexao.fechaConexao();
+        }
+    }
+    
+      public List<Convidados> listarConvidados(String c_Nome) throws SQLException {
+        
+        Conexao con = new Conexao();
+        con.getConexao(); 
+        PreparedStatement stmt = null;
+        ResultSet resultado = null;
+
+        
+        List<Convidados> listaConvidados = new ArrayList<>();
+
+        try {
+           
+            String sql = "select * from tb_convidados WHERE c_Nome = ?";
+
+          
+            stmt = con.getConexao().prepareStatement(sql);
+            stmt.setString(1,c_Nome);
+            resultado = stmt.executeQuery();
+
+           
+            while (resultado.next()) {
+            Convidados conv = new Convidados();
+
+                conv.setNome(resultado.getString("c_Nome")); 
+                conv.setTelefone(resultado.getString("c_Telefone"));
+                conv.setRestricao(resultado.getString("c_Restricao")); 
+                conv.setParentesco(resultado.getString("c_Parentesco")); 
+              
+       
+                listaConvidados.add(conv);
+            }
+
+            return listaConvidados;
+            
+        } catch (SQLException e) { 
+            System.out.println(e.getMessage());
+            return null;
+            
+        } finally {
+           
+            resultado.close();
+            stmt.close();
+            con.getConexao().close();
         }
     }
 }

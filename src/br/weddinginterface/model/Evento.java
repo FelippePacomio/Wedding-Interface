@@ -5,6 +5,7 @@ import br.weddinginterface.controller.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class Evento {
 
@@ -83,6 +84,35 @@ public class Evento {
         this.lembrancas = lembrancas;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 97 * hash + Objects.hashCode(this.nomeIgreja);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Evento other = (Evento) obj;
+        return Objects.equals(this.nomeIgreja, other.nomeIgreja);
+    }
+
+    @Override
+    public String toString() {
+        return "Evento{" + "nomeIgreja=" + nomeIgreja + ", cardapio=" + cardapio + ", anotacoes=" + anotacoes + ", tema=" + tema + ", horaBuffet=" + horaBuffet + ", horaCerimonia=" + horaCerimonia + ", valorBuffet=" + valorBuffet + ", valorCerimonia=" + valorCerimonia + ", lembrancas=" + lembrancas + '}';
+    }
+    
+    
+
     public void inserirEvento(Evento eve) {
         Conexao conexao = new Conexao();
 
@@ -127,6 +157,6 @@ public class Evento {
         } finally {
             conexao.fechaConexao();
         }
-// oioioioioio
+
     }
 }

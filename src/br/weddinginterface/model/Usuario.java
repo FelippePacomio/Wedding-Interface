@@ -5,6 +5,7 @@ import br.weddinginterface.controller.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class Usuario {
     
@@ -42,6 +43,34 @@ public class Usuario {
     public void setCpf(int cpf) {
         this.cpf = cpf;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 71 * hash + Objects.hashCode(this.email);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Usuario other = (Usuario) obj;
+        return Objects.equals(this.email, other.email);
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "email=" + email + ", nome=" + nome + ", senha=" + senha + ", cpf=" + cpf + '}';
+    }
+    
     
     public void insereUsuario(Usuario user){
          Conexao conexao = new Conexao();
@@ -88,4 +117,5 @@ public class Usuario {
     }
 }
     
-
+//teste de git terminal
+//salveeeeeeeee
