@@ -5,6 +5,10 @@ import br.weddinginterface.controller.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+<<<<<<< HEAD
+=======
+import java.util.Objects;
+>>>>>>> 21ca27b9737d5285393285b9281768e3422ca30f
 
 public class Conjuge {
     private String nome, dataCerimonia, dataRecepcao, cerimonialista, anotacoes;
@@ -81,6 +85,38 @@ public class Conjuge {
     public void setAcessorios(double acessorios) {
         this.acessorios = acessorios;
     }
+<<<<<<< HEAD
+=======
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 59 * hash + Objects.hashCode(this.nome);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Conjuge other = (Conjuge) obj;
+        return Objects.equals(this.nome, other.nome);
+    }
+
+    @Override
+    public String toString() {
+        return "Conjuge{" + "nome=" + nome + ", dataCerimonia=" + dataCerimonia + ", dataRecepcao=" + dataRecepcao + ", cerimonialista=" + cerimonialista + ", anotacoes=" + anotacoes + ", valorCerimonialista=" + valorCerimonialista + ", valorGasto=" + valorGasto + ", orcamentoPrevisto=" + orcamentoPrevisto + ", acessorios=" + acessorios + '}';
+    }
+    
+    
+>>>>>>> 21ca27b9737d5285393285b9281768e3422ca30f
     
     public void insereConjuge(Conjuge con) {
 
