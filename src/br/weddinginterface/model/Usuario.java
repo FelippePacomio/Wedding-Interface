@@ -5,10 +5,7 @@ import br.weddinginterface.controller.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-<<<<<<< HEAD
-=======
 import java.util.Objects;
->>>>>>> 21ca27b9737d5285393285b9281768e3422ca30f
 
 public class Usuario {
     
@@ -46,8 +43,6 @@ public class Usuario {
     public void setCpf(int cpf) {
         this.cpf = cpf;
     }
-<<<<<<< HEAD
-=======
 
     @Override
     public int hashCode() {
@@ -75,8 +70,6 @@ public class Usuario {
     public String toString() {
         return "Usuario{" + "email=" + email + ", nome=" + nome + ", senha=" + senha + ", cpf=" + cpf + '}';
     }
-    
->>>>>>> 21ca27b9737d5285393285b9281768e3422ca30f
     
     public void insereUsuario(Usuario user){
          Conexao conexao = new Conexao();
@@ -123,9 +116,3 @@ public class Usuario {
     }
 }
     
-<<<<<<< HEAD
-
-=======
-//teste de git terminal
-//salveeeeeeeee
->>>>>>> 21ca27b9737d5285393285b9281768e3422ca30f

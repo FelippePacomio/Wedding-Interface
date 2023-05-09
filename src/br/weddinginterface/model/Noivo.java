@@ -40,9 +40,7 @@ public class Noivo extends Conjuge {
     public void setTransporteNoivo(double transporteNoivo) {
         this.transporteNoivo = transporteNoivo;
     }
-<<<<<<< HEAD
-=======
-
+    
     @Override
     public int hashCode() {
         int hash = 3;
@@ -71,10 +69,6 @@ public class Noivo extends Conjuge {
     public String toString() {
         return "Noivo{" + "terno=" + terno + ", sapato=" + sapato + ", diaDoNoivo=" + diaDoNoivo + ", transporteNoivo=" + transporteNoivo + '}';
     }
-    
-    
-    
->>>>>>> 21ca27b9737d5285393285b9281768e3422ca30f
     
     public void insereNoivo(Noivo noivo){
         

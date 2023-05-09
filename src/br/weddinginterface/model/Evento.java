@@ -5,11 +5,7 @@ import br.weddinginterface.controller.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-<<<<<<< HEAD
-=======
 import java.util.Objects;
->>>>>>> 21ca27b9737d5285393285b9281768e3422ca30f
-
 public class Evento {
 
     private String nomeIgreja, cardapio, anotacoes, tema, horaBuffet, horaCerimonia;
@@ -86,9 +82,6 @@ public class Evento {
     public void setLembrancas(Double lembrancas) {
         this.lembrancas = lembrancas;
     }
-
-<<<<<<< HEAD
-=======
     @Override
     public int hashCode() {
         int hash = 3;
@@ -116,9 +109,6 @@ public class Evento {
         return "Evento{" + "nomeIgreja=" + nomeIgreja + ", cardapio=" + cardapio + ", anotacoes=" + anotacoes + ", tema=" + tema + ", horaBuffet=" + horaBuffet + ", horaCerimonia=" + horaCerimonia + ", valorBuffet=" + valorBuffet + ", valorCerimonia=" + valorCerimonia + ", lembrancas=" + lembrancas + '}';
     }
     
-    
-
->>>>>>> 21ca27b9737d5285393285b9281768e3422ca30f
     public void inserirEvento(Evento eve) {
         Conexao conexao = new Conexao();
 
@@ -163,10 +153,5 @@ public class Evento {
         } finally {
             conexao.fechaConexao();
         }
-<<<<<<< HEAD
-// oioioioioio
-=======
-
->>>>>>> 21ca27b9737d5285393285b9281768e3422ca30f
     }
 }
