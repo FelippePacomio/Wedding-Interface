@@ -53,6 +53,23 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
+        jProgressBar1 = new javax.swing.JProgressBar();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -390,8 +407,102 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Wedding Interface(red).png"))); // NOI18N
         background.add(jLabel24);
         jLabel24.setBounds(300, 100, 1133, 164);
+        background.add(jProgressBar1);
+        jProgressBar1.setBounds(420, 300, 810, 30);
 
-        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jTextField1.setToolTipText("Insira o gasto previsto para o casamento.");
+        jTextField1.setMinimumSize(new java.awt.Dimension(100, 30));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        background.add(jTextField1);
+        jTextField1.setBounds(510, 410, 180, 30);
+
+        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel5.setText("GASTO PREVISTO");
+        background.add(jLabel5);
+        jLabel5.setBounds(510, 390, 150, 21);
+
+        jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        jLabel6.setText("GASTO EVENTO");
+        jLabel6.setToolTipText("");
+        background.add(jLabel6);
+        jLabel6.setBounds(510, 510, 170, 21);
+
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jLabel7.setText("R$ 0,00");
+        background.add(jLabel7);
+        jLabel7.setBounds(1060, 410, 100, 21);
+
+        jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        jLabel8.setText("GASTO TOTAL");
+        jLabel8.setToolTipText("");
+        background.add(jLabel8);
+        jLabel8.setBounds(830, 510, 170, 21);
+
+        jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        jLabel9.setText("GASTO NOIVA");
+        jLabel9.setToolTipText("");
+        background.add(jLabel9);
+        jLabel9.setBounds(830, 390, 170, 21);
+
+        jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        jLabel10.setText("GASTO NOIVO");
+        jLabel10.setToolTipText("");
+        background.add(jLabel10);
+        jLabel10.setBounds(1060, 390, 170, 21);
+
+        jLabel17.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jLabel17.setText("R$ 0,00");
+        background.add(jLabel17);
+        jLabel17.setBounds(510, 530, 100, 21);
+
+        jLabel18.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jLabel18.setText("R$ 0,00");
+        background.add(jLabel18);
+        jLabel18.setBounds(830, 530, 100, 21);
+
+        jLabel19.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jLabel19.setText("R$ 0,00");
+        background.add(jLabel19);
+        jLabel19.setBounds(830, 410, 100, 20);
+
+        jButton1.setBackground(new java.awt.Color(204, 0, 51));
+        jButton1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("SALVAR");
+        background.add(jButton1);
+        jButton1.setBounds(770, 700, 110, 23);
+
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/real-brasileiro.png"))); // NOI18N
+        background.add(jLabel21);
+        jLabel21.setBounds(470, 400, 40, 40);
+
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/noivo (1).png"))); // NOI18N
+        background.add(jLabel22);
+        jLabel22.setBounds(1020, 390, 40, 50);
+
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aliancas-de-casamento.png"))); // NOI18N
+        background.add(jLabel23);
+        jLabel23.setBounds(470, 510, 40, 50);
+
+        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/noiva.png"))); // NOI18N
+        background.add(jLabel27);
+        jLabel27.setBounds(790, 390, 40, 50);
+
+        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/financeiro.png"))); // NOI18N
+        background.add(jLabel28);
+        jLabel28.setBounds(790, 510, 40, 50);
+
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -489,6 +600,10 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -530,6 +645,22 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -549,19 +680,36 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     private javax.swing.JPanel btnNoiva;
     private javax.swing.JPanel btnNoivo;
     private javax.swing.JPanel btnOrcamento;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
