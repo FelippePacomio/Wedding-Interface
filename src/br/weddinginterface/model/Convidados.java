@@ -12,7 +12,7 @@ import java.util.Objects;
 
 public class Convidados {
     
-    String nome, restricao, telefone, parentesco;
+    private String nome, restricao, telefone, parentesco;
 
     public String getNome() {
         return nome;
@@ -75,8 +75,9 @@ public class Convidados {
     
     
     
-    public void insereConvidados(Convidados conv) {
+    public void insereConvidados(String i) {
         
+        Convidados conv = new Convidados();
         
         Conexao conexao = new Conexao();
 
@@ -165,5 +166,7 @@ public class Convidados {
             con.getConexao().close();
         }
     }
+      
+      
 }
 

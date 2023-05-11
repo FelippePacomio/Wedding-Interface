@@ -7,6 +7,12 @@ package br.weddinginterface.interface_principal;
 import br.weddinginterface.model.*;
 import java.awt.Color;
 import javax.swing.JPanel;
+import java.awt.Color;
+import java.awt.Toolkit;
+import br.weddinginterface.controller.Conexao;
+import br.weddinginterface.model.Convidados;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -562,11 +568,27 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
+ 
     }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
+
+        int rgbcolor_green = Color.HSBtoRGB(0.38f, 0.93f, 0.73f);
+        int rgbcolor_red = Color.HSBtoRGB(1.0f, 0.89f, 0.77f);
+
+        Color coloruse_green = new Color(rgbcolor_green);
+        Color coloruse_red = new Color(rgbcolor_red);
+        //aqui    
+        Convidados conv = new Convidados();
+
+        if (jTextField6.getText().trim().isEmpty()) {
+            jTextField6.setBackground(coloruse_red);
+        } else {
+            jTextField6.setBackground(coloruse_green);
+            conv.insereConvidados(jTextField6.getText());
+        }
+
     }//GEN-LAST:event_jTextField6ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
@@ -597,6 +619,38 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
         new Menu_GerenciarConvidados().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
+
+    private void adicionarConvidado() {
+        Conexao conexao = new Conexao();
+        PreparedStatement st = null;
+        String sql = "INSERT INTO tb_convidados "
+                + "(c_Nome, c_Telefone, c_Restricao, c_Parentesco)"
+                + "VALUES"
+                + "(?, ?, ?, ?)";
+        try {
+            st = conexao.getConexao().prepareStatement(sql);
+            st.setString(1, jTextField6.getText());
+            st.setString(2, jTextField5.getText());
+            st.setString(3, jTextField4.getText());
+            st.setString(4, jComboBox2.getItemAt(WIDTH));
+            if ((jTextField6.getText() == null) || (jTextField5.getText() == null) || (jTextField4.getText() == null)) {
+                JOptionPane.showMessageDialog(null, "Preencha todos os campos obrigatórios");
+            } else {
+                int adicionado = st.executeUpdate();
+                if (adicionado > 0) {
+                    JOptionPane.showMessageDialog(null, "Convidado adicionado com sucesso!");
+
+                    jTextField6.setText(null);
+                    jTextField5.setText(null);
+                    jTextField4.setText(null);
+
+                }
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+
+    }
 
     /**
      * @param args the command line arguments
