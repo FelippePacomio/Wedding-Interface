@@ -441,7 +441,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         });
         background.add(jButton1);
-        jButton1.setBounds(810, 1000, 110, 23);
+        jButton1.setBounds(860, 1010, 110, 23);
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/notas-musicais.png"))); // NOI18N
@@ -460,16 +460,16 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         });
         background.add(jTextField1);
-        jTextField1.setBounds(470, 760, 220, 22);
+        jTextField1.setBounds(470, 760, 220, 30);
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel7.setText("ANOTAÇÕES");
         background.add(jLabel7);
-        jLabel7.setBounds(690, 850, 100, 21);
+        jLabel7.setBounds(710, 860, 100, 21);
 
         jTextField2.setToolTipText("Informe o valor gasto com convites.");
         background.add(jTextField2);
-        jTextField2.setBounds(800, 660, 220, 22);
+        jTextField2.setBounds(800, 660, 220, 30);
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel8.setText("BUFFET");
@@ -478,7 +478,7 @@ public class Menu_Evento extends javax.swing.JFrame {
 
         jTextField3.setToolTipText("Informe o valor gasto com a locação.");
         background.add(jTextField3);
-        jTextField3.setBounds(470, 660, 220, 20);
+        jTextField3.setBounds(470, 660, 220, 30);
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel9.setText("HORÁRIO DA CERIMÔNIA");
@@ -502,7 +502,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         });
         background.add(jTextField4);
-        jTextField4.setBounds(470, 340, 220, 20);
+        jTextField4.setBounds(470, 340, 220, 30);
 
         jTextField5.setToolTipText("Informe o endereço do buffet.");
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
@@ -511,11 +511,11 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         });
         background.add(jTextField5);
-        jTextField5.setBounds(470, 430, 220, 22);
+        jTextField5.setBounds(470, 430, 220, 30);
 
         jTextField6.setToolTipText("Informe a hora do evento.");
         background.add(jTextField6);
-        jTextField6.setBounds(1130, 340, 220, 22);
+        jTextField6.setBounds(1130, 340, 220, 30);
 
         jLabel18.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel18.setText("DATA DA CERIMÔNIA");
@@ -529,7 +529,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         });
         background.add(jTextField7);
-        jTextField7.setBounds(800, 760, 220, 22);
+        jTextField7.setBounds(800, 760, 220, 30);
 
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/placeholder (2).png"))); // NOI18N
@@ -583,7 +583,7 @@ public class Menu_Evento extends javax.swing.JFrame {
 
         jTextField8.setToolTipText("Informe o valor gasto com músicos/DJ's.");
         background.add(jTextField8);
-        jTextField8.setBounds(1130, 660, 220, 22);
+        jTextField8.setBounds(1130, 660, 220, 30);
 
         jLabel30.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel30.setText("LOCAÇÃO");
@@ -595,7 +595,7 @@ public class Menu_Evento extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         background.add(jScrollPane1);
-        jScrollPane1.setBounds(690, 870, 390, 86);
+        jScrollPane1.setBounds(710, 880, 390, 86);
 
         jTextField9.setToolTipText("Informe a data do evento.");
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
@@ -604,7 +604,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         });
         background.add(jTextField9);
-        jTextField9.setBounds(800, 340, 220, 22);
+        jTextField9.setBounds(800, 340, 220, 30);
 
         jLabel33.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel33.setText("ENDEREÇO DA CERIMÔMIA");
@@ -626,37 +626,37 @@ public class Menu_Evento extends javax.swing.JFrame {
         background.add(jLabel36);
         jLabel36.setBounds(750, 410, 40, 40);
 
-        jTextField10.setToolTipText("Informe a data do evento.");
+        jTextField10.setToolTipText("Informe a data da recepção.");
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField10ActionPerformed(evt);
             }
         });
         background.add(jTextField10);
-        jTextField10.setBounds(800, 430, 220, 22);
+        jTextField10.setBounds(800, 430, 220, 30);
 
         jLabel37.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel37.setText("HORÁRIO DA RECEPÇÃO");
         background.add(jLabel37);
         jLabel37.setBounds(1130, 410, 210, 21);
 
-        jTextField11.setToolTipText("Informe a hora do evento.");
+        jTextField11.setToolTipText("Informe a hora da recepção.");
         background.add(jTextField11);
-        jTextField11.setBounds(1130, 430, 220, 22);
+        jTextField11.setBounds(1130, 430, 220, 30);
 
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tempo-livre.png"))); // NOI18N
         background.add(jLabel38);
         jLabel38.setBounds(1080, 410, 40, 40);
 
-        jTextField12.setToolTipText("Informe o valor gasto com o buffet.");
+        jTextField12.setToolTipText("Informe o cardápio.");
         jTextField12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField12ActionPerformed(evt);
             }
         });
         background.add(jTextField12);
-        jTextField12.setBounds(470, 520, 220, 22);
+        jTextField12.setBounds(470, 520, 220, 30);
 
         jLabel39.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel39.setText("CARDÁPIO");
@@ -675,14 +675,14 @@ public class Menu_Evento extends javax.swing.JFrame {
         background.add(jLabel41);
         jLabel41.setBounds(1130, 740, 210, 21);
 
-        jTextField13.setToolTipText("Informe o valor gasto com lembranças.");
+        jTextField13.setToolTipText("Informe o valor gasto..");
         jTextField13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField13ActionPerformed(evt);
             }
         });
         background.add(jTextField13);
-        jTextField13.setBounds(1130, 760, 220, 22);
+        jTextField13.setBounds(1130, 760, 220, 30);
 
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/presente.png"))); // NOI18N
@@ -850,6 +850,14 @@ public class Menu_Evento extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Menu_Evento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
