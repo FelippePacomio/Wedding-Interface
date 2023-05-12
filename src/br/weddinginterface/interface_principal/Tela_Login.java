@@ -220,42 +220,22 @@ public class Tela_Login extends javax.swing.JFrame {
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         // TODO add your handling code here:
-        String usuario = jTextField1.getText();
         String senha = jPasswordField1.getText();
 
         Color color_red = new Color(255, 102, 102);
         Color color_green = new Color(102, 255, 102);
+        Color color_white = new Color(255, 255, 255);
 
-        if (usuario.equals("@senacsp") && senha.equals("123456")) {
+        if (senha.equals("123456")) {
 
-            jTextField1.setBackground(color_green);
             jPasswordField1.setBackground(color_green);
-            new Menu_Noiva().setVisible(true);
-            Tela_Login.this.dispose();
 
-        } else if (!usuario.equals("@senacsp") && (!senha.equals("123456"))) {
+        } else if ((!senha.equals("123456"))) {
 
-            jTextField1.setBackground(color_red);
             jPasswordField1.setBackground(color_red);
 
-        } else if (!usuario.equals("@senacsp") && (senha.equals("123456"))) {
-
-            jTextField1.setBackground(color_red);
-            jPasswordField1.setBackground(color_green);
-            
-        } else if (usuario.equals("@senacsp") && (!senha.equals("123456"))) {
-
-            jTextField1.setBackground(color_green);
-            jPasswordField1.setBackground(color_red);
-
-        } else if (senha.equals("123456")) {
-
-            jPasswordField1.setBackground(color_green);
-        } else if (usuario.equals("@senacsp")) {
-
-            jTextField1.setBackground(color_green);
         } else {
-
+            jPasswordField1.setBackground(color_white);
         }
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
@@ -266,17 +246,17 @@ public class Tela_Login extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-           String usuario = jTextField1.getText();
+        String usuario = jTextField1.getText();
 
         Color color_red = new Color(255, 102, 102);
         Color color_green = new Color(102, 255, 102);
         Color color_white = new Color(255, 255, 255);
 
-        if (usuario.equals("@senacsp")){
+        if (usuario.equals("@senacsp")) {
 
             jTextField1.setBackground(color_green);
 
-        } else if (!usuario.equals("@senacsp")){
+        } else if (!usuario.equals("@senacsp")) {
 
             jTextField1.setBackground(color_red);
 
@@ -284,12 +264,46 @@ public class Tela_Login extends javax.swing.JFrame {
             jTextField1.setBackground(color_white);
 
         }
-        
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String usuario = jTextField1.getText();
+        String senha = jPasswordField1.getText();
 
+        Color color_red = new Color(255, 102, 102);
+        Color color_green = new Color(102, 255, 102);
+        Color color_white = new Color(255, 255, 255);
 
+        if (usuario.equals("@senacsp") && (senha.equals("123456"))) {
+            new Menu_Orcamento().setVisible(true);
+            this.dispose();
+        }
+
+        if (usuario.equals("@senacsp")) {
+
+            jTextField1.setBackground(color_green);
+
+        } else if (!usuario.equals("@senacsp")) {
+
+            jTextField1.setBackground(color_red);
+
+        } else {
+            jTextField1.setBackground(color_white);
+
+        }
+
+        if (senha.equals("123456")) {
+
+            jPasswordField1.setBackground(color_green);
+
+        } else if ((!senha.equals("123456"))) {
+
+            jPasswordField1.setBackground(color_red);
+
+        } else {
+            jPasswordField1.setBackground(color_white);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
