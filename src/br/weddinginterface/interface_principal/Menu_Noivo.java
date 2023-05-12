@@ -6,6 +6,7 @@ package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -472,6 +473,11 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("SALVAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         background.add(jButton1);
         jButton1.setBounds(720, 700, 110, 23);
 
@@ -593,14 +599,45 @@ public class Menu_Noivo extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNoivoMouseClicked
 
     private void btnOrcamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrcamentoMouseClicked
-       new Menu_Orcamento().setVisible(true);
-       this.dispose();
+        new Menu_Orcamento().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
-       new Menu_GerenciarConvidados().setVisible(true);
-       this.dispose();
+        new Menu_GerenciarConvidados().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        Noivo noi = new Noivo();
+
+        try {
+
+            double terno;
+            double sapato;
+            double diaDoNoivo;
+            double transporteNoivo;
+
+            terno = Double.parseDouble(jTextField3.getText());
+            sapato = Double.parseDouble(jTextField2.getText());
+            diaDoNoivo = Double.parseDouble(jTextField6.getText());
+            transporteNoivo = Double.parseDouble(jTextField7.getText());
+
+            noi.setTerno(terno);
+            noi.setSapato(sapato);
+            noi.setDiaDoNoivo(diaDoNoivo);
+            noi.setTransporteNoivo(transporteNoivo);
+
+            Noivo noa = new Noivo();
+
+            noa.insereNoivo(noa);
+
+            JOptionPane.showMessageDialog(null, "Noivo inserido com sucesso!");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

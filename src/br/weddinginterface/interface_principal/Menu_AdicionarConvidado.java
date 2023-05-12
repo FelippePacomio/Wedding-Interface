@@ -409,6 +409,11 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("SALVAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         background.add(jButton1);
         jButton1.setBounds(810, 570, 110, 23);
 
@@ -568,7 +573,7 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
- 
+
     }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
@@ -579,14 +584,13 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
 
         Color coloruse_green = new Color(rgbcolor_green);
         Color coloruse_red = new Color(rgbcolor_red);
-        //aqui    
         Convidados conv = new Convidados();
 
         if (jTextField6.getText().trim().isEmpty()) {
             jTextField6.setBackground(coloruse_red);
         } else {
             jTextField6.setBackground(coloruse_green);
-            conv.insereConvidados(jTextField6.getText());
+            conv.setNome(jTextField6.getText());
         }
 
     }//GEN-LAST:event_jTextField6ActionPerformed
@@ -619,6 +623,36 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
         new Menu_GerenciarConvidados().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Convidados conv = new Convidados();
+
+        try {
+
+            String Nome;
+            String Telefone;
+            String Restricao;
+            // String Parentesco;
+
+            Nome = jTextField6.getText();
+            Telefone = jTextField5.getText();
+            Restricao = jTextField4.getText();
+            // Parentesco = jTextField4.getText(); // aqui é combobox
+
+            conv.setNome(Nome);
+            conv.setTelefone(Telefone);
+            conv.setRestricao(Restricao);
+            // conv.setParentesco(Parentesco); // mudar aqui tbm
+
+            conv.insereConvidados(conv);
+
+            JOptionPane.showMessageDialog(null, "Convidado inserido com sucesso!");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void adicionarConvidado() {
         Conexao conexao = new Conexao();

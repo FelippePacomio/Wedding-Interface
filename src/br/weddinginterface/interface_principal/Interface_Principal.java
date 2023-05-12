@@ -6,7 +6,6 @@ package br.weddinginterface.interface_principal;
 import br.weddinginterface.model.*;
 /**
  *
- * @author maay_
  */
 public class Interface_Principal extends javax.swing.JFrame {
 

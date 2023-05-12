@@ -3,8 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package br.weddinginterface.interface_principal;
+
 import br.weddinginterface.model.*;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -485,6 +487,11 @@ public class Menu_Noiva extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("SALVAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         background.add(jButton1);
         jButton1.setBounds(720, 700, 110, 23);
 
@@ -532,7 +539,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
 
     Color mySelect = new Color(255, 161, 170);
     Color myUnSelect = new Color(253, 214, 218);
-    Color mySubUnSelect = new Color (232,194,194);
+    Color mySubUnSelect = new Color(232, 194, 194);
     private void btnNoivoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoivoMouseEntered
         btnNoivo.setBackground(mySelect);
     }//GEN-LAST:event_btnNoivoMouseEntered
@@ -571,7 +578,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNoivoMouseClicked
 
     private void btnOrcamentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrcamentoMouseEntered
-       btnOrcamento.setBackground(mySelect);
+        btnOrcamento.setBackground(mySelect);
     }//GEN-LAST:event_btnOrcamentoMouseEntered
 
     private void btnOrcamentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrcamentoMouseExited
@@ -579,7 +586,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOrcamentoMouseExited
 
     private void btnAdicionarConvidadoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdicionarConvidadoMouseEntered
-       btnAdicionarConvidado.setBackground(mySelect);
+        btnAdicionarConvidado.setBackground(mySelect);
     }//GEN-LAST:event_btnAdicionarConvidadoMouseEntered
 
     private void btnAdicionarConvidadoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdicionarConvidadoMouseExited
@@ -605,19 +612,54 @@ public class Menu_Noiva extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNoivaMouseExited
 
     private void btnNoivaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoivaMouseClicked
-       new Menu_Noiva().setVisible(true);
-       this.dispose();
+        new Menu_Noiva().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnNoivaMouseClicked
 
     private void btnOrcamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrcamentoMouseClicked
-       new Menu_Orcamento().setVisible(true);
-       this.dispose();
+        new Menu_Orcamento().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
-       new Menu_GerenciarConvidados().setVisible(true);
-       this.dispose();
+        new Menu_GerenciarConvidados().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Noiva noi = new Noiva();
+
+        try {
+
+            double vestido;
+            double sapato;
+            double buque;
+            double diaDaNoiva;
+            double transporteNoiva;
+
+            vestido = Double.parseDouble(jTextField3.getText());
+            sapato = Double.parseDouble(jTextField2.getText());
+            buque = Double.parseDouble(jTextField4.getText());
+            diaDaNoiva = Double.parseDouble(jTextField6.getText());
+            transporteNoiva = Double.parseDouble(jTextField7.getText());
+
+            noi.setVestido(vestido);
+            noi.setSapato(sapato);
+            noi.setBuque(buque);
+            noi.setDiaDaNoiva(diaDaNoiva);
+            noi.setTransporteNoiva(transporteNoiva);
+
+            Noiva noa = new Noiva();
+
+            noa.insereNoiva(noa);
+
+            JOptionPane.showMessageDialog(null, "Noiva inserida com sucesso!");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

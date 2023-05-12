@@ -6,6 +6,7 @@ package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -764,12 +765,12 @@ public class Menu_Evento extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
@@ -796,7 +797,45 @@ public class Menu_Evento extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNoivoMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        Evento eve = new Evento();
+
+        try {
+
+            String nomeIgreja;
+            String cardapio;
+            String anotacoes;
+            String locacao;
+            String horaBuffet;
+            String horaCerimonia;
+            double valorCerimonia;
+            double lembrancas;
+
+            nomeIgreja = jTextField1.getText();
+            cardapio = jTextField12.getText();
+            anotacoes = jTextArea1.getText();
+            locacao = jTextField3.getText();
+            horaBuffet = jTextField11.getText();
+            horaCerimonia = jTextField6.getText();
+            valorCerimonia = Double.parseDouble(jTextField13.getText());
+            lembrancas = Double.parseDouble(jTextField7.getText());
+
+            eve.setNomeIgreja(nomeIgreja);
+            eve.setCardapio(cardapio);
+            eve.setAnotacoes(anotacoes);
+            eve.setLocacao(locacao);
+            eve.setHoraBuffet(horaBuffet);
+            eve.setHoraCerimonia(horaCerimonia);
+            eve.setValorCerimonia(valorCerimonia);
+            eve.setLembrancas(lembrancas);
+
+            Evento ev = new Evento();
+
+            ev.inserirEvento(eve);
+
+            JOptionPane.showMessageDialog(null, "Evento inserido com sucesso!");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
@@ -816,13 +855,13 @@ public class Menu_Evento extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField13ActionPerformed
 
     private void btnOrcamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrcamentoMouseClicked
-       new Menu_Orcamento().setVisible(true);
-       this.dispose();
+        new Menu_Orcamento().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
-       new Menu_GerenciarConvidados().setVisible(true);
-       this.dispose();
+        new Menu_GerenciarConvidados().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 
     /**

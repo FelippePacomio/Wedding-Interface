@@ -1,4 +1,3 @@
-
 package br.weddinginterface.model;
 
 import br.weddinginterface.controller.Conexao;
@@ -6,10 +5,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Objects;
+
 public class Evento {
 
-    private String nomeIgreja, cardapio, anotacoes, tema, horaBuffet, horaCerimonia;
-    private Double valorBuffet, valorCerimonia, lembrancas;
+    private String nomeIgreja, cardapio, anotacoes, tema, horaBuffet, horaCerimonia, locacao;
+    private Double valorCerimonia, lembrancas;
 
     public String getNomeIgreja() {
         return nomeIgreja;
@@ -59,14 +59,6 @@ public class Evento {
         this.horaCerimonia = horaCerimonia;
     }
 
-    public Double getValorBuffet() {
-        return valorBuffet;
-    }
-
-    public void setValorBuffet(Double valorBuffet) {
-        this.valorBuffet = valorBuffet;
-    }
-
     public Double getValorCerimonia() {
         return valorCerimonia;
     }
@@ -82,6 +74,7 @@ public class Evento {
     public void setLembrancas(Double lembrancas) {
         this.lembrancas = lembrancas;
     }
+
     @Override
     public int hashCode() {
         int hash = 3;
@@ -106,9 +99,9 @@ public class Evento {
 
     @Override
     public String toString() {
-        return "Evento{" + "nomeIgreja=" + nomeIgreja + ", cardapio=" + cardapio + ", anotacoes=" + anotacoes + ", tema=" + tema + ", horaBuffet=" + horaBuffet + ", horaCerimonia=" + horaCerimonia + ", valorBuffet=" + valorBuffet + ", valorCerimonia=" + valorCerimonia + ", lembrancas=" + lembrancas + '}';
+        return "Evento{" + "nomeIgreja=" + nomeIgreja + ", cardapio=" + cardapio + ", anotacoes=" + anotacoes + ", tema=" + tema + ", horaBuffet=" + horaBuffet + ", horaCerimonia=" + horaCerimonia + ", valorCerimonia=" + valorCerimonia + ", lembrancas=" + lembrancas + '}';
     }
-    
+
     public void inserirEvento(Evento eve) {
         Conexao conexao = new Conexao();
 
@@ -131,9 +124,8 @@ public class Evento {
             st.setString(4, eve.getTema());
             st.setString(5, eve.getHoraBuffet());
             st.setString(6, eve.getHoraCerimonia());
-            st.setDouble(7, eve.getValorBuffet());
-            st.setDouble(8, eve.getValorCerimonia());
-            st.setDouble(9, eve.getLembrancas());
+            st.setDouble(7, eve.getValorCerimonia());
+            st.setDouble(8, eve.getLembrancas());
 
             int linhasAfetadas = st.executeUpdate();
 
@@ -153,5 +145,13 @@ public class Evento {
         } finally {
             conexao.fechaConexao();
         }
+    }
+
+    public String getLocacao() {
+        return locacao;
+    }
+
+    public void setLocacao(String locacao) {
+        this.locacao = locacao;
     }
 }

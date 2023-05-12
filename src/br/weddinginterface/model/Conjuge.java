@@ -1,4 +1,3 @@
-
 package br.weddinginterface.model;
 
 import br.weddinginterface.controller.Conexao;
@@ -8,8 +7,9 @@ import java.sql.SQLException;
 import java.util.Objects;
 
 public class Conjuge {
-    private String nome, dataCerimonia, dataRecepcao, cerimonialista, anotacoes;
-    private double valorCerimonialista, valorGasto, orcamentoPrevisto, acessorios;
+
+    private String nome, dataCerimonia, dataRecepcao, anotacoes;
+    private double valorGasto, orcamentoPrevisto, acessorios;
 
     public String getNome() {
         return nome;
@@ -35,28 +35,12 @@ public class Conjuge {
         this.dataRecepcao = dataRecepcao;
     }
 
-    public String getCerimonialista() {
-        return cerimonialista;
-    }
-
-    public void setCerimonialista(String cerimonialista) {
-        this.cerimonialista = cerimonialista;
-    }
-
     public String getAnotacoes() {
         return anotacoes;
     }
 
     public void setAnotacoes(String anotacoes) {
         this.anotacoes = anotacoes;
-    }
-
-    public double getValorCerimonialista() {
-        return valorCerimonialista;
-    }
-
-    public void setValorCerimonialista(double valorCerimonialista) {
-        this.valorCerimonialista = valorCerimonialista;
     }
 
     public double getValorGasto() {
@@ -107,10 +91,9 @@ public class Conjuge {
 
     @Override
     public String toString() {
-        return "Conjuge{" + "nome=" + nome + ", dataCerimonia=" + dataCerimonia + ", dataRecepcao=" + dataRecepcao + ", cerimonialista=" + cerimonialista + ", anotacoes=" + anotacoes + ", valorCerimonialista=" + valorCerimonialista + ", valorGasto=" + valorGasto + ", orcamentoPrevisto=" + orcamentoPrevisto + ", acessorios=" + acessorios + '}';
+        return "Conjuge{" + "nome=" + nome + ", dataCerimonia=" + dataCerimonia + ", dataRecepcao=" + dataRecepcao + ", anotacoes=" + anotacoes + ", valorGasto=" + valorGasto + ", orcamentoPrevisto=" + orcamentoPrevisto + ", acessorios=" + acessorios + '}';
     }
-    
-    
+
     public void insereConjuge(Conjuge con) {
 
         Conexao conexao = new Conexao();
@@ -131,9 +114,7 @@ public class Conjuge {
             st.setString(1, con.getNome());
             st.setString(2, con.getDataCerimonia());
             st.setString(3, con.getDataRecepcao());
-            st.setString(4, con.getCerimonialista());
             st.setString(5, con.getAnotacoes());
-            st.setDouble(6, con.getValorCerimonialista());
             st.setDouble(7, con.getValorGasto());
             st.setDouble(8, con.getOrcamentoPrevisto());
             st.setDouble(9, con.getAcessorios());

@@ -75,9 +75,8 @@ public class Convidados {
     
     
     
-    public void insereConvidados(String i) {
-        
-        Convidados conv = new Convidados();
+    public void insereConvidados(Convidados conv) {
+     
         
         Conexao conexao = new Conexao();
 

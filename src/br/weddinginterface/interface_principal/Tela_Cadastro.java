@@ -3,7 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package br.weddinginterface.interface_principal;
+
 import br.weddinginterface.model.*;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author maay_
@@ -82,6 +85,11 @@ public class Tela_Cadastro extends javax.swing.JFrame {
 
         jTextField2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField2.setToolTipText("Informe um e-mail válido.");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -89,6 +97,11 @@ public class Tela_Cadastro extends javax.swing.JFrame {
 
         jTextField3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField3.setToolTipText("Informe um e-mail válido.");
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -113,6 +126,11 @@ public class Tela_Cadastro extends javax.swing.JFrame {
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("CADASTRAR");
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
@@ -222,6 +240,41 @@ public class Tela_Cadastro extends javax.swing.JFrame {
         new Interface_Principal().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Usuario us = new Usuario();
+
+        try {
+
+            String email;
+            String nome;
+            String senha;
+
+            email = jTextField3.getText();
+            nome = jTextField2.getText();
+            senha = jPasswordField1.getText();
+
+            us.setEmail(email);
+            us.setNome(nome);
+            us.setSenha(senha);
+
+            Usuario user = new Usuario();
+
+            user.insereUsuario(user);
+
+            JOptionPane.showMessageDialog(null, "Usuário inserido com sucesso!");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
