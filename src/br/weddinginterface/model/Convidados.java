@@ -87,7 +87,7 @@ public class Convidados {
             String sql = "";
             sql += "";
             sql += "INSERT INTO tb_convidados "
-                    + "(c_Nome, c_Telefone, c_Restricao, c_Parentesco)"
+                    + "(c_nome, c_telefone, c_restricao, c_parentesco)"
                     + "VALUES"
                     + "(?, ?, ?, ?)";
 

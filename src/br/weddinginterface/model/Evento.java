@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public class Evento {
 
-    private String nomeIgreja, cardapio, anotacoes, tema, horaBuffet, horaCerimonia, locacao;
+    private String nomeIgreja, cardapio, anotacoes, horaBuffet, horaCerimonia, locacao;
     private Double valorCerimonia, lembrancas;
 
     public String getNomeIgreja() {
@@ -33,14 +33,6 @@ public class Evento {
 
     public void setAnotacoes(String anotacoes) {
         this.anotacoes = anotacoes;
-    }
-
-    public String getTema() {
-        return tema;
-    }
-
-    public void setTema(String tema) {
-        this.tema = tema;
     }
 
     public String getHoraBuffet() {
@@ -99,7 +91,7 @@ public class Evento {
 
     @Override
     public String toString() {
-        return "Evento{" + "nomeIgreja=" + nomeIgreja + ", cardapio=" + cardapio + ", anotacoes=" + anotacoes + ", tema=" + tema + ", horaBuffet=" + horaBuffet + ", horaCerimonia=" + horaCerimonia + ", valorCerimonia=" + valorCerimonia + ", lembrancas=" + lembrancas + '}';
+        return "Evento{" + "nomeIgreja=" + nomeIgreja + ", cardapio=" + cardapio + ", anotacoes=" + anotacoes + ", horaBuffet=" + horaBuffet + ", horaCerimonia=" + horaCerimonia + ", valorCerimonia=" + valorCerimonia + ", lembrancas=" + lembrancas + '}';
     }
 
     public void inserirEvento(Evento eve) {
@@ -112,7 +104,7 @@ public class Evento {
             String sql = "";
             sql += "";
             sql += "INSERT INTO tb_evento "
-                    + "(e_NomeIgreja, e_Cardapio, e_Anotacoes, e_Tema, e_HoraBuffet, e_HoraCerimonia, e_ValorBuffet, e_ValorCerimonia, e_Lembrancas)"
+                    + "(e_NomeIgreja, e_Cardapio, e_Anotacoes, e_HoraBuffet, e_HoraCerimonia, e_ValorBuffet, e_ValorCerimonia, e_Lembrancas)"
                     + "VALUES"
                     + "(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
@@ -121,11 +113,10 @@ public class Evento {
             st.setString(1, eve.getNomeIgreja());
             st.setString(2, eve.getCardapio());
             st.setString(3, eve.getAnotacoes());
-            st.setString(4, eve.getTema());
-            st.setString(5, eve.getHoraBuffet());
-            st.setString(6, eve.getHoraCerimonia());
-            st.setDouble(7, eve.getValorCerimonia());
-            st.setDouble(8, eve.getLembrancas());
+            st.setString(4, eve.getHoraBuffet());
+            st.setString(5, eve.getHoraCerimonia());
+            st.setDouble(6, eve.getValorCerimonia());
+            st.setDouble(7, eve.getLembrancas());
 
             int linhasAfetadas = st.executeUpdate();
 

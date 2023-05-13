@@ -234,8 +234,9 @@ public class Tela_Login extends javax.swing.JFrame {
 
             jPasswordField1.setBackground(color_red);
 
-        } else {
+        } else if (senha.equals("")) {
             jPasswordField1.setBackground(color_white);
+        } else {
         }
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
@@ -260,11 +261,11 @@ public class Tela_Login extends javax.swing.JFrame {
 
             jTextField1.setBackground(color_red);
 
-        } else {
+        } else if (usuario.equals("")) {
             jTextField1.setBackground(color_white);
 
+        } else {
         }
-
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -288,9 +289,10 @@ public class Tela_Login extends javax.swing.JFrame {
 
             jTextField1.setBackground(color_red);
 
-        } else {
+        } else if (usuario.equals("")) {
             jTextField1.setBackground(color_white);
 
+        } else {
         }
 
         if (senha.equals("123456")) {
@@ -301,8 +303,9 @@ public class Tela_Login extends javax.swing.JFrame {
 
             jPasswordField1.setBackground(color_red);
 
-        } else {
+        } else if (senha.equals("")) {
             jPasswordField1.setBackground(color_white);
+        } else {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
