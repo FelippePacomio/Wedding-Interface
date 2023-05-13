@@ -6,6 +6,7 @@ package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -474,6 +475,11 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("SALVAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         background.add(jButton1);
         jButton1.setBounds(770, 700, 110, 23);
 
@@ -591,8 +597,8 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNoivoMouseClicked
 
     private void btnOrcamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrcamentoMouseClicked
-       new Menu_Orcamento().setVisible(true);
-       this.dispose();
+        new Menu_Orcamento().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
@@ -603,6 +609,29 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Orcamento orc = new Orcamento();
+
+        try {
+
+            double gastoPrevisto;
+
+            gastoPrevisto = Double.parseDouble(jTextField1.getText());
+
+            orc.setGastoEvento(orc.gastoEventoTotal());
+            orc.setGastoNoiva(orc.gastoNoivaTotal());
+            orc.setGastoNoivo(orc.gastoNoivoTotal());
+            orc.setGastoPrevisto(gastoPrevisto);
+            orc.setGastoTotal(orc.gastoCompleto());
+            orc.insereOrcamento(orc);
+
+            JOptionPane.showMessageDialog(null, "Orçamento inserido com sucesso!");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

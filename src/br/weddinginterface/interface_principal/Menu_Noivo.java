@@ -629,9 +629,8 @@ public class Menu_Noivo extends javax.swing.JFrame {
             noi.setDiaDoNoivo(diaDoNoivo);
             noi.setTransporteNoivo(transporteNoivo);
 
-            Noivo noa = new Noivo();
 
-            noa.insereNoivo(noa);
+            noi.insereNoivo(noi);
 
             JOptionPane.showMessageDialog(null, "Noivo inserido com sucesso!");
         } catch (Exception e) {

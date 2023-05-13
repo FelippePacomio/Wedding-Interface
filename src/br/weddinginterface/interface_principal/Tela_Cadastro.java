@@ -266,9 +266,7 @@ public class Tela_Cadastro extends javax.swing.JFrame {
             us.setLogin(login);
             us.setSenha(senha);
 
-            Usuario user = new Usuario();
-
-            user.insereUsuario(user);
+            us.insereUsuario(us);
 
             JOptionPane.showMessageDialog(null, "Usuário inserido com sucesso!");
         } catch (Exception e) {
