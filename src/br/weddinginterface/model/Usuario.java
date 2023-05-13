@@ -9,8 +9,7 @@ import java.util.Objects;
 
 public class Usuario {
     
-    private String email, nome, senha;
-    private int cpf;
+    private String email, login, senha;
 
     public String getEmail() {
         return email;
@@ -19,13 +18,13 @@ public class Usuario {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public String getNome() {
-        return nome;
+    
+    public String getLogin() {
+        return login;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getSenha() {
@@ -34,14 +33,6 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-
-    public int getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(int cpf) {
-        this.cpf = cpf;
     }
 
     @Override
@@ -68,7 +59,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" + "email=" + email + ", nome=" + nome + ", senha=" + senha + ", cpf=" + cpf + '}';
+        return "Usuario{" + "email=" + email + ", login=" + login + ", senha=" + senha + '}';
     }
     
     public void insereUsuario(Usuario user){
@@ -81,26 +72,23 @@ public class Usuario {
             String sql = "";
             sql += "";
             sql += "INSERT INTO tb_usuario "
-                    + "(u_Email, u_Nome, u_Senha, u_Cpf)"
+                    + "(u_email, u_login, u_senha)"
                     + "VALUES"
-                    + "(?, ?, ?, ?)";
+                    + "(?, ?, ?)";
 
             st = conexao.getConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
 
             st.setString(1, user.getEmail());
-            st.setString(2, user.getNome());
+            st.setString(2, user.getLogin());
             st.setString(3, user.getSenha());
-            st.setInt(4, user.getCpf());
-            
-            
 
             int linhasAfetadas = st.executeUpdate();
 
             if (linhasAfetadas > 0) {
                 ResultSet rs = st.getGeneratedKeys();
                 if (rs.next()) {
-                    int cpf = rs.getInt(1);
-                    user.setCpf(cpf);
+                    String login = rs.getString(1);
+                    user.setLogin(login);
                 }
                 rs.close();
             } else {
@@ -114,5 +102,7 @@ public class Usuario {
         }
 
     }
+
+
 }
     

@@ -469,6 +469,11 @@ public class Menu_Evento extends javax.swing.JFrame {
         jLabel7.setBounds(710, 860, 100, 21);
 
         jTextField2.setToolTipText("Informe o valor gasto com convites.");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
         background.add(jTextField2);
         jTextField2.setBounds(800, 660, 220, 30);
 
@@ -478,6 +483,11 @@ public class Menu_Evento extends javax.swing.JFrame {
         jLabel8.setBounds(470, 740, 100, 21);
 
         jTextField3.setToolTipText("Informe o valor gasto com a locação.");
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
         background.add(jTextField3);
         jTextField3.setBounds(470, 660, 220, 30);
 
@@ -515,6 +525,11 @@ public class Menu_Evento extends javax.swing.JFrame {
         jTextField5.setBounds(470, 430, 220, 30);
 
         jTextField6.setToolTipText("Informe a hora do evento.");
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
         background.add(jTextField6);
         jTextField6.setBounds(1130, 340, 220, 30);
 
@@ -583,6 +598,11 @@ public class Menu_Evento extends javax.swing.JFrame {
         jLabel32.setBounds(470, 410, 220, 21);
 
         jTextField8.setToolTipText("Informe o valor gasto com músicos/DJ's.");
+        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField8ActionPerformed(evt);
+            }
+        });
         background.add(jTextField8);
         jTextField8.setBounds(1130, 660, 220, 30);
 
@@ -642,6 +662,11 @@ public class Menu_Evento extends javax.swing.JFrame {
         jLabel37.setBounds(1130, 410, 210, 21);
 
         jTextField11.setToolTipText("Informe a hora da recepção.");
+        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField11ActionPerformed(evt);
+            }
+        });
         background.add(jTextField11);
         jTextField11.setBounds(1130, 430, 220, 30);
 
@@ -797,42 +822,48 @@ public class Menu_Evento extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNoivoMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        String enderecoCerimonia, enderecoBuffet, horaCerimonia, horaRecepcao,
+                dataRecepcao, dataCerimonia, cardapio, locacao, anotacoes;
+        Double valorBuffet, valorCerimonia, lembrancas, musica, convites;
+        
         Evento eve = new Evento();
 
         try {
 
-            String nomeIgreja;
-            String cardapio;
-            String anotacoes;
-            String locacao;
-            String horaBuffet;
-            String horaCerimonia;
-            double valorCerimonia;
-            double lembrancas;
-
-            nomeIgreja = jTextField1.getText();
+            enderecoCerimonia = jTextField4.getText();
+            dataCerimonia = jTextField9.getText();
+            enderecoBuffet = jTextField5.getText();
+            dataRecepcao = jTextField10.getText();
+            horaRecepcao = jTextField11.getText();
             cardapio = jTextField12.getText();
             anotacoes = jTextArea1.getText();
             locacao = jTextField3.getText();
-            horaBuffet = jTextField11.getText();
+            convites = Double.parseDouble(jTextField2.getText());
+            musica = Double.parseDouble(jTextField8.getText());
+            valorBuffet = Double.parseDouble(jTextField1.getText());
+            lembrancas = Double.parseDouble(jTextField7.getText());
             horaCerimonia = jTextField6.getText();
             valorCerimonia = Double.parseDouble(jTextField13.getText());
-            lembrancas = Double.parseDouble(jTextField7.getText());
-
-            eve.setNomeIgreja(nomeIgreja);
+            
+            eve.setEnderecoCerimonia(enderecoCerimonia);
             eve.setCardapio(cardapio);
             eve.setAnotacoes(anotacoes);
             eve.setLocacao(locacao);
-            eve.setHoraBuffet(horaBuffet);
             eve.setHoraCerimonia(horaCerimonia);
             eve.setValorCerimonia(valorCerimonia);
             eve.setLembrancas(lembrancas);
+            eve.setEnderecoBuffet(enderecoBuffet);
+            eve.setHoraRecepcao(horaRecepcao);
+            eve.setDataRecepcao(dataRecepcao);
+            eve.setDataCerimonia(dataCerimonia);
+            eve.setValorBuffet(valorBuffet);
+            eve.setMusica(musica);
+            eve.setConvites(convites);
+            eve.inserirEvento(eve);
 
-            Evento ev = new Evento();
-
-            ev.inserirEvento(eve);
-
-            JOptionPane.showMessageDialog(null, "Evento inserido com sucesso!");
+            JOptionPane.showMessageDialog(
+                    null, "Evento inserido com sucesso!");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -864,6 +895,26 @@ public class Menu_Evento extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField11ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField8ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -878,16 +929,24 @@ public class Menu_Evento extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu_Evento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_Evento.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu_Evento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_Evento.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu_Evento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_Evento.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menu_Evento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu_Evento.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>

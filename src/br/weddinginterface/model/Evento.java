@@ -8,15 +8,72 @@ import java.util.Objects;
 
 public class Evento {
 
-    private String nomeIgreja, cardapio, anotacoes, horaBuffet, horaCerimonia, locacao;
-    private Double valorCerimonia, lembrancas;
+    private String enderecoCerimonia, enderecoBuffet, horaCerimonia, horaRecepcao,
+            dataRecepcao, dataCerimonia, cardapio, locacao, anotacoes;
+    private Double valorBuffet, valorCerimonia, lembrancas, musica, convites;
 
-    public String getNomeIgreja() {
-        return nomeIgreja;
+    public String getHoraRecepcao() {
+        return horaRecepcao;
     }
 
-    public void setNomeIgreja(String nomeIgreja) {
-        this.nomeIgreja = nomeIgreja;
+    public void setHoraRecepcao(String horaRecepcao) {
+        this.horaRecepcao = horaRecepcao;
+    }
+
+    public String getEnderecoCerimonia() {
+        return enderecoCerimonia;
+    }
+
+    public void setEnderecoCerimonia(String enderecoCerimonia) {
+        this.enderecoCerimonia = enderecoCerimonia;
+    }
+
+    public String getEnderecoBuffet() {
+        return enderecoBuffet;
+    }
+
+    public void setEnderecoBuffet(String enderecoBuffet) {
+        this.enderecoBuffet = enderecoBuffet;
+    }
+
+    public String getDataRecepcao() {
+        return dataRecepcao;
+    }
+
+    public void setDataRecepcao(String dataRecepcao) {
+        this.dataRecepcao = dataRecepcao;
+    }
+
+    public String getDataCerimonia() {
+        return dataCerimonia;
+    }
+
+    public void setDataCerimonia(String dataCerimonia) {
+        this.dataCerimonia = dataCerimonia;
+    }
+
+    public Double getValorBuffet() {
+        return valorBuffet;
+    }
+
+    public void setValorBuffet(Double valorBuffet) {
+        this.valorBuffet = valorBuffet;
+    }
+
+    public Double getMusica() {
+        return musica;
+    }
+
+    public void setMusica(Double musica) {
+        this.musica = musica;
+    }
+
+    public Double getConvites() {
+        return convites;
+    }
+
+    public void setConvites(Double convites) {
+        this.convites = convites;
     }
 
     public String getCardapio() {
@@ -33,14 +90,6 @@ public class Evento {
 
     public void setAnotacoes(String anotacoes) {
         this.anotacoes = anotacoes;
-    }
-
-    public String getHoraBuffet() {
-        return horaBuffet;
-    }
-
-    public void setHoraBuffet(String horaBuffet) {
-        this.horaBuffet = horaBuffet;
     }
 
     public String getHoraCerimonia() {
@@ -70,7 +119,7 @@ public class Evento {
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 97 * hash + Objects.hashCode(this.nomeIgreja);
+        hash = 97 * hash + Objects.hashCode(this.enderecoCerimonia);
         return hash;
     }
 
@@ -86,12 +135,16 @@ public class Evento {
             return false;
         }
         final Evento other = (Evento) obj;
-        return Objects.equals(this.nomeIgreja, other.nomeIgreja);
+        return Objects.equals(this.enderecoCerimonia, other.enderecoCerimonia);
     }
 
     @Override
     public String toString() {
-        return "Evento{" + "nomeIgreja=" + nomeIgreja + ", cardapio=" + cardapio + ", anotacoes=" + anotacoes + ", horaBuffet=" + horaBuffet + ", horaCerimonia=" + horaCerimonia + ", valorCerimonia=" + valorCerimonia + ", lembrancas=" + lembrancas + '}';
+        return "Evento{" + "enderecoCerimonia=" + enderecoCerimonia + ", enderecoBuffet=" + enderecoBuffet + ", horaCerimonia="
+                + horaCerimonia + ", horaRecepcao=" + horaRecepcao + ", dataRecepcao=" + dataRecepcao
+                + ", dataCerimonia=" + dataCerimonia + ", cardapio=" + cardapio + ", locacao=" + locacao + ", anotacoes="
+                + anotacoes + ", valorBuffet=" + valorBuffet + ", valorCerimonia="  + valorCerimonia + ", lembrancas="
+                + lembrancas + ", musica=" + musica + ", convites=" + convites + '}';
     }
 
     public void inserirEvento(Evento eve) {
@@ -104,27 +157,36 @@ public class Evento {
             String sql = "";
             sql += "";
             sql += "INSERT INTO tb_evento "
-                    + "(e_NomeIgreja, e_Cardapio, e_Anotacoes, e_HoraBuffet, e_HoraCerimonia, e_ValorBuffet, e_ValorCerimonia, e_Lembrancas)"
+                    + "(e_enderecocerimonia, e_enderecobuffet, e_horacerimonia, e_horarecepcao, e_datarecepcao,"
+                    + "e_datacerimonia, e_cardapio, e_locacao, e_anotacoes, e_valorbuffet, e_valorcerimonia, e_lembrancas"
+                    + "e_musica, e_convites)"
                     + "VALUES"
-                    + "(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                    + "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
             st = conexao.getConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
 
-            st.setString(1, eve.getNomeIgreja());
-            st.setString(2, eve.getCardapio());
-            st.setString(3, eve.getAnotacoes());
-            st.setString(4, eve.getHoraBuffet());
-            st.setString(5, eve.getHoraCerimonia());
-            st.setDouble(6, eve.getValorCerimonia());
-            st.setDouble(7, eve.getLembrancas());
+            st.setString(1, eve.getEnderecoCerimonia());
+            st.setString(2, eve.getEnderecoBuffet());
+            st.setString(3, eve.getHoraCerimonia());
+            st.setString(4, eve.getHoraRecepcao());
+            st.setString(5, eve.getDataRecepcao());
+            st.setString(6, eve.getDataCerimonia());
+            st.setString(7, eve.getCardapio());
+            st.setString(8, eve.getLocacao());
+            st.setString(9, eve.getAnotacoes());
+            st.setDouble(10, eve.getValorBuffet());
+            st.setDouble(11, eve.getValorCerimonia());
+            st.setDouble(12, eve.getLembrancas());
+            st.setDouble(13, eve.getMusica());
+            st.setDouble(14, eve.getConvites());
 
             int linhasAfetadas = st.executeUpdate();
 
             if (linhasAfetadas > 0) {
                 ResultSet rs = st.getGeneratedKeys();
                 if (rs.next()) {
-                    String igreja = rs.getString(1);
-                    eve.setNomeIgreja(igreja);
+                    String EnderecoCerimonia = rs.getString(1);
+                    eve.setEnderecoCerimonia(EnderecoCerimonia);
                 }
                 rs.close();
             } else {
@@ -145,4 +207,5 @@ public class Evento {
     public void setLocacao(String locacao) {
         this.locacao = locacao;
     }
+
 }

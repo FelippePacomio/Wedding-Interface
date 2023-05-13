@@ -255,15 +255,15 @@ public class Tela_Cadastro extends javax.swing.JFrame {
         try {
 
             String email;
-            String nome;
+            String login;
             String senha;
 
             email = jTextField3.getText();
-            nome = jTextField2.getText();
+            login = jTextField2.getText();
             senha = jPasswordField1.getText();
 
             us.setEmail(email);
-            us.setNome(nome);
+            us.setLogin(login);
             us.setSenha(senha);
 
             Usuario user = new Usuario();

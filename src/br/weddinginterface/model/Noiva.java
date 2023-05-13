@@ -1,4 +1,3 @@
-
 package br.weddinginterface.model;
 
 import br.weddinginterface.controller.Conexao;
@@ -6,8 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Noiva extends Conjuge {
- private double vestido, sapato, buque, diaDaNoiva, transporteNoiva;
+public class Noiva {
+
+    private double vestido, sapato, buque, diaDaNoiva, transporteNoiva, acessorios;
 
     public double getVestido() {
         return vestido;
@@ -19,6 +19,14 @@ public class Noiva extends Conjuge {
 
     public double getSapato() {
         return sapato;
+    }
+
+    public double getAcessorios() {
+        return acessorios;
+    }
+
+    public void setAcessorios(double acessorios) {
+        this.acessorios = acessorios;
     }
 
     public void setSapato(double sapato) {
@@ -48,7 +56,7 @@ public class Noiva extends Conjuge {
     public void setTransporteNoiva(double transporteNoiva) {
         this.transporteNoiva = transporteNoiva;
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 3;
@@ -73,12 +81,13 @@ public class Noiva extends Conjuge {
 
     @Override
     public String toString() {
-        return "Noiva{" + "vestido=" + vestido + ", sapato=" + sapato + ", buque=" + buque + ", diaDaNoiva=" + diaDaNoiva + ", transporteNoiva=" + transporteNoiva + '}';
+        return "Noiva{" + "vestido=" + vestido + ", sapato=" + sapato + ", buque=" + buque + ", acessorios" + acessorios
+                + ", diaDaNoiva=" + diaDaNoiva + ", transporteNoiva=" + transporteNoiva + '}';
     }
-    
-    public void insereNoiva(Noiva noiva){
-        
-    Conexao conexao = new Conexao();
+
+    public void insereNoiva(Noiva noiva) {
+
+        Conexao conexao = new Conexao();
 
         PreparedStatement st = null;
 
@@ -87,19 +96,18 @@ public class Noiva extends Conjuge {
             String sql = "";
             sql += "";
             sql += "INSERT INTO tb_noiva"
-                    + "(n_Vestido, n_Sapato, n_Buque, n_DiadaNoiva, n_TransporteNoiva)"
+                    + "(n_vestido, n_sapato, n_buque, n_acessorios, n_diadanoiva, n_transporte)"
                     + "VALUES"
-                    + "(?, ?, ?, ?, ?)";
+                    + "(?, ?, ?, ?, ?, ?)";
 
             st = conexao.getConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
 
             st.setDouble(1, noiva.getVestido());
             st.setDouble(2, noiva.getSapato());
             st.setDouble(3, noiva.getBuque());
-            st.setDouble(4, noiva.getDiaDaNoiva());
-            st.setDouble(5, noiva.getTransporteNoiva());
-            
-            
+            st.setDouble(4, noiva.getAcessorios());
+            st.setDouble(5, noiva.getDiaDaNoiva());
+            st.setDouble(6, noiva.getTransporteNoiva());
 
             int linhasAfetadas = st.executeUpdate();
 
@@ -121,6 +129,5 @@ public class Noiva extends Conjuge {
         }
 
     }
-}
- 
 
+}

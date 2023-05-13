@@ -87,7 +87,7 @@ public class Convidados {
             String sql = "";
             sql += "";
             sql += "INSERT INTO tb_convidados "
-                    + "(c_nome, c_telefone, c_restricao, c_parentesco)"
+                    + "(c_nome, c_telefone, c_parentesco, c_restricao_alimentar)"
                     + "VALUES"
                     + "(?, ?, ?, ?)";
 
@@ -95,9 +95,8 @@ public class Convidados {
 
             st.setString(1, conv.getNome());
             st.setString(2, conv.getTelefone());
-            st.setString(3, conv.getRestricao());
-            st.setString(4, conv.getParentesco());
-            
+            st.setString(3, conv.getParentesco());
+            st.setString(4, conv.getRestricao());
             
 
             int linhasAfetadas = st.executeUpdate();
@@ -132,7 +131,7 @@ public class Convidados {
 
         try {
            
-            String sql = "select * from tb_convidados WHERE c_Nome = ?";
+            String sql = "select * from tb_convidados WHERE c_nome = ?";
 
           
             stmt = con.getConexao().prepareStatement(sql);
@@ -143,10 +142,10 @@ public class Convidados {
             while (resultado.next()) {
             Convidados conv = new Convidados();
 
-                conv.setNome(resultado.getString("c_Nome")); 
-                conv.setTelefone(resultado.getString("c_Telefone"));
-                conv.setRestricao(resultado.getString("c_Restricao")); 
-                conv.setParentesco(resultado.getString("c_Parentesco")); 
+                conv.setNome(resultado.getString("c_nome")); 
+                conv.setTelefone(resultado.getString("c_telefone"));
+                conv.setRestricao(resultado.getString("c_restricao_alimentar")); 
+                conv.setParentesco(resultado.getString("c_parentesco")); 
               
        
                 listaConvidados.add(conv);
