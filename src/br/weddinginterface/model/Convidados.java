@@ -165,6 +165,54 @@ public class Convidados {
         }
     }
       
-      
-}
+    public void atualizaConvidados(Convidados con) throws SQLException {
 
+        Conexao conexao = new Conexao();
+
+        PreparedStatement st = null;
+
+        try {
+
+            String sql = "";
+            sql += "";
+            sql += "UPDATE tb_convidado "
+                    + "SET c_Nome = ?, c_Telefone = ?, c_Restricao = ?,"
+                    + "c_Parentesco = ?";
+
+            st = conexao.getConexao().prepareStatement(sql);
+
+            st.setString(1, con.getNome());
+            st.setString(2, con.getTelefone());
+            st.setString(3, con.getRestricao());
+            st.setString(4, con.getParentesco());
+
+            st.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            st.close();
+        }
+    }
+    
+    public void deletarConvidado(String c_Nome) throws SQLException{
+        
+        Conexao conexao = new Conexao();
+        PreparedStatement st = null;
+        
+        try{
+            String sql = "";
+            sql += "DELETE FROM tb_convidados "
+                    + "WHERE c_Nome = ?";
+            
+            st = conexao.getConexao().prepareStatement(sql);
+            
+            st.setString(1, c_Nome);
+            st.executeUpdate();
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }finally{
+            st.close();
+        }
+    }
+}
