@@ -1,4 +1,3 @@
-
 package br.weddinginterface.model;
 
 import br.weddinginterface.controller.Conexao;
@@ -8,8 +7,9 @@ import java.sql.SQLException;
 import java.util.Objects;
 
 public class Usuario {
-    
-    private String email, login, senha;
+
+    private String email, login;
+    private int senha;
 
     public String getEmail() {
         return email;
@@ -18,21 +18,13 @@ public class Usuario {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
     public String getLogin() {
         return login;
     }
 
     public void setLogin(String login) {
         this.login = login;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
     }
 
     @Override
@@ -59,11 +51,11 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" + "email=" + email + ", login=" + login + ", senha=" + senha + '}';
+        return "Usuario{" + "email=" + email + ", login=" + login + ", senha=" + getSenha() + '}';
     }
-    
-    public void insereUsuario(Usuario user){
-         Conexao conexao = new Conexao();
+
+    public void insereUsuario(Usuario user) {
+        Conexao conexao = new Conexao();
 
         PreparedStatement st = null;
 
@@ -80,15 +72,17 @@ public class Usuario {
 
             st.setString(1, user.getEmail());
             st.setString(2, user.getLogin());
-            st.setString(3, user.getSenha());
+            st.setInt(3, user.getSenha());
 
             int linhasAfetadas = st.executeUpdate();
 
             if (linhasAfetadas > 0) {
                 ResultSet rs = st.getGeneratedKeys();
                 if (rs.next()) {
-                    String login = rs.getString(1);
+                    String login = rs.getString(3);
+                    int senha = rs.getInt(4);
                     user.setLogin(login);
+                    user.setSenha(senha);
                 }
                 rs.close();
             } else {
@@ -103,6 +97,42 @@ public class Usuario {
 
     }
 
+    public boolean checarLogin(String login, int senha){
+
+        Conexao con = new Conexao();
+        con.getConexao();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        boolean check = false;
+
+        try {
+
+            String sql = "select * from tb_usuario WHERE u_login = ? AND u_senha = ?";
+            stmt = con.getConexao().prepareStatement(sql);
+            stmt.setString(1, login);
+            stmt.setInt(2, senha);
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                check = true;
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+
+        } finally {
+
+            con.fechaConexao();
+        }
+        return check;
+    }
+
+    public int getSenha() {
+        return senha;
+    }
+
+    public void setSenha(int senha) {
+        this.senha = senha;
+    }
 
 }
-    

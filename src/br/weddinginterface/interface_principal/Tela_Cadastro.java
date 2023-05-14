@@ -5,6 +5,8 @@
 package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 
 /**
@@ -249,18 +251,20 @@ public class Tela_Cadastro extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jTextField2ActionPerformed
 
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
         Usuario us = new Usuario();
 
         try {
 
             String email;
             String login;
-            String senha;
+            int senha;
 
             email = jTextField3.getText();
             login = jTextField2.getText();
-            senha = jPasswordField1.getText();
+            senha = Integer.parseInt(jPasswordField1.getText());
 
             us.setEmail(email);
             us.setLogin(login);

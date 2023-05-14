@@ -1,17 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
 import java.awt.Color;
-import java.awt.Toolkit;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
-/**
- *
- * @author maay_
- */
 public class Tela_Login extends javax.swing.JFrame {
 
     /**
@@ -219,25 +212,29 @@ public class Tela_Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        // TODO add your handling code here:
-        String senha = jPasswordField1.getText();
+
+        Usuario user = new Usuario();
+
+        String usuario = jTextField1.getText();
+        int senha;
+        senha = Integer.parseInt(jPasswordField1.getText());
 
         Color color_red = new Color(255, 102, 102);
         Color color_green = new Color(102, 255, 102);
         Color color_white = new Color(255, 255, 255);
 
-        if (senha.equals("123456")) {
-
-            jPasswordField1.setBackground(color_green);
-
-        } else if ((!senha.equals("123456"))) {
+        if (!(user.checarLogin(usuario, senha))) {
 
             jPasswordField1.setBackground(color_red);
 
-        } else if (senha.equals("")) {
-            jPasswordField1.setBackground(color_white);
+        } else if ((user.checarLogin(usuario, senha))) {
+
+            jPasswordField1.setBackground(color_green);
+
         } else {
+            jPasswordField1.setBackground(color_white);
         }
+
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
@@ -247,66 +244,54 @@ public class Tela_Login extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
+
+        Usuario user = new Usuario();
+
         String usuario = jTextField1.getText();
+        int senha;
+        senha = Integer.parseInt(jPasswordField1.getText());
 
         Color color_red = new Color(255, 102, 102);
         Color color_green = new Color(102, 255, 102);
         Color color_white = new Color(255, 255, 255);
 
-        if (usuario.equals("@senacsp")) {
-
-            jTextField1.setBackground(color_green);
-
-        } else if (!usuario.equals("@senacsp")) {
+        if (!(user.checarLogin(usuario, senha))) {
 
             jTextField1.setBackground(color_red);
 
-        } else if (usuario.equals("")) {
-            jTextField1.setBackground(color_white);
+        } else if ((user.checarLogin(usuario, senha))) {
+
+            jTextField1.setBackground(color_green);
 
         } else {
+            jTextField1.setBackground(color_white);
         }
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String usuario = jTextField1.getText();
-        String senha = jPasswordField1.getText();
+
+        Usuario user = new Usuario();
+
+        String usuario;
+        int senha;
+
+        usuario = jTextField1.getText();
+        senha = Integer.parseInt(jPasswordField1.getText());
 
         Color color_red = new Color(255, 102, 102);
         Color color_green = new Color(102, 255, 102);
         Color color_white = new Color(255, 255, 255);
 
-        if (usuario.equals("@senacsp") && (senha.equals("123456"))) {
+        if (user.checarLogin(usuario, senha)) {
+            jTextField1.setBackground(color_green);
+            jPasswordField1.setBackground(color_green);
             new Menu_Orcamento().setVisible(true);
             this.dispose();
-        }
-
-        if (usuario.equals("@senacsp")) {
-
-            jTextField1.setBackground(color_green);
-
-        } else if (!usuario.equals("@senacsp")) {
-
-            jTextField1.setBackground(color_red);
-
-        } else if (usuario.equals("")) {
-            jTextField1.setBackground(color_white);
 
         } else {
+            JOptionPane.showMessageDialog(null, "Senha incorreta!");
         }
 
-        if (senha.equals("123456")) {
-
-            jPasswordField1.setBackground(color_green);
-
-        } else if ((!senha.equals("123456"))) {
-
-            jPasswordField1.setBackground(color_red);
-
-        } else if (senha.equals("")) {
-            jPasswordField1.setBackground(color_white);
-        } else {
-        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -323,16 +308,24 @@ public class Tela_Login extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Tela_Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Tela_Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Tela_Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Tela_Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela_Login.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
