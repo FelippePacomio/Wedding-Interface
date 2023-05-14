@@ -12,6 +12,9 @@ import java.awt.Toolkit;
 import br.weddinginterface.controller.Conexao;
 import br.weddinginterface.model.Convidados;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -620,7 +623,11 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
-        new Menu_GerenciarConvidados().setVisible(true);
+        try {
+            new Menu_GerenciarConvidados().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu_AdicionarConvidado.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 

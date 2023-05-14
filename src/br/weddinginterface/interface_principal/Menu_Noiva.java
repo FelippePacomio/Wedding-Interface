@@ -6,6 +6,9 @@ package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
 import java.awt.Color;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -622,7 +625,11 @@ public class Menu_Noiva extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
-        new Menu_GerenciarConvidados().setVisible(true);
+        try {
+            new Menu_GerenciarConvidados().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu_Noiva.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 

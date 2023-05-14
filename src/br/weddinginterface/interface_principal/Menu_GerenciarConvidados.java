@@ -7,6 +7,13 @@ package br.weddinginterface.interface_principal;
 import br.weddinginterface.model.*;
 import java.awt.Color;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import br.weddinginterface.controller.Conexao;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  *
@@ -16,10 +23,35 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
 
     /**
      * Creates new form Menu_Noiva
+     * @throws java.sql.SQLException
+     * 
      */
-    public Menu_GerenciarConvidados() {
+    
+
+    public Menu_GerenciarConvidados() throws SQLException {
         initComponents();
+        DefaultTableModel c_Nome = (DefaultTableModel) jTable1.getModel();
+        jTable1.setRowSorter(new TableRowSorter(c_Nome));
     }
+
+    public void LerTabelaConvidados(String C_Nome) throws SQLException {
+
+        DefaultTableModel c_Nome = (DefaultTableModel) jTable1.getModel();
+        c_Nome.setNumRows(0);
+
+        Convidados conv = new Convidados();
+
+        for (Convidados con : conv.listarConvidados(C_Nome)) {
+
+            c_Nome.addRow(new Object[]{
+                con.getNome(),
+                con.getTelefone(),
+                con.getRestricao(),
+                con.getParentesco()
+            });
+        }
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -62,6 +94,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -451,6 +484,15 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         background.add(jLabel10);
         jLabel10.setBounds(830, 280, 40, 40);
 
+        jButton2.setText("Buscar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        background.add(jButton2);
+        jButton2.setBounds(500, 330, 72, 23);
+
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -525,7 +567,11 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNoivaMouseClicked
 
     private void btnEventoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEventoMouseClicked
-        new Menu_GerenciarConvidados().setVisible(true);
+        try {
+            new Menu_GerenciarConvidados().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu_GerenciarConvidados.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.dispose();
     }//GEN-LAST:event_btnEventoMouseClicked
 
@@ -545,9 +591,21 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
-        new Menu_GerenciarConvidados().setVisible(true);
+        try {
+            new Menu_GerenciarConvidados().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Menu_GerenciarConvidados.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+      try {
+           LerTabelaConvidados(jTextField1.getText());
+       } catch(SQLException ex){
+          
+       }                           
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -642,7 +700,11 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu_GerenciarConvidados().setVisible(true);
+                try {
+                    new Menu_GerenciarConvidados().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Menu_GerenciarConvidados.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -657,6 +719,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
     private javax.swing.JPanel btnNoiva;
     private javax.swing.JPanel btnNoivo;
     private javax.swing.JPanel btnOrcamento;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
