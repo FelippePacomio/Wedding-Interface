@@ -71,10 +71,10 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -427,7 +427,7 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
             }
         });
         background.add(jTextField4);
-        jTextField4.setBounds(970, 340, 220, 20);
+        jTextField4.setBounds(970, 450, 220, 30);
 
         jTextField5.setToolTipText("Informe o número para contato do convidado.");
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
@@ -436,7 +436,7 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
             }
         });
         background.add(jTextField5);
-        jTextField5.setBounds(550, 450, 220, 22);
+        jTextField5.setBounds(550, 450, 220, 30);
 
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Wedding Interface(red).png"))); // NOI18N
@@ -469,22 +469,12 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
             }
         });
         background.add(jTextField6);
-        jTextField6.setBounds(550, 350, 220, 20);
+        jTextField6.setBounds(550, 350, 220, 30);
 
         jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel10.setText("RESTRIÇÃO ALIMENTAR");
         background.add(jLabel10);
         jLabel10.setBounds(970, 320, 220, 21);
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox2.setToolTipText("Informe o grau de parentesco do convidado.");
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
-        background.add(jComboBox2);
-        jComboBox2.setBounds(970, 450, 220, 22);
 
         jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/carteira-de-identidade.png"))); // NOI18N
         background.add(jLabel34);
@@ -497,6 +487,15 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
         jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/prato.png"))); // NOI18N
         background.add(jLabel37);
         jLabel37.setBounds(930, 320, 32, 40);
+
+        jTextField7.setToolTipText("Informe as restrições alimentares de convidado (se houver).");
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+        background.add(jTextField7);
+        jTextField7.setBounds(970, 340, 220, 30);
 
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -598,10 +597,6 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jTextField6ActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
-
     private void btnEventoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEventoMouseClicked
         new Menu_Evento().setVisible(true);
         this.dispose();
@@ -639,17 +634,17 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
             String Nome;
             String Telefone;
             String Restricao;
-            // String Parentesco;
+            String Parentesco;
 
             Nome = jTextField6.getText();
             Telefone = jTextField5.getText();
-            Restricao = jTextField4.getText();
-            // Parentesco = jTextField4.getText(); // aqui é combobox
+            Restricao = jTextField7.getText();
+            Parentesco = jTextField4.getText();
 
             conv.setNome(Nome);
             conv.setTelefone(Telefone);
             conv.setRestricao(Restricao);
-            // conv.setParentesco(Parentesco); // mudar aqui tbm
+            conv.setParentesco(Parentesco);
 
             conv.insereConvidados(conv);
 
@@ -661,37 +656,9 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void adicionarConvidado() {
-        Conexao conexao = new Conexao();
-        PreparedStatement st = null;
-        String sql = "INSERT INTO tb_convidados "
-                + "(c_Nome, c_Telefone, c_Restricao, c_Parentesco)"
-                + "VALUES"
-                + "(?, ?, ?, ?)";
-        try {
-            st = conexao.getConexao().prepareStatement(sql);
-            st.setString(1, jTextField6.getText());
-            st.setString(2, jTextField5.getText());
-            st.setString(3, jTextField4.getText());
-            st.setString(4, jComboBox2.getItemAt(WIDTH));
-            if ((jTextField6.getText() == null) || (jTextField5.getText() == null) || (jTextField4.getText() == null)) {
-                JOptionPane.showMessageDialog(null, "Preencha todos os campos obrigatórios");
-            } else {
-                int adicionado = st.executeUpdate();
-                if (adicionado > 0) {
-                    JOptionPane.showMessageDialog(null, "Convidado adicionado com sucesso!");
-
-                    jTextField6.setText(null);
-                    jTextField5.setText(null);
-                    jTextField4.setText(null);
-
-                }
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-
-    }
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -770,7 +737,6 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
     private javax.swing.JPanel btnNoivo;
     private javax.swing.JPanel btnOrcamento;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -796,5 +762,6 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 }

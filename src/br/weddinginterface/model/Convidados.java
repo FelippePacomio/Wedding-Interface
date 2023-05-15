@@ -175,9 +175,9 @@ public class Convidados {
 
             String sql = "";
             sql += "";
-            sql += "UPDATE tb_convidado "
-                    + "SET c_Nome = ?, c_Telefone = ?, c_Restricao = ?,"
-                    + "c_Parentesco = ?";
+            sql += "UPDATE tb_convidados "
+                    + "SET c_nome = ?, c_telefone = ?, c_restricao_alimentar = ?,"
+                    + "c_parentesco = ?";
 
             st = conexao.getConexao().prepareStatement(sql);
 
@@ -203,7 +203,7 @@ public class Convidados {
         try{
             String sql = "";
             sql += "DELETE FROM tb_convidados "
-                    + "WHERE c_Nome = ?";
+                    + "WHERE c_nome = ?";
             
             st = conexao.getConexao().prepareStatement(sql);
             

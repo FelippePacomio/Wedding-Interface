@@ -634,10 +634,10 @@ public class Menu_Noiva extends javax.swing.JFrame {
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Noiva noi = new Noiva();
 
         try {
-
+            
+            Noiva noiva = new Noiva();
             double vestido;
             double sapato;
             double buque;
@@ -650,14 +650,13 @@ public class Menu_Noiva extends javax.swing.JFrame {
             diaDaNoiva = Double.parseDouble(jTextField6.getText());
             transporteNoiva = Double.parseDouble(jTextField7.getText());
 
-            noi.setVestido(vestido);
-            noi.setSapato(sapato);
-            noi.setBuque(buque);
-            noi.setDiaDaNoiva(diaDaNoiva);
-            noi.setTransporteNoiva(transporteNoiva);
+            noiva.setVestido(vestido);
+            noiva.setSapato(sapato);
+            noiva.setBuque(buque);
+            noiva.setDiaDaNoiva(diaDaNoiva);
+            noiva.setTransporteNoiva(transporteNoiva);
 
-
-            noi.insereNoiva(noi);
+            noiva.insereNoiva(noiva);
 
             JOptionPane.showMessageDialog(null, "Noiva inserida com sucesso!");
         } catch (Exception e) {

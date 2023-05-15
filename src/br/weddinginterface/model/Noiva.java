@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 public class Noiva {
 
+    Noiva noiva = new Noiva();
     private double vestido, sapato, buque, diaDaNoiva, transporteNoiva, acessorios;
 
     public double getVestido() {
@@ -130,4 +131,11 @@ public class Noiva {
 
     }
 
+    public double gastoNoivaTotal(double gastoNoiva) {
+
+        gastoNoiva = noiva.getAcessorios() + noiva.getBuque() + noiva.getDiaDaNoiva()
+                + noiva.getSapato() + noiva.getTransporteNoiva() + noiva.getVestido();
+
+        return gastoNoiva;
+    }
 }

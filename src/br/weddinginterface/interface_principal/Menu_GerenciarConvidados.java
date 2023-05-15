@@ -16,7 +16,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-
 /**
  *
  * @author Tips
@@ -25,11 +24,10 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
 
     /**
      * Creates new form Menu_Noiva
+     *
      * @throws java.sql.SQLException
-     * 
+     *
      */
-    
-
     public Menu_GerenciarConvidados() throws SQLException {
         initComponents();
         DefaultTableModel c_Nome = (DefaultTableModel) jTable1.getModel();
@@ -53,7 +51,6 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
             });
         }
     }
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -96,6 +93,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -474,14 +472,14 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         background.add(jLabel9);
         jLabel9.setBounds(390, 280, 32, 40);
 
-        jButton2.setText("Remover");
+        jButton2.setText("Alterar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         background.add(jButton2);
-        jButton2.setBounds(790, 330, 90, 23);
+        jButton2.setBounds(1070, 330, 90, 23);
 
         jButton3.setText("Buscar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -491,6 +489,15 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         });
         background.add(jButton3);
         jButton3.setBounds(500, 330, 72, 23);
+
+        jButton4.setText("Remover");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        background.add(jButton4);
+        jButton4.setBounds(790, 330, 90, 23);
 
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -599,31 +606,40 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-   Conexao conexao = new Conexao();
-        int confirma = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja remover este convidado?");
-        if(confirma==JOptionPane.YES_OPTION){
-            String sql = "DELETE FROM tb_convidados WHERE c_Nome = ?";
-            try{
-                PreparedStatement stmt = null;
-                stmt = conexao.getConexao().prepareStatement(sql);
-                stmt.setString(1, jTextField1.getText());
-                int apagado = stmt.executeUpdate();
-                if(apagado>0){
-                    JOptionPane.showMessageDialog(null,"Convidado Removido com Sucesso!");
-                }
-            }catch(Exception e){
-                JOptionPane.showMessageDialog(null, e);
-            }
-        }                       
+        int confirma = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja alterar este convidado?");
+        if (confirma == JOptionPane.YES_OPTION) {
+            new Menu_AdicionarConvidado().setVisible(true);
+            this.dispose();
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         try {
-           LerTabelaConvidados(jTextField1.getText());
-       } catch(SQLException ex){
-          
-       }                          
+            LerTabelaConvidados(jTextField1.getText());
+        } catch (SQLException ex) {
+
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        Conexao conexao = new Conexao();
+        int confirma = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja remover este convidado?");
+        if (confirma == JOptionPane.YES_OPTION) {
+            String sql = "DELETE FROM tb_convidados WHERE c_Nome = ?";
+            try {
+                PreparedStatement stmt = null;
+                stmt = conexao.getConexao().prepareStatement(sql);
+                stmt.setString(1, jTextField1.getText());
+                int apagado = stmt.executeUpdate();
+                if (apagado > 0) {
+                    JOptionPane.showMessageDialog(null, "Convidado Removido com Sucesso!");
+                }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, e);
+            }
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -739,6 +755,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
     private javax.swing.JPanel btnOrcamento;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

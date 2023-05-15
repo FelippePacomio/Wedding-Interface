@@ -4,6 +4,7 @@ import br.weddinginterface.model.*;
 import java.awt.Color;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import java.awt.event.KeyEvent;
 
 public class Tela_Login extends javax.swing.JFrame {
 
@@ -212,7 +213,21 @@ public class Tela_Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        Usuario user = new Usuario();
 
+        Color color_green = new Color(102, 255, 102);
+        Color color_red = new Color(255, 102, 102);
+        Color color_white = new Color(255, 255, 255);
+        int senha;
+        senha = Integer.parseInt(jPasswordField1.getText());
+
+        if (user.checarSenha(senha)) {
+            jPasswordField1.setBackground(color_green);
+        } else if (!(user.checarSenha(senha))) {
+            jPasswordField1.setBackground(color_red);
+        } else {
+            jPasswordField1.setBackground(color_white);
+        }
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
@@ -222,6 +237,22 @@ public class Tela_Login extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
+        Usuario user = new Usuario();
+
+        Color color_green = new Color(102, 255, 102);
+        Color color_red = new Color(255, 102, 102);
+        Color color_white = new Color(255, 255, 255);
+
+        String usuario;
+        usuario = jTextField1.getText();
+
+        if (user.checarLogin(usuario)) {
+            jTextField1.setBackground(color_green);
+        } else if (!(user.checarLogin(usuario))) {
+            jTextField1.setBackground(color_red);
+        } else {
+            jTextField1.setBackground(color_white);
+        }
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -238,13 +269,30 @@ public class Tela_Login extends javax.swing.JFrame {
         Color color_green = new Color(102, 255, 102);
         Color color_white = new Color(255, 255, 255);
 
-        if (user.checarLogin(usuario, senha)) {
+        if (user.checarLoginESenha(usuario, senha)) {
             new Menu_Orcamento().setVisible(true);
             this.dispose();
 
-        } else {
-            JOptionPane.showMessageDialog(null, "Login e/ou senha incorretos!");
         }
+
+        if (user.checarLogin(usuario)) {
+            jTextField1.setBackground(color_green);
+        } else if (!(user.checarLogin(usuario))) {
+            jTextField1.setBackground(color_red);
+            JOptionPane.showMessageDialog(null, "Login incorreto!");
+        } else {
+            jTextField1.setBackground(color_white);
+        }
+
+        if (user.checarSenha(senha)) {
+            jPasswordField1.setBackground(color_green);
+        } else if (!(user.checarSenha(senha))) {
+            jPasswordField1.setBackground(color_red);
+            JOptionPane.showMessageDialog(null, "Senha incorreta!");
+        } else {
+            jPasswordField1.setBackground(color_white);
+        }
+
 
     }//GEN-LAST:event_jButton1ActionPerformed
 

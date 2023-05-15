@@ -519,7 +519,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     private void btnEventoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEventoMousePressed
 
     }//GEN-LAST:event_btnEventoMousePressed
-
+    
     Color mySelect = new Color(255, 161, 170);
     Color myUnSelect = new Color(253, 214, 218);
     Color mySubUnSelect = new Color(232, 194, 194);
@@ -619,22 +619,28 @@ public class Menu_Orcamento extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Orcamento orc = new Orcamento();
+       Orcamento orc = new Orcamento();
+        Noiva noiva = new Noiva();
 
         try {
 
             double gastoPrevisto;
+            double gastoNoiva = 0.00;
+            gastoNoiva = noiva.gastoNoivaTotal(gastoNoiva);
+
 
             gastoPrevisto = Double.parseDouble(jTextField1.getText());
 
             orc.setGastoEvento(orc.gastoEventoTotal());
-            orc.setGastoNoiva(orc.gastoNoivaTotal());
+            orc.setGastoNoiva(noiva.gastoNoivaTotal(gastoNoiva));
             orc.setGastoNoivo(orc.gastoNoivoTotal());
             orc.setGastoPrevisto(gastoPrevisto);
             orc.setGastoTotal(orc.gastoCompleto());
             orc.insereOrcamento(orc);
 
-            JOptionPane.showMessageDialog(null, "Orçamento inserido com sucesso!");
+            jLabel19.setText(String.valueOf(gastoNoiva));
+
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

@@ -22,6 +22,14 @@ public class Usuario {
     public String getLogin() {
         return login;
     }
+    
+        public int getSenha() {
+        return senha;
+    }
+
+    public void setSenha(int senha) {
+        this.senha = senha;
+    }
 
     public void setLogin(String login) {
         this.login = login;
@@ -97,7 +105,7 @@ public class Usuario {
 
     }
 
-    public boolean checarLogin(String login, int senha){
+    public boolean checarLoginESenha(String login, int senha){
 
         Conexao con = new Conexao();
         con.getConexao();
@@ -115,6 +123,67 @@ public class Usuario {
 
             if (rs.next()) {
                 check = true;
+                
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+
+        } finally {
+
+            con.fechaConexao();
+        }
+        return check;
+    }
+    
+    public boolean checarLogin(String login){
+
+        Conexao con = new Conexao();
+        con.getConexao();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        boolean check = false;
+
+        try {
+
+            String sql = "select * from tb_usuario WHERE u_login = ?";
+            stmt = con.getConexao().prepareStatement(sql);
+            stmt.setString(1, login);
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                check = true;
+                
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+
+        } finally {
+
+            con.fechaConexao();
+        }
+        return check;
+    }
+    
+    public boolean checarSenha(int senha){
+
+        Conexao con = new Conexao();
+        con.getConexao();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        boolean check = false;
+
+        try {
+
+            String sql = "select * from tb_usuario WHERE u_senha = ?";
+            stmt = con.getConexao().prepareStatement(sql);
+            stmt.setInt(1, senha);
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                check = true;
+                
             }
 
         } catch (SQLException e) {
@@ -127,12 +196,6 @@ public class Usuario {
         return check;
     }
 
-    public int getSenha() {
-        return senha;
-    }
 
-    public void setSenha(int senha) {
-        this.senha = senha;
-    }
 
 }
