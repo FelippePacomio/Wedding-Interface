@@ -625,11 +625,9 @@ public class Menu_Noiva extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
-        try {
+
             new Menu_GerenciarConvidados().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(Menu_Noiva.class.getName()).log(Level.SEVERE, null, ex);
-        }
+   
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 

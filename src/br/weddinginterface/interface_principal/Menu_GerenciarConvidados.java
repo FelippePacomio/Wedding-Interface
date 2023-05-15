@@ -573,11 +573,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNoivaMouseClicked
 
     private void btnEventoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEventoMouseClicked
-        try {
-            new Menu_GerenciarConvidados().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(Menu_GerenciarConvidados.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        new Menu_GerenciarConvidados().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnEventoMouseClicked
 
@@ -597,11 +593,8 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
-        try {
-            new Menu_GerenciarConvidados().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(Menu_GerenciarConvidados.class.getName()).log(Level.SEVERE, null, ex);
-        }
+
+        new Menu_GerenciarConvidados().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 

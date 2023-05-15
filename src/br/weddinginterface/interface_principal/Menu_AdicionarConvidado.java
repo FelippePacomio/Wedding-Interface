@@ -618,11 +618,8 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
-        try {
-            new Menu_GerenciarConvidados().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(Menu_AdicionarConvidado.class.getName()).log(Level.SEVERE, null, ex);
-        }
+
+        new Menu_GerenciarConvidados().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 

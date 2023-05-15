@@ -610,12 +610,10 @@ public class Menu_Noivo extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
-        try {
+
             new Menu_GerenciarConvidados().setVisible(true);
             this.dispose();
-        } catch (SQLException ex) {
-            Logger.getLogger(Menu_Noivo.class.getName()).log(Level.SEVERE, null, ex);
-        }
+  
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
