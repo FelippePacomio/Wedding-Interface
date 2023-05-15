@@ -6,7 +6,6 @@ package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
 import java.awt.Color;
-import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;

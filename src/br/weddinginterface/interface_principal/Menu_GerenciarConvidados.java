@@ -16,23 +16,24 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Tips
- */
 public class Menu_GerenciarConvidados extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Menu_Noiva
-     *
-     * @throws java.sql.SQLException
-     *
-     */
-    public Menu_GerenciarConvidados() throws SQLException {
+    public Menu_GerenciarConvidados() {
         initComponents();
         DefaultTableModel c_Nome = (DefaultTableModel) jTable1.getModel();
         jTable1.setRowSorter(new TableRowSorter(c_Nome));
     }
+
+    public Menu_GerenciarConvidados(boolean throwSQLException) throws SQLException {
+        initComponents();
+        DefaultTableModel c_Nome = (DefaultTableModel) jTable1.getModel();
+        jTable1.setRowSorter(new TableRowSorter(c_Nome));
+        
+        if (throwSQLException) {
+            throw new SQLException("Exemplo de exceção SQLException");
+        }
+    }
+
 
     public void LerTabelaConvidados(String C_Nome) throws SQLException {
 
@@ -727,12 +728,10 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                try {
+               
                     new Menu_GerenciarConvidados().setVisible(true);
-                } catch (SQLException ex) {
-                    Logger.getLogger(Menu_GerenciarConvidados.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
+               
+                }  
         });
     }
 
