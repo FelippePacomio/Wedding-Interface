@@ -6,9 +6,6 @@ package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
 import java.awt.Color;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -57,7 +54,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jProgressBar1 = new javax.swing.JProgressBar();
+        barraProgresso = new javax.swing.JProgressBar();
         jTextField1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -411,8 +408,11 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Wedding Interface(red).png"))); // NOI18N
         background.add(jLabel24);
         jLabel24.setBounds(300, 100, 1133, 164);
-        background.add(jProgressBar1);
-        jProgressBar1.setBounds(420, 300, 810, 30);
+
+        barraProgresso.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        barraProgresso.setStringPainted(true);
+        background.add(barraProgresso);
+        barraProgresso.setBounds(430, 300, 810, 30);
 
         jTextField1.setToolTipText("Insira o gasto previsto para o casamento.");
         jTextField1.setMinimumSize(new java.awt.Dimension(100, 30));
@@ -484,7 +484,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
             }
         });
         background.add(jButton1);
-        jButton1.setBounds(770, 700, 110, 23);
+        jButton1.setBounds(770, 700, 110, 22);
 
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/real-brasileiro.png"))); // NOI18N
@@ -519,7 +519,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     private void btnEventoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEventoMousePressed
 
     }//GEN-LAST:event_btnEventoMousePressed
-    
+
     Color mySelect = new Color(255, 161, 170);
     Color myUnSelect = new Color(253, 214, 218);
     Color mySubUnSelect = new Color(232, 194, 194);
@@ -605,9 +605,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
-
-            new Menu_GerenciarConvidados().setVisible(true);
-       
+        new Menu_GerenciarConvidados().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 
@@ -713,6 +711,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
     private javax.swing.JPanel barraMenu;
+    private javax.swing.JProgressBar barraProgresso;
     private javax.swing.JPanel btnAdicionarConvidado;
     private javax.swing.JPanel btnConvidados;
     private javax.swing.JPanel btnEvento;
@@ -749,7 +748,6 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

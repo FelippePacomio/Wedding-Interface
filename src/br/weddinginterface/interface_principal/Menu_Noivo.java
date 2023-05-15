@@ -6,9 +6,7 @@ package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
 import java.awt.Color;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -396,8 +394,6 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jTextField2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField2.setToolTipText("Informe o valor gasto com o sapato. (Opcional)");
-        jTextField2.setMaximumSize(new java.awt.Dimension(150, 30));
-        jTextField2.setMinimumSize(new java.awt.Dimension(150, 30));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -410,13 +406,6 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jTextField3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField3.setToolTipText("Informe o valor gasto com o terno. (Opcional)");
         jTextField3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jTextField3.setMaximumSize(new java.awt.Dimension(150, 30));
-        jTextField3.setMinimumSize(new java.awt.Dimension(150, 30));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
         background.add(jTextField3);
         jTextField3.setBounds(430, 390, 220, 30);
 
@@ -454,7 +443,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField7.setToolTipText("Informe o valor gasto com o transporte. (Opcional)");
         background.add(jTextField7);
-        jTextField7.setBounds(860, 492, 220, 30);
+        jTextField7.setBounds(860, 490, 220, 30);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel11);
@@ -484,24 +473,29 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("SALVAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         background.add(jButton1);
-        jButton1.setBounds(720, 700, 110, 23);
+        jButton1.setBounds(720, 700, 110, 22);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/terno.png"))); // NOI18N
         background.add(jLabel9);
-        jLabel9.setBounds(390, 370, 37, 40);
+        jLabel9.setBounds(390, 380, 37, 40);
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/weddinginterface/imagens/view/gravata-borboleta.png"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gravata-borboleta.png"))); // NOI18N
         background.add(jLabel17);
-        jLabel17.setBounds(390, 590, 40, 40);
+        jLabel17.setBounds(390, 600, 40, 40);
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/barbearia.png"))); // NOI18N
         background.add(jLabel18);
-        jLabel18.setBounds(820, 370, 50, 50);
+        jLabel18.setBounds(820, 380, 50, 50);
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/carro-de-casamento.png"))); // NOI18N
         background.add(jLabel19);
-        jLabel19.setBounds(820, 470, 50, 50);
+        jLabel19.setBounds(820, 480, 50, 50);
 
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Wedding Interface(red).png"))); // NOI18N
@@ -610,15 +604,39 @@ public class Menu_Noivo extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
-
-            new Menu_GerenciarConvidados().setVisible(true);
-            this.dispose();
-  
+        new Menu_GerenciarConvidados().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        Noivo noi = new Noivo();
+
+        try {
+
+            double terno;
+            double sapato;
+            double diaDoNoivo;
+            double transporteNoivo;
+
+            terno = Double.parseDouble(jTextField3.getText());
+            sapato = Double.parseDouble(jTextField2.getText());
+            diaDoNoivo = Double.parseDouble(jTextField6.getText());
+            transporteNoivo = Double.parseDouble(jTextField7.getText());
+
+            noi.setTerno(terno);
+            noi.setSapato(sapato);
+            noi.setDiaDoNoivo(diaDoNoivo);
+            noi.setTransporteNoivo(transporteNoivo);
+
+
+            noi.insereNoivo(noi);
+
+            JOptionPane.showMessageDialog(null, "Noivo inserido com sucesso!");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -645,10 +663,6 @@ public class Menu_Noivo extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Menu_Noivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
