@@ -7,6 +7,7 @@ package br.weddinginterface.interface_principal;
 import br.weddinginterface.model.*;
 import java.awt.Color;
 import java.awt.Toolkit;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -199,65 +200,59 @@ public class Tela_Login extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-        String usuario = jTextField1.getText();
+        Usuario user = new Usuario();
 
-        Color color_red = new Color(255, 102, 102);
         Color color_green = new Color(102, 255, 102);
+        Color color_red = new Color(255, 102, 102);
         Color color_white = new Color(255, 255, 255);
 
-        if (usuario.equals("@senacsp")) {
+        String usuario;
+        usuario = jTextField1.getText();
 
+        if (user.checarLogin(usuario)) {
             jTextField1.setBackground(color_green);
-
-        } else if (!usuario.equals("@senacsp")) {
-
+        } else if (!(user.checarLogin(usuario))) {
             jTextField1.setBackground(color_red);
-
-        } else if (usuario.equals("")) {
-            jTextField1.setBackground(color_white);
-
         } else {
+            jTextField1.setBackground(color_white);
         }
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String usuario = jTextField1.getText();
-        String senha = jPasswordField1.getText();
+        Usuario user = new Usuario();
+
+        String usuario;
+        int senha;
+
+        usuario = jTextField1.getText();
+        senha = Integer.parseInt(jPasswordField1.getText());
 
         Color color_red = new Color(255, 102, 102);
         Color color_green = new Color(102, 255, 102);
         Color color_white = new Color(255, 255, 255);
 
-        if (usuario.equals("@senacsp") && (senha.equals("123456"))) {
+        if (user.checarLoginESenha(usuario, senha)) {
             new Menu_Orcamento().setVisible(true);
             this.dispose();
+
         }
 
-        if (usuario.equals("@senacsp")) {
-
+        if (user.checarLogin(usuario)) {
             jTextField1.setBackground(color_green);
-
-        } else if (!usuario.equals("@senacsp")) {
-
+        } else if (!(user.checarLogin(usuario))) {
             jTextField1.setBackground(color_red);
-
-        } else if (usuario.equals("")) {
-            jTextField1.setBackground(color_white);
-
+            JOptionPane.showMessageDialog(null, "Login incorreto!");
         } else {
+            jTextField1.setBackground(color_white);
         }
 
-        if (senha.equals("123456")) {
-
+        if (user.checarSenha(senha)) {
             jPasswordField1.setBackground(color_green);
-
-        } else if ((!senha.equals("123456"))) {
-
+        } else if (!(user.checarSenha(senha))) {
             jPasswordField1.setBackground(color_red);
-
-        } else if (senha.equals("")) {
-            jPasswordField1.setBackground(color_white);
+            JOptionPane.showMessageDialog(null, "Senha incorreta!");
         } else {
+            jPasswordField1.setBackground(color_white);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
