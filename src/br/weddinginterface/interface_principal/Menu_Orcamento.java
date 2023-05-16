@@ -6,6 +6,7 @@ package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
 import java.awt.Color;
+import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -13,6 +14,9 @@ import javax.swing.JPanel;
  *
  * @author Tips
  */
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class Menu_Orcamento extends javax.swing.JFrame {
 
     /**
@@ -71,6 +75,8 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -471,6 +477,13 @@ public class Menu_Orcamento extends javax.swing.JFrame {
 
         jLabel19.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel19.setText("R$ 0,00");
+        jLabel19.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                jLabel19InputMethodTextChanged(evt);
+            }
+        });
         background.add(jLabel19);
         jLabel19.setBounds(830, 410, 100, 20);
 
@@ -484,7 +497,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
             }
         });
         background.add(jButton1);
-        jButton1.setBounds(770, 700, 110, 22);
+        jButton1.setBounds(770, 700, 110, 23);
 
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/real-brasileiro.png"))); // NOI18N
@@ -510,6 +523,26 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/financeiro.png"))); // NOI18N
         background.add(jLabel28);
         jLabel28.setBounds(790, 510, 40, 50);
+
+        jTextField2.setToolTipText("Insira o gasto previsto para o casamento.");
+        jTextField2.setMinimumSize(new java.awt.Dimension(100, 30));
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        background.add(jTextField2);
+        jTextField2.setBounds(510, 410, 180, 30);
+
+        jTextField3.setToolTipText("Insira o gasto previsto para o casamento.");
+        jTextField3.setMinimumSize(new java.awt.Dimension(100, 30));
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+        background.add(jTextField3);
+        jTextField3.setBounds(510, 410, 180, 30);
 
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
 
@@ -609,38 +642,38 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-       Orcamento orc = new Orcamento();
-        Noiva noiva = new Noiva();
 
         try {
+            double gastoNoiva = Orcamento.instancia.getGastoNoiva();
+            DecimalFormat decimalFormat = new DecimalFormat("#.00");
+            String gastoFormatado = decimalFormat.format(gastoNoiva);
 
-            double gastoPrevisto;
-            double gastoNoiva = 0.00;
-            gastoNoiva = noiva.gastoNoivaTotal(gastoNoiva);
-
-
-            gastoPrevisto = Double.parseDouble(jTextField1.getText());
-
-            orc.setGastoEvento(orc.gastoEventoTotal());
-            orc.setGastoNoiva(noiva.gastoNoivaTotal(gastoNoiva));
-            orc.setGastoNoivo(orc.gastoNoivoTotal());
-            orc.setGastoPrevisto(gastoPrevisto);
-            orc.setGastoTotal(orc.gastoCompleto());
-            orc.insereOrcamento(orc);
-
-            jLabel19.setText(String.valueOf(gastoNoiva));
-
+            jLabel19.setText("R$ " + gastoFormatado);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jLabel19InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jLabel19InputMethodTextChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel19InputMethodTextChanged
 
     /**
      * @param args the command line arguments
@@ -730,7 +763,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
+    public javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -749,5 +782,16 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JLabel getjLabel19() {
+        return jLabel19;
+    }
+
+    public void setjLabel19(javax.swing.JLabel jLabel19) {
+        this.jLabel19 = jLabel19;
+    }
+
 }

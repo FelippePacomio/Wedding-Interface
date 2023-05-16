@@ -7,8 +7,7 @@ import java.sql.SQLException;
 
 public class Noiva {
 
-    Noiva noiva = new Noiva();
-    private double vestido, sapato, buque, diaDaNoiva, transporteNoiva, acessorios;
+    private double vestido, sapato, buque, diaDaNoiva, transporteNoiva, acessorios, gastoNoivaTotal;
 
     public double getVestido() {
         return vestido;
@@ -16,6 +15,14 @@ public class Noiva {
 
     public void setVestido(double vestido) {
         this.vestido = vestido;
+    }
+
+    public double getGastoNoivaTotal() {
+        return gastoNoivaTotal;
+    }
+
+    public void setGastoNoivaTotal(double gastoNoivaTotal) {
+        this.gastoNoivaTotal = gastoNoivaTotal;
     }
 
     public double getSapato() {
@@ -119,6 +126,9 @@ public class Noiva {
                     noiva.setVestido(vestido);
                 }
                 rs.close();
+
+                
+
             } else {
                 throw new SQLException("Erro inesperado! Nenhuma linha afetada!");
             }
@@ -131,11 +141,5 @@ public class Noiva {
 
     }
 
-    public double gastoNoivaTotal(double gastoNoiva) {
 
-        gastoNoiva = noiva.getAcessorios() + noiva.getBuque() + noiva.getDiaDaNoiva()
-                + noiva.getSapato() + noiva.getTransporteNoiva() + noiva.getVestido();
-
-        return gastoNoiva;
-    }
 }

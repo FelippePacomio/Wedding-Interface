@@ -15,6 +15,8 @@ import javax.swing.JPanel;
  */
 public class Menu_Noiva extends javax.swing.JFrame {
 
+    Noiva noiva = new Noiva();
+
     /**
      * Creates new form Menu_Noiva
      */
@@ -579,10 +581,12 @@ public class Menu_Noiva extends javax.swing.JFrame {
 
     private void btnOrcamentoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrcamentoMouseEntered
         btnOrcamento.setBackground(mySelect);
+
     }//GEN-LAST:event_btnOrcamentoMouseEntered
 
     private void btnOrcamentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrcamentoMouseExited
         btnOrcamento.setBackground(myUnSelect);
+
     }//GEN-LAST:event_btnOrcamentoMouseExited
 
     private void btnAdicionarConvidadoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdicionarConvidadoMouseEntered
@@ -626,10 +630,11 @@ public class Menu_Noiva extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
 
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
         try {
-            
-            Noiva noiva = new Noiva();
+
             double vestido;
             double sapato;
             double buque;
@@ -647,8 +652,11 @@ public class Menu_Noiva extends javax.swing.JFrame {
             noiva.setBuque(buque);
             noiva.setDiaDaNoiva(diaDaNoiva);
             noiva.setTransporteNoiva(transporteNoiva);
-
             noiva.insereNoiva(noiva);
+            //double gastoNoivaTot = noiva.getAcessorios() + noiva.getBuque() + noiva.getDiaDaNoiva()
+            //       + noiva.getSapato() + noiva.getTransporteNoiva() + noiva.getVestido();
+            Orcamento.instancia.setGastoNoiva(vestido + sapato + buque + diaDaNoiva + transporteNoiva);
+
 
             JOptionPane.showMessageDialog(null, "Noiva inserida com sucesso!");
         } catch (Exception e) {
@@ -738,4 +746,5 @@ public class Menu_Noiva extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
+
 }

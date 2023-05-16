@@ -8,6 +8,8 @@ import java.util.Objects;
 
 public class Orcamento {
 
+    public static Orcamento instancia;
+    
     private double gastoPrevisto, gastoNoiva, gastoNoivo, gastoEvento, gastoTotal;
 
     public double getGastoPrevisto() {
