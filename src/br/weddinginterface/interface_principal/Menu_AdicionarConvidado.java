@@ -497,7 +497,7 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
         background.add(jTextField7);
         jTextField7.setBounds(970, 340, 220, 30);
 
-        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 10, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

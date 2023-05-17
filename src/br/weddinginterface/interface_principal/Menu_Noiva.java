@@ -15,7 +15,7 @@ import javax.swing.JPanel;
  */
 public class Menu_Noiva extends javax.swing.JFrame {
 
-    Noiva noiva = new Noiva();
+
 
     /**
      * Creates new form Menu_Noiva
@@ -393,7 +393,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("VESTIDO");
         background.add(jLabel5);
-        jLabel5.setBounds(430, 370, 62, 21);
+        jLabel5.setBounds(520, 370, 62, 21);
 
         jTextField2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -404,62 +404,62 @@ public class Menu_Noiva extends javax.swing.JFrame {
             }
         });
         background.add(jTextField2);
-        jTextField2.setBounds(430, 492, 220, 30);
+        jTextField2.setBounds(520, 490, 220, 30);
 
         jTextField3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField3.setToolTipText("Informe o valor gasto com vestido. (Opcional).");
         jTextField3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         background.add(jTextField3);
-        jTextField3.setBounds(430, 390, 220, 30);
+        jTextField3.setBounds(520, 390, 220, 30);
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("SAPATO");
         background.add(jLabel6);
-        jLabel6.setBounds(430, 472, 61, 21);
+        jLabel6.setBounds(520, 470, 61, 21);
 
         jTextField4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField4.setToolTipText("Informe o valor gasto com o buquê. (Opcional)");
         background.add(jTextField4);
-        jTextField4.setBounds(430, 600, 220, 30);
+        jTextField4.setBounds(520, 600, 220, 30);
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("DIA DA NOIVA");
         background.add(jLabel7);
-        jLabel7.setBounds(860, 470, 110, 21);
+        jLabel7.setBounds(930, 470, 110, 21);
 
         jTextField5.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField5.setToolTipText("Informe o valor gasto com acessórios. (Opcional)");
         background.add(jTextField5);
-        jTextField5.setBounds(860, 390, 220, 30);
+        jTextField5.setBounds(930, 390, 220, 30);
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("ACESSÓRIOS");
         background.add(jLabel8);
-        jLabel8.setBounds(860, 370, 95, 21);
+        jLabel8.setBounds(930, 370, 95, 21);
 
         jTextField6.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField6.setToolTipText("Informe o valor gasto com maquiagem, cabelo, etc. (Opcional)");
         background.add(jTextField6);
-        jTextField6.setBounds(860, 490, 220, 30);
+        jTextField6.setBounds(930, 490, 220, 30);
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel9.setText("BUQUÊ");
         background.add(jLabel9);
-        jLabel9.setBounds(430, 580, 50, 21);
+        jLabel9.setBounds(520, 580, 50, 21);
 
         jTextField7.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField7.setToolTipText("Informe o valor gasto com transporte. (Opcional)");
         background.add(jTextField7);
-        jTextField7.setBounds(860, 600, 220, 30);
+        jTextField7.setBounds(930, 600, 220, 30);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel11);
@@ -483,7 +483,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("TRANSPORTE");
         background.add(jLabel10);
-        jLabel10.setBounds(860, 580, 94, 21);
+        jLabel10.setBounds(930, 580, 94, 21);
 
         jButton1.setBackground(new java.awt.Color(204, 0, 51));
         jButton1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -495,31 +495,31 @@ public class Menu_Noiva extends javax.swing.JFrame {
             }
         });
         background.add(jButton1);
-        jButton1.setBounds(720, 700, 110, 22);
+        jButton1.setBounds(760, 700, 110, 23);
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/vestido-de-casamento.png"))); // NOI18N
         background.add(jLabel17);
-        jLabel17.setBounds(390, 380, 43, 40);
+        jLabel17.setBounds(480, 380, 43, 40);
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/salto-alto.png"))); // NOI18N
         background.add(jLabel18);
-        jLabel18.setBounds(390, 480, 43, 40);
+        jLabel18.setBounds(480, 480, 43, 40);
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/buque-de-flores.png"))); // NOI18N
         background.add(jLabel19);
-        jLabel19.setBounds(390, 590, 30, 40);
+        jLabel19.setBounds(480, 590, 30, 40);
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/maquiagem.png"))); // NOI18N
         background.add(jLabel20);
-        jLabel20.setBounds(820, 480, 43, 40);
+        jLabel20.setBounds(890, 480, 43, 40);
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/carro-de-casamento.png"))); // NOI18N
         background.add(jLabel21);
-        jLabel21.setBounds(820, 590, 40, 40);
+        jLabel21.setBounds(890, 590, 40, 40);
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pingente.png"))); // NOI18N
         background.add(jLabel22);
-        jLabel22.setBounds(820, 370, 32, 50);
+        jLabel22.setBounds(890, 370, 32, 50);
 
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Wedding Interface(red).png"))); // NOI18N
@@ -633,6 +633,8 @@ public class Menu_Noiva extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
+            Noiva noiva = new Noiva();
+        
         try {
 
             double vestido;
@@ -653,8 +655,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
             noiva.setDiaDaNoiva(diaDaNoiva);
             noiva.setTransporteNoiva(transporteNoiva);
             noiva.insereNoiva(noiva);
-            //double gastoNoivaTot = noiva.getAcessorios() + noiva.getBuque() + noiva.getDiaDaNoiva()
-            //       + noiva.getSapato() + noiva.getTransporteNoiva() + noiva.getVestido();
+
             Orcamento.instancia.setGastoNoiva(vestido + sapato + buque + diaDaNoiva + transporteNoiva);
 
 

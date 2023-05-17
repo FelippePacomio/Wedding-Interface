@@ -79,7 +79,7 @@ public class Orcamento {
             st.setDouble(2, orcamento.getGastoNoiva());
             st.setDouble(3, orcamento.getGastoNoivo());
             st.setDouble(4, orcamento.getGastoEvento());
-            st.setDouble(5, orcamento.gastoCompleto());
+            st.setDouble(5, orcamento.getGastoTotal());
 
             int linhasAfetadas = st.executeUpdate();
 
@@ -102,29 +102,5 @@ public class Orcamento {
 
     }
 
-    public double gastoNoivaTotal() {
-        Noiva noi = new Noiva();
-        gastoNoiva = noi.getAcessorios() + noi.getBuque() + noi.getDiaDaNoiva()
-                + noi.getSapato() + noi.getTransporteNoiva() + noi.getVestido();
-        return gastoNoiva;
-    }
 
-    public double gastoNoivoTotal() {
-        Noivo noi = new Noivo();
-        gastoNoivo = noi.getAcessorios() + noi.getDiaDoNoivo() + noi.getSapato()
-                + noi.getTerno() + noi.getTransporteNoivo();
-        return gastoNoivo;
-    }
-
-    public double gastoEventoTotal() {
-        Evento eve = new Evento();
-        gastoEvento = eve.getConvites() + eve.getLembrancas() + eve.getMusica()
-                + eve.getValorBuffet() + eve.getValorCerimonia();
-        return gastoEvento;
-    }
-
-    public double gastoCompleto() {
-        gastoTotal += gastoNoivaTotal() + gastoNoivoTotal() + gastoEventoTotal();
-        return gastoTotal;
-    }
 }

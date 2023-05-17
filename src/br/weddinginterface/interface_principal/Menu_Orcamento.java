@@ -647,11 +647,22 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         try {
+            
+            double gastoEvento = Orcamento.instancia.getGastoEvento();
+            double gastoNoivo = Orcamento.instancia.getGastoNoivo();
             double gastoNoiva = Orcamento.instancia.getGastoNoiva();
+            double gastoTotal = gastoEvento + gastoNoivo + gastoNoiva;
+            
             DecimalFormat decimalFormat = new DecimalFormat("#.00");
-            String gastoFormatado = decimalFormat.format(gastoNoiva);
+            
+            String noivaFormatado = decimalFormat.format(gastoNoiva);
+            String noivoFormatado = decimalFormat.format(gastoNoivo);
+            String eventoFormatado = decimalFormat.format(gastoEvento);
 
-            jLabel19.setText("R$ " + gastoFormatado);
+            jLabel19.setText("R$ " + noivaFormatado);
+            jLabel17.setText("R$ " + eventoFormatado);
+            jLabel7.setText("R$ " + noivoFormatado);
+            jLabel18.setText("R$ " + gastoTotal);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());

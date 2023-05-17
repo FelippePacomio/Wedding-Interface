@@ -7,6 +7,7 @@ package br.weddinginterface.interface_principal;
 import br.weddinginterface.model.*;
 import java.awt.Color;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -104,6 +105,11 @@ public class Tela_Login extends javax.swing.JFrame {
                 jPasswordField1ActionPerformed(evt);
             }
         });
+        jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jPasswordField1KeyTyped(evt);
+            }
+        });
         jPanel1.add(jPasswordField1);
         jPasswordField1.setBounds(677, 492, 300, 30);
 
@@ -117,7 +123,7 @@ public class Tela_Login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(777, 621, 105, 22);
+        jButton1.setBounds(777, 621, 105, 23);
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -176,7 +182,7 @@ public class Tela_Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-            Usuario user = new Usuario();
+        Usuario user = new Usuario();
 
         Color color_green = new Color(102, 255, 102);
         Color color_red = new Color(255, 102, 102);
@@ -227,8 +233,8 @@ public class Tela_Login extends javax.swing.JFrame {
         usuario = jTextField1.getText();
         senha = Integer.parseInt(jPasswordField1.getText());
 
-        Color color_red = new Color(255, 102, 102);
-        Color color_green = new Color(102, 255, 102);
+        Color color_red = new Color(240, 128, 128);
+        Color color_green = new Color(144, 238, 144);
         Color color_white = new Color(255, 255, 255);
 
         if (user.checarLoginESenha(usuario, senha)) {
@@ -237,24 +243,39 @@ public class Tela_Login extends javax.swing.JFrame {
 
         }
 
-        if (user.checarLogin(usuario)) {
+        if (user.checarLogin(usuario) && user.checarSenha(senha)) {
             jTextField1.setBackground(color_green);
-        } else if (!(user.checarLogin(usuario))) {
+            jPasswordField1.setBackground(color_green);
+        } else if (!(user.checarLogin(usuario) && user.checarSenha(senha))) {
             jTextField1.setBackground(color_red);
+            jPasswordField1.setBackground(color_red);
+            JOptionPane.showMessageDialog(null, "Login e senha incorretos!");
+        } else if (user.checarLogin(usuario) && !(user.checarSenha(senha))) {
+            jTextField1.setBackground(color_green);
+            jPasswordField1.setBackground(color_red);
+            JOptionPane.showMessageDialog(null, "Senha incorreta!");
+        } else if (user.checarSenha(senha) && !(user.checarLogin(usuario))) {
+            jTextField1.setBackground(color_red);
+            jPasswordField1.setBackground(color_green);
             JOptionPane.showMessageDialog(null, "Login incorreto!");
         } else {
+            jPasswordField1.setBackground(color_white);
             jTextField1.setBackground(color_white);
         }
 
-        if (user.checarSenha(senha)) {
-            jPasswordField1.setBackground(color_green);
-        } else if (!(user.checarSenha(senha))) {
-            jPasswordField1.setBackground(color_red);
-            JOptionPane.showMessageDialog(null, "Senha incorreta!");
-        } else {
-            jPasswordField1.setBackground(color_white);
-        }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jPasswordField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyTyped
+        // TODO add your handling code here:
+    /*    try {
+            if (evt.getKeyCode() == KeyEvent.VK_ENTER) LerTabelaConvidados("");
+        } */
+    Usuario user = new Usuario();
+    String usuario;
+    
+        usuario = jTextField1.getText();
+    if (evt.getKeyCode() == KeyEvent.VK_ENTER) user.checarLogin(usuario);
+    }//GEN-LAST:event_jPasswordField1KeyTyped
 
     /**
      * @param args the command line arguments
