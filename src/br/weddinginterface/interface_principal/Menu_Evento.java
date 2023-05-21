@@ -882,8 +882,8 @@ public class Menu_Evento extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         String enderecoCerimonia, enderecoBuffet, horaCerimonia, horaRecepcao,
-                dataRecepcao, dataCerimonia, cardapio, locacao, anotacoes;
-        Double valorBuffet, valorCerimonia, lembrancas, musica, convites;
+                dataRecepcao, dataCerimonia, cardapio, anotacoes;
+        Double valorBuffet, valorCerimonia, lembrancas, musica, locacao, convites;
 
         Evento eve = new Evento();
 
@@ -896,7 +896,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             horaRecepcao = jTextField11.getText();
             cardapio = jTextField12.getText();
             anotacoes = jTextArea1.getText();
-            locacao = jTextField3.getText();
+            locacao = Double.parseDouble(jTextField3.getText());
             convites = Double.parseDouble(jTextField2.getText());
             musica = Double.parseDouble(jTextField8.getText());
             valorBuffet = Double.parseDouble(jTextField1.getText());
@@ -920,7 +920,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             eve.setConvites(convites);
             eve.inserirEvento(eve);
 
-            Orcamento.instancia.setGastoEvento(valorBuffet + valorCerimonia + lembrancas + musica + convites);
+            Orcamento.instancia.setGastoEvento(locacao + valorBuffet + valorCerimonia + lembrancas + musica + convites);
 
             JOptionPane.showMessageDialog(
                     null, "Evento inserido com sucesso!");

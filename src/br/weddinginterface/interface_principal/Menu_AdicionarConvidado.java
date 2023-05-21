@@ -481,7 +481,7 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel10.setText("RESTRIÇÃO ALIMENTAR");
         background.add(jLabel10);
-        jLabel10.setBounds(970, 320, 220, 21);
+        jLabel10.setBounds(970, 330, 220, 21);
 
         jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/carteira-de-identidade.png"))); // NOI18N
         background.add(jLabel34);
@@ -493,7 +493,7 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
 
         jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/prato.png"))); // NOI18N
         background.add(jLabel37);
-        jLabel37.setBounds(930, 320, 32, 40);
+        jLabel37.setBounds(930, 330, 32, 40);
 
         jTextField7.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField7.setToolTipText("Informe as restrições alimentares de convidado (se houver).");
@@ -503,7 +503,7 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
             }
         });
         background.add(jTextField7);
-        jTextField7.setBounds(970, 340, 220, 30);
+        jTextField7.setBounds(970, 350, 220, 30);
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N

@@ -75,11 +75,11 @@ public class Orcamento {
 
             st = conexao.getConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
 
-            st.setDouble(1, orcamento.getGastoPrevisto());
-            st.setDouble(2, orcamento.getGastoNoiva());
-            st.setDouble(3, orcamento.getGastoNoivo());
-            st.setDouble(4, orcamento.getGastoEvento());
-            st.setDouble(5, orcamento.getGastoTotal());
+            st.setDouble(1, Orcamento.instancia.getGastoPrevisto());
+            st.setDouble(2, Orcamento.instancia.getGastoNoiva());
+            st.setDouble(3, Orcamento.instancia.getGastoNoivo());
+            st.setDouble(4, Orcamento.instancia.getGastoEvento());
+            st.setDouble(5, Orcamento.instancia.getGastoTotal());
 
             int linhasAfetadas = st.executeUpdate();
 

@@ -9,8 +9,8 @@ import java.util.Objects;
 public class Evento {
 
     private String enderecoCerimonia, enderecoBuffet, horaCerimonia, horaRecepcao,
-            dataRecepcao, dataCerimonia, cardapio, locacao, anotacoes;
-    private Double valorBuffet, valorCerimonia, lembrancas, musica, convites;
+            dataRecepcao, dataCerimonia, cardapio, anotacoes;
+    private Double valorBuffet, valorCerimonia, lembrancas, musica, convites, locacao;
 
     public String getHoraRecepcao() {
         return horaRecepcao;
@@ -158,7 +158,7 @@ public class Evento {
             sql += "";
             sql += "INSERT INTO tb_evento "
                     + "(e_enderecocerimonia, e_enderecobuffet, e_horacerimonia, e_horarecepcao, e_datarecepcao,"
-                    + "e_datacerimonia, e_cardapio, e_locacao, e_anotacoes, e_valorbuffet, e_valorcerimonia, e_lembrancas"
+                    + "e_datacerimonia, e_cardapio, e_locacao, e_anotacoes, e_valorbuffet, e_valorcerimonia, e_lembrancas,"
                     + "e_musica, e_convites)"
                     + "VALUES"
                     + "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -172,7 +172,7 @@ public class Evento {
             st.setString(5, eve.getDataRecepcao());
             st.setString(6, eve.getDataCerimonia());
             st.setString(7, eve.getCardapio());
-            st.setString(8, eve.getLocacao());
+            st.setDouble(8, eve.getLocacao());
             st.setString(9, eve.getAnotacoes());
             st.setDouble(10, eve.getValorBuffet());
             st.setDouble(11, eve.getValorCerimonia());
@@ -185,8 +185,8 @@ public class Evento {
             if (linhasAfetadas > 0) {
                 ResultSet rs = st.getGeneratedKeys();
                 if (rs.next()) {
-                    String EnderecoCerimonia = rs.getString(1);
-                    eve.setEnderecoCerimonia(EnderecoCerimonia);
+                    Double musica = rs.getDouble(1);
+                    eve.setMusica(musica);
                 }
                 rs.close();
             } else {
@@ -200,12 +200,13 @@ public class Evento {
         }
     }
 
-    public String getLocacao() {
+    public Double getLocacao() {
         return locacao;
     }
 
-    public void setLocacao(String locacao) {
+    public void setLocacao(Double locacao) {
         this.locacao = locacao;
     }
+
 
 }

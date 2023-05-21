@@ -58,8 +58,6 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        barraProgresso = new javax.swing.JProgressBar();
-        jTextField1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -68,7 +66,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
@@ -80,6 +78,11 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -418,28 +421,11 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         background.add(jLabel24);
         jLabel24.setBounds(280, 70, 1133, 164);
 
-        barraProgresso.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        barraProgresso.setStringPainted(true);
-        background.add(barraProgresso);
-        barraProgresso.setBounds(410, 290, 810, 30);
-
-        jTextField1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField1.setToolTipText("Insira o gasto previsto para o casamento.");
-        jTextField1.setMinimumSize(new java.awt.Dimension(100, 30));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        background.add(jTextField1);
-        jTextField1.setBounds(490, 400, 180, 30);
-
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel5.setText("GASTO PREVISTO");
+        jLabel5.setText("VALOR RESTANTE");
         background.add(jLabel5);
-        jLabel5.setBounds(490, 380, 150, 21);
+        jLabel5.setBounds(1050, 500, 150, 21);
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel6.setText("GASTO EVENTO");
@@ -450,7 +436,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel7.setText("R$ 0,00");
         background.add(jLabel7);
-        jLabel7.setBounds(1040, 400, 100, 21);
+        jLabel7.setBounds(1050, 400, 100, 21);
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel8.setText("GASTO TOTAL");
@@ -468,7 +454,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jLabel10.setText("GASTO NOIVO");
         jLabel10.setToolTipText("");
         background.add(jLabel10);
-        jLabel10.setBounds(1040, 380, 170, 21);
+        jLabel10.setBounds(1050, 380, 170, 21);
 
         jLabel17.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel17.setText("R$ 0,00");
@@ -480,39 +466,39 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         background.add(jLabel18);
         jLabel18.setBounds(810, 520, 100, 21);
 
-        jLabel19.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
-        jLabel19.setText("R$ 0,00");
-        jLabel19.addInputMethodListener(new java.awt.event.InputMethodListener() {
+        jLabel40.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jLabel40.setText("R$ 0,00");
+        jLabel40.addInputMethodListener(new java.awt.event.InputMethodListener() {
             public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
             }
             public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
-                jLabel19InputMethodTextChanged(evt);
+                jLabel40InputMethodTextChanged(evt);
             }
         });
-        background.add(jLabel19);
-        jLabel19.setBounds(810, 400, 100, 20);
+        background.add(jLabel40);
+        jLabel40.setBounds(1050, 520, 100, 20);
 
         jButton1.setBackground(new java.awt.Color(204, 0, 51));
         jButton1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("SALVAR");
+        jButton1.setText("ATUALIZAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         background.add(jButton1);
-        jButton1.setBounds(750, 620, 110, 23);
+        jButton1.setBounds(930, 620, 110, 23);
 
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/real-brasileiro.png"))); // NOI18N
         background.add(jLabel21);
-        jLabel21.setBounds(450, 390, 40, 40);
+        jLabel21.setBounds(1010, 510, 40, 40);
 
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/noivo (1).png"))); // NOI18N
         background.add(jLabel22);
-        jLabel22.setBounds(1000, 380, 40, 50);
+        jLabel22.setBounds(1010, 380, 40, 50);
 
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aliancas-de-casamento.png"))); // NOI18N
@@ -558,6 +544,53 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jLabel33.setToolTipText("");
         background.add(jLabel33);
         jLabel33.setBounds(1720, 640, 280, 300);
+
+        jButton2.setBackground(new java.awt.Color(204, 0, 51));
+        jButton2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("SALVAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        background.add(jButton2);
+        jButton2.setBounds(600, 620, 110, 23);
+
+        jLabel34.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel34.setText("GASTO PREVISTO");
+        background.add(jLabel34);
+        jLabel34.setBounds(490, 380, 150, 21);
+
+        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/real-brasileiro.png"))); // NOI18N
+        background.add(jLabel35);
+        jLabel35.setBounds(450, 390, 40, 40);
+
+        jTextField2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextField2.setToolTipText("Insira o gasto previsto para o casamento.");
+        jTextField2.setMinimumSize(new java.awt.Dimension(100, 30));
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        background.add(jTextField2);
+        jTextField2.setBounds(490, 400, 180, 30);
+
+        jLabel19.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jLabel19.setText("R$ 0,00");
+        jLabel19.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                jLabel19InputMethodTextChanged(evt);
+            }
+        });
+        background.add(jLabel19);
+        jLabel19.setBounds(810, 400, 100, 20);
 
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1910, 1080));
 
@@ -634,7 +667,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNoivaMouseClicked
 
     private void btnEventoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEventoMouseClicked
-     new Menu_Evento().setVisible(true);
+        new Menu_Evento().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnEventoMouseClicked
 
@@ -663,18 +696,24 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         try {
-
+            
+            double gastoPrevisto = Orcamento.instancia.getGastoPrevisto();
             double gastoEvento = Orcamento.instancia.getGastoEvento();
             double gastoNoivo = Orcamento.instancia.getGastoNoivo();
             double gastoNoiva = Orcamento.instancia.getGastoNoiva();
             double gastoTotal = gastoEvento + gastoNoivo + gastoNoiva;
+            double valorRestante = gastoPrevisto - gastoTotal;
+            
+            Orcamento.instancia.setGastoTotal(gastoTotal);
 
             DecimalFormat decimalFormat = new DecimalFormat("#.00");
 
+            String restanteFormatado = decimalFormat.format(valorRestante);
             String noivaFormatado = decimalFormat.format(gastoNoiva);
             String noivoFormatado = decimalFormat.format(gastoNoivo);
             String eventoFormatado = decimalFormat.format(gastoEvento);
 
+            jLabel40.setText("R$ " + restanteFormatado);
             jLabel19.setText("R$ " + noivaFormatado);
             jLabel17.setText("R$ " + eventoFormatado);
             jLabel7.setText("R$ " + noivoFormatado);
@@ -686,9 +725,35 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jLabel40InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jLabel40InputMethodTextChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jLabel40InputMethodTextChanged
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Orcamento orc = new Orcamento();
+
+        try {
+
+            double valorPrevisto;
+
+            valorPrevisto = Double.parseDouble(jTextField2.getText());
+
+            orc.setGastoPrevisto(valorPrevisto);
+
+            Orcamento.instancia.setGastoPrevisto(valorPrevisto);
+
+            JOptionPane.showMessageDialog(null, "Orçamento inserido com sucesso!");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jLabel19InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jLabel19InputMethodTextChanged
         // TODO add your handling code here:
@@ -763,7 +828,6 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
     private javax.swing.JPanel barraMenu;
-    private javax.swing.JProgressBar barraProgresso;
     private javax.swing.JPanel btnAdicionarConvidado;
     private javax.swing.JPanel btnConvidados;
     private javax.swing.JPanel btnEvento;
@@ -772,6 +836,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     private javax.swing.JPanel btnNoivo;
     private javax.swing.JPanel btnOrcamento;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -799,21 +864,24 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
+    public javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 
     public javax.swing.JLabel getjLabel19() {
-        return jLabel19;
+        return jLabel40;
     }
 
     public void setjLabel19(javax.swing.JLabel jLabel19) {
-        this.jLabel19 = jLabel19;
+        this.jLabel40 = jLabel19;
     }
 
 }

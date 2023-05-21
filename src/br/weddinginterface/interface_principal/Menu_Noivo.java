@@ -661,17 +661,21 @@ public class Menu_Noivo extends javax.swing.JFrame {
             double sapato;
             double diaDoNoivo;
             double transporteNoivo;
+            double acessorios;
 
             terno = Double.parseDouble(jTextField3.getText());
             sapato = Double.parseDouble(jTextField2.getText());
             diaDoNoivo = Double.parseDouble(jTextField6.getText());
             transporteNoivo = Double.parseDouble(jTextField7.getText());
+            acessorios = Double.parseDouble(jTextField5.getText());
 
             noi.setTerno(terno);
             noi.setSapato(sapato);
             noi.setDiaDoNoivo(diaDoNoivo);
             noi.setTransporteNoivo(transporteNoivo);
+            noi.setAcessorios(acessorios);
             noi.insereNoivo(noi);
+    
 
             Orcamento.instancia.setGastoNoivo(terno + sapato + diaDoNoivo + transporteNoivo);
 
