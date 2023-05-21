@@ -96,6 +96,11 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -120,7 +125,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         barraMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 300, -1));
 
         btnOrcamento.setBackground(new java.awt.Color(253, 214, 218));
-        btnOrcamento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnOrcamento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnOrcamento.setMaximumSize(new java.awt.Dimension(150, 75));
         btnOrcamento.setMinimumSize(new java.awt.Dimension(150, 75));
         btnOrcamento.setPreferredSize(new java.awt.Dimension(150, 75));
@@ -161,7 +166,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         barraMenu.add(btnOrcamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 300, -1));
 
         btnNoiva.setBackground(new java.awt.Color(253, 214, 218));
-        btnNoiva.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnNoiva.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnNoiva.setMaximumSize(new java.awt.Dimension(150, 75));
         btnNoiva.setMinimumSize(new java.awt.Dimension(150, 75));
         btnNoiva.setPreferredSize(new java.awt.Dimension(150, 75));
@@ -202,7 +207,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         barraMenu.add(btnNoiva, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 300, -1));
 
         btnNoivo.setBackground(new java.awt.Color(253, 214, 218));
-        btnNoivo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnNoivo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnNoivo.setMaximumSize(new java.awt.Dimension(150, 75));
         btnNoivo.setMinimumSize(new java.awt.Dimension(150, 75));
         btnNoivo.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -256,7 +261,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         barraMenu.add(btnNoivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 300, -1));
 
         btnEvento.setBackground(new java.awt.Color(253, 214, 218));
-        btnEvento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnEvento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEvento.setMaximumSize(new java.awt.Dimension(150, 75));
         btnEvento.setMinimumSize(new java.awt.Dimension(150, 75));
         btnEvento.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -299,7 +304,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         barraMenu.add(btnEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 300, -1));
 
         btnConvidados.setBackground(new java.awt.Color(253, 214, 218));
-        btnConvidados.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnConvidados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConvidados.setMaximumSize(new java.awt.Dimension(150, 75));
         btnConvidados.setMinimumSize(new java.awt.Dimension(150, 75));
         btnConvidados.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -343,7 +348,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         barraMenu.add(btnConvidados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 300, -1));
 
         btnAdicionarConvidado.setBackground(new java.awt.Color(232, 194, 194));
-        btnAdicionarConvidado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnAdicionarConvidado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAdicionarConvidado.setMaximumSize(new java.awt.Dimension(150, 75));
         btnAdicionarConvidado.setMinimumSize(new java.awt.Dimension(150, 75));
         btnAdicionarConvidado.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -383,7 +388,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         barraMenu.add(btnAdicionarConvidado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, -1, -1));
 
         btnGerenciarConvidados.setBackground(new java.awt.Color(232, 194, 194));
-        btnGerenciarConvidados.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnGerenciarConvidados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGerenciarConvidados.setMaximumSize(new java.awt.Dimension(150, 75));
         btnGerenciarConvidados.setMinimumSize(new java.awt.Dimension(150, 75));
         btnGerenciarConvidados.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -459,10 +464,11 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
                 "Nome", "Telefone", "Restrição", "Parentesco"
             }
         ));
+        jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane1.setViewportView(jTable1);
 
         background.add(jScrollPane1);
-        jScrollPane1.setBounds(370, 380, 960, 402);
+        jScrollPane1.setBounds(370, 380, 960, 280);
 
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -473,32 +479,38 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
             }
         });
         background.add(jLabel5);
-        jLabel5.setBounds(1070, 290, 80, 21);
+        jLabel5.setBounds(1160, 290, 80, 21);
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel6.setText("BUSCAR");
         background.add(jLabel6);
-        jLabel6.setBounds(430, 270, 62, 21);
+        jLabel6.setBounds(520, 270, 62, 21);
 
+        jTextField1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField1KeyTyped(evt);
             }
         });
         background.add(jTextField1);
-        jTextField1.setBounds(430, 290, 220, 30);
+        jTextField1.setBounds(520, 290, 220, 30);
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/editar.png"))); // NOI18N
         background.add(jLabel7);
-        jLabel7.setBounds(1010, 280, 40, 40);
+        jLabel7.setBounds(1100, 280, 40, 40);
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lupa.png"))); // NOI18N
         background.add(jLabel9);
-        jLabel9.setBounds(390, 280, 32, 40);
+        jLabel9.setBounds(480, 280, 32, 40);
 
+        jButton3.setBackground(new java.awt.Color(204, 0, 51));
+
+        jButton3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Buscar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -506,7 +518,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
             }
         });
         background.add(jButton3);
-        jButton3.setBounds(500, 330, 72, 23);
+        jButton3.setBounds(590, 330, 72, 23);
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -517,12 +529,42 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
             }
         });
         background.add(jLabel8);
-        jLabel8.setBounds(770, 290, 80, 21);
+        jLabel8.setBounds(860, 290, 80, 21);
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cruz.png"))); // NOI18N
         background.add(jLabel10);
-        jLabel10.setBounds(730, 280, 40, 40);
+        jLabel10.setBounds(820, 280, 40, 40);
+
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
+        jLabel17.setToolTipText("");
+        background.add(jLabel17);
+        jLabel17.setBounds(1740, 10, 280, 300);
+
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
+        jLabel18.setToolTipText("");
+        background.add(jLabel18);
+        jLabel18.setBounds(1730, 920, 280, 180);
+
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
+        jLabel19.setToolTipText("");
+        background.add(jLabel19);
+        jLabel19.setBounds(1740, 330, 280, 300);
+
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
+        jLabel21.setToolTipText("");
+        background.add(jLabel21);
+        jLabel21.setBounds(1740, 610, 280, 300);
+
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
+        jLabel22.setToolTipText("");
+        background.add(jLabel22);
+        jLabel22.setBounds(1740, 610, 280, 300);
 
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -674,11 +716,11 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
-
+        btnNoivo.setBackground(mySelect);
     }//GEN-LAST:event_jLabel3MouseEntered
 
     private void jLabel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseExited
-
+        btnNoivo.setBackground(myUnSelect);
     }//GEN-LAST:event_jLabel3MouseExited
 
     private void btnNoivoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoivoMousePressed
@@ -868,8 +910,13 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;

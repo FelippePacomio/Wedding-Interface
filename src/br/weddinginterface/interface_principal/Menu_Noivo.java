@@ -38,8 +38,6 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btnNoiva = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        btnNoivo = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         btnEvento = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         btnConvidados = new javax.swing.JPanel();
@@ -49,6 +47,8 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         btnGerenciarConvidados = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
+        btnNoivo = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
@@ -65,11 +65,16 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -94,7 +99,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
         barraMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 300, -1));
 
         btnOrcamento.setBackground(new java.awt.Color(253, 214, 218));
-        btnOrcamento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnOrcamento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnOrcamento.setMaximumSize(new java.awt.Dimension(150, 75));
         btnOrcamento.setMinimumSize(new java.awt.Dimension(150, 75));
         btnOrcamento.setPreferredSize(new java.awt.Dimension(150, 75));
@@ -135,7 +140,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
         barraMenu.add(btnOrcamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 300, -1));
 
         btnNoiva.setBackground(new java.awt.Color(253, 214, 218));
-        btnNoiva.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnNoiva.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnNoiva.setMaximumSize(new java.awt.Dimension(150, 75));
         btnNoiva.setMinimumSize(new java.awt.Dimension(150, 75));
         btnNoiva.setPreferredSize(new java.awt.Dimension(150, 75));
@@ -175,48 +180,8 @@ public class Menu_Noivo extends javax.swing.JFrame {
 
         barraMenu.add(btnNoiva, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 300, -1));
 
-        btnNoivo.setBackground(new java.awt.Color(253, 214, 218));
-        btnNoivo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnNoivo.setMaximumSize(new java.awt.Dimension(150, 75));
-        btnNoivo.setMinimumSize(new java.awt.Dimension(150, 75));
-        btnNoivo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnNoivoMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnNoivoMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnNoivoMouseExited(evt);
-            }
-        });
-
-        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/noivo (1).png"))); // NOI18N
-        jLabel3.setText("                    NOIVO");
-
-        javax.swing.GroupLayout btnNoivoLayout = new javax.swing.GroupLayout(btnNoivo);
-        btnNoivo.setLayout(btnNoivoLayout);
-        btnNoivoLayout.setHorizontalGroup(
-            btnNoivoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnNoivoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addContainerGap(125, Short.MAX_VALUE))
-        );
-        btnNoivoLayout.setVerticalGroup(
-            btnNoivoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnNoivoLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel3)
-                .addContainerGap(22, Short.MAX_VALUE))
-        );
-
-        barraMenu.add(btnNoivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 300, -1));
-
         btnEvento.setBackground(new java.awt.Color(253, 214, 218));
-        btnEvento.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnEvento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEvento.setMaximumSize(new java.awt.Dimension(150, 75));
         btnEvento.setMinimumSize(new java.awt.Dimension(150, 75));
         btnEvento.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -259,7 +224,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
         barraMenu.add(btnEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 300, -1));
 
         btnConvidados.setBackground(new java.awt.Color(253, 214, 218));
-        btnConvidados.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnConvidados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConvidados.setMaximumSize(new java.awt.Dimension(150, 75));
         btnConvidados.setMinimumSize(new java.awt.Dimension(150, 75));
         btnConvidados.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -303,7 +268,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
         barraMenu.add(btnConvidados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 300, -1));
 
         btnAdicionarConvidado.setBackground(new java.awt.Color(232, 194, 194));
-        btnAdicionarConvidado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnAdicionarConvidado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAdicionarConvidado.setMaximumSize(new java.awt.Dimension(150, 75));
         btnAdicionarConvidado.setMinimumSize(new java.awt.Dimension(150, 75));
         btnAdicionarConvidado.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -343,7 +308,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
         barraMenu.add(btnAdicionarConvidado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, -1, -1));
 
         btnGerenciarConvidados.setBackground(new java.awt.Color(232, 194, 194));
-        btnGerenciarConvidados.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnGerenciarConvidados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGerenciarConvidados.setMaximumSize(new java.awt.Dimension(150, 75));
         btnGerenciarConvidados.setMinimumSize(new java.awt.Dimension(150, 75));
         btnGerenciarConvidados.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -382,6 +347,54 @@ public class Menu_Noivo extends javax.swing.JFrame {
 
         barraMenu.add(btnGerenciarConvidados, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, 300, -1));
 
+        btnNoivo.setBackground(new java.awt.Color(253, 214, 218));
+        btnNoivo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNoivo.setMaximumSize(new java.awt.Dimension(150, 75));
+        btnNoivo.setMinimumSize(new java.awt.Dimension(150, 75));
+        btnNoivo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnNoivoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnNoivoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnNoivoMouseExited(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/noivo (1).png"))); // NOI18N
+        jLabel3.setText("                    NOIVO");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel3MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnNoivoLayout = new javax.swing.GroupLayout(btnNoivo);
+        btnNoivo.setLayout(btnNoivoLayout);
+        btnNoivoLayout.setHorizontalGroup(
+            btnNoivoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnNoivoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addContainerGap(125, Short.MAX_VALUE))
+        );
+        btnNoivoLayout.setVerticalGroup(
+            btnNoivoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnNoivoLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel3)
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
+
+        barraMenu.add(btnNoivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, -1, -1));
+
         background.add(barraMenu);
         barraMenu.setBounds(0, 0, 300, 1080);
 
@@ -389,7 +402,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("TERNO");
         background.add(jLabel5);
-        jLabel5.setBounds(540, 370, 62, 21);
+        jLabel5.setBounds(540, 270, 62, 21);
 
         jTextField2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -400,50 +413,50 @@ public class Menu_Noivo extends javax.swing.JFrame {
             }
         });
         background.add(jTextField2);
-        jTextField2.setBounds(540, 500, 220, 30);
+        jTextField2.setBounds(540, 400, 220, 30);
 
         jTextField3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField3.setToolTipText("Informe o valor gasto com o terno. (Opcional)");
         jTextField3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         background.add(jTextField3);
-        jTextField3.setBounds(540, 390, 220, 30);
+        jTextField3.setBounds(540, 290, 220, 30);
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("SAPATO");
         background.add(jLabel6);
-        jLabel6.setBounds(540, 480, 61, 21);
+        jLabel6.setBounds(540, 380, 61, 21);
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel7.setText("DIA DA NOIVO");
         background.add(jLabel7);
-        jLabel7.setBounds(970, 370, 120, 21);
+        jLabel7.setBounds(970, 270, 120, 21);
 
         jTextField5.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField5.setToolTipText("Informe o valor gasto com acessórios. (Opcional)");
         background.add(jTextField5);
-        jTextField5.setBounds(540, 610, 220, 30);
+        jTextField5.setBounds(540, 510, 220, 30);
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("ACESSÓRIOS");
         background.add(jLabel8);
-        jLabel8.setBounds(540, 590, 95, 21);
+        jLabel8.setBounds(540, 490, 95, 21);
 
         jTextField6.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField6.setToolTipText("Informe o valor gasto com barbearia, maquiagem, etc. (Opcional)");
         background.add(jTextField6);
-        jTextField6.setBounds(970, 390, 220, 30);
+        jTextField6.setBounds(970, 290, 220, 30);
 
         jTextField7.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField7.setToolTipText("Informe o valor gasto com o transporte. (Opcional)");
         background.add(jTextField7);
-        jTextField7.setBounds(970, 490, 220, 30);
+        jTextField7.setBounds(970, 390, 220, 30);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel11);
@@ -467,7 +480,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("TRANSPORTE");
         background.add(jLabel10);
-        jLabel10.setBounds(970, 470, 94, 21);
+        jLabel10.setBounds(970, 370, 94, 21);
 
         jButton1.setBackground(new java.awt.Color(204, 0, 51));
         jButton1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -479,32 +492,62 @@ public class Menu_Noivo extends javax.swing.JFrame {
             }
         });
         background.add(jButton1);
-        jButton1.setBounds(790, 700, 110, 23);
+        jButton1.setBounds(790, 600, 110, 23);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/terno.png"))); // NOI18N
         background.add(jLabel9);
-        jLabel9.setBounds(500, 380, 37, 40);
-
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gravata-borboleta.png"))); // NOI18N
-        background.add(jLabel17);
-        jLabel17.setBounds(500, 600, 40, 40);
+        jLabel9.setBounds(500, 500, 37, 40);
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/barbearia.png"))); // NOI18N
         background.add(jLabel18);
-        jLabel18.setBounds(930, 380, 50, 50);
+        jLabel18.setBounds(930, 280, 50, 50);
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/carro-de-casamento.png"))); // NOI18N
         background.add(jLabel19);
-        jLabel19.setBounds(930, 480, 50, 50);
+        jLabel19.setBounds(930, 380, 50, 50);
 
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Wedding Interface(red).png"))); // NOI18N
         background.add(jLabel24);
-        jLabel24.setBounds(300, 100, 1133, 164);
+        jLabel24.setBounds(300, 50, 1133, 164);
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sapato-inteligente.png"))); // NOI18N
-        background.add(jLabel21);
-        jLabel21.setBounds(500, 490, 40, 40);
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
+        jLabel22.setToolTipText("");
+        background.add(jLabel22);
+        jLabel22.setBounds(1730, 10, 280, 300);
+
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
+        jLabel23.setToolTipText("");
+        background.add(jLabel23);
+        jLabel23.setBounds(1720, 920, 280, 180);
+
+        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
+        jLabel27.setToolTipText("");
+        background.add(jLabel27);
+        jLabel27.setBounds(1730, 330, 280, 300);
+
+        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
+        jLabel28.setToolTipText("");
+        background.add(jLabel28);
+        jLabel28.setBounds(1730, 610, 280, 300);
+
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
+        jLabel29.setToolTipText("");
+        background.add(jLabel29);
+        jLabel29.setBounds(1730, 610, 280, 300);
+
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sapato-inteligente.png"))); // NOI18N
+        background.add(jLabel31);
+        jLabel31.setBounds(500, 390, 40, 40);
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/terno.png"))); // NOI18N
+        background.add(jLabel17);
+        jLabel17.setBounds(500, 280, 37, 40);
 
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -594,8 +637,8 @@ public class Menu_Noivo extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAdicionarConvidadoMouseClicked
 
     private void btnNoivoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoivoMouseClicked
-        //new Menu_Noivo().setVisible(true);
-        // this.dispose();
+        new Menu_Noivo().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnNoivoMouseClicked
 
     private void btnOrcamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrcamentoMouseClicked
@@ -637,6 +680,14 @@ public class Menu_Noivo extends javax.swing.JFrame {
             System.out.println(e.getMessage());
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
+        btnNoivo.setBackground(mySelect);
+    }//GEN-LAST:event_jLabel3MouseEntered
+
+    private void jLabel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseExited
+        btnNoivo.setBackground(myUnSelect);
+    }//GEN-LAST:event_jLabel3MouseExited
 
     /**
      * @param args the command line arguments
@@ -700,11 +751,16 @@ public class Menu_Noivo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
