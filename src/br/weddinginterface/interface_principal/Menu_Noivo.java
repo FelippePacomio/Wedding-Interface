@@ -594,8 +594,8 @@ public class Menu_Noivo extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAdicionarConvidadoMouseClicked
 
     private void btnNoivoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoivoMouseClicked
-        new Menu_Noivo().setVisible(true);
-        this.dispose();
+        //new Menu_Noivo().setVisible(true);
+        // this.dispose();
     }//GEN-LAST:event_btnNoivoMouseClicked
 
     private void btnOrcamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrcamentoMouseClicked
@@ -629,9 +629,8 @@ public class Menu_Noivo extends javax.swing.JFrame {
             noi.setDiaDoNoivo(diaDoNoivo);
             noi.setTransporteNoivo(transporteNoivo);
             noi.insereNoivo(noi);
-            
-            Orcamento.instancia.setGastoNoivo(terno + sapato + diaDoNoivo + transporteNoivo);
 
+            Orcamento.instancia.setGastoNoivo(terno + sapato + diaDoNoivo + transporteNoivo);
 
             JOptionPane.showMessageDialog(null, "Noivo inserido com sucesso!");
         } catch (Exception e) {

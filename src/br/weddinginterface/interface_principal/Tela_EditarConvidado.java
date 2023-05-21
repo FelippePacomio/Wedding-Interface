@@ -115,6 +115,11 @@ public class Tela_EditarConvidado extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("CANCELAR");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -138,7 +143,6 @@ public class Tela_EditarConvidado extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel35)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(2, 2, 2)
@@ -237,37 +241,37 @@ public class Tela_EditarConvidado extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         Conexao conexao = new Conexao();
-         
+        Conexao conexao = new Conexao();
+
         Convidados con = new Convidados();
-    
-    PreparedStatement st = null;
-    
-    try{
-        
-        String sql = "";
-        sql += "";
-        sql += "UPDATE tb_covidados "
-                + "SET c_nome = ?,"
-                + "c_telefone = ?, c_restricao = ?, c_parentesco = ?";
-                
-        
-        st = conexao.getConexao().prepareStatement(sql);
-        
-        
-        st.setString(1, jTextField6.getText());
-        st.setString(2, jTextField5.getText());
-        st.setString(3, jTextField4.getText());
-        st.setString(4, jTextField7.getText());
-   
-        
-        st.executeUpdate();
- 
-        JOptionPane.showMessageDialog(null, "Convidado atualizado com sucesso!");
-         
-    }catch (SQLException e){
-        System.out.println(e.getMessage());
-    }
+
+        PreparedStatement st = null;
+
+        try {
+
+            String sql = "";
+            sql += "";
+            sql += "UPDATE tb_convidados "
+                    + "SET c_nome = ?, c_telefone = ?, c_restricao_alimentar = ?, c_parentesco = ?"
+                    + "WHERE c_nome = ?";
+
+            st = conexao.getConexao().prepareStatement(sql);
+
+            st.setString(1, jTextField6.getText());
+            st.setString(2, jTextField5.getText());
+            st.setString(3, jTextField4.getText());
+            st.setString(4, jTextField7.getText());
+            st.setString(5, jTextField6.getText());
+
+            st.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Convidado atualizado com sucesso!");
+            new Menu_GerenciarConvidados().setVisible(true);
+            this.dispose();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
@@ -281,6 +285,12 @@ public class Tela_EditarConvidado extends javax.swing.JFrame {
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        new Menu_GerenciarConvidados().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments

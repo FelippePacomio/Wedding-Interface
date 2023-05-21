@@ -15,8 +15,6 @@ import javax.swing.JPanel;
  */
 public class Menu_Noiva extends javax.swing.JFrame {
 
-
-
     /**
      * Creates new form Menu_Noiva
      */
@@ -199,6 +197,11 @@ public class Menu_Noiva extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/noivo (1).png"))); // NOI18N
         jLabel3.setText("                    NOIVO");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnNoivoLayout = new javax.swing.GroupLayout(btnNoivo);
         btnNoivo.setLayout(btnNoivoLayout);
@@ -536,7 +539,8 @@ public class Menu_Noiva extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void btnEventoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEventoMousePressed
-
+        new Menu_Evento().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnEventoMousePressed
 
     Color mySelect = new Color(255, 161, 170);
@@ -633,8 +637,8 @@ public class Menu_Noiva extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-            Noiva noiva = new Noiva();
-        
+        Noiva noiva = new Noiva();
+
         try {
 
             double vestido;
@@ -658,7 +662,6 @@ public class Menu_Noiva extends javax.swing.JFrame {
 
             Orcamento.instancia.setGastoNoiva(vestido + sapato + buque + diaDaNoiva + transporteNoiva);
 
-
             JOptionPane.showMessageDialog(null, "Noiva inserida com sucesso!");
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -666,6 +669,11 @@ public class Menu_Noiva extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jLabel3MouseClicked
 
     /**
      * @param args the command line arguments

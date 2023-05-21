@@ -215,12 +215,26 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnNoivoMouseExited(evt);
             }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnNoivoMousePressed(evt);
+            }
         });
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/noivo (1).png"))); // NOI18N
         jLabel3.setText("                    NOIVO");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel3MouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnNoivoLayout = new javax.swing.GroupLayout(btnNoivo);
         btnNoivo.setLayout(btnNoivoLayout);
@@ -523,11 +537,13 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
     Color myUnSelect = new Color(253, 214, 218);
     Color mySubUnSelect = new Color(232, 194, 194);
     private void btnNoivoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoivoMouseEntered
-        btnNoivo.setBackground(mySelect);
+       btnNoivo.setBackground(mySelect);
+
     }//GEN-LAST:event_btnNoivoMouseEntered
 
     private void btnNoivoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoivoMouseExited
         btnNoivo.setBackground(myUnSelect);
+
     }//GEN-LAST:event_btnNoivoMouseExited
 
     private void btnEventoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEventoMouseEntered
@@ -584,7 +600,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNoivaMouseClicked
 
     private void btnEventoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEventoMouseClicked
-        new Menu_GerenciarConvidados().setVisible(true);
+     new Menu_Evento().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnEventoMouseClicked
 
@@ -601,6 +617,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
     private void btnOrcamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrcamentoMouseClicked
         new Menu_Orcamento().setVisible(true);
         this.dispose();
+        
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
@@ -651,6 +668,22 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
             Logger.getLogger(Menu_GerenciarConvidados.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jTextField1KeyTyped
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
+
+    }//GEN-LAST:event_jLabel3MouseEntered
+
+    private void jLabel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseExited
+
+    }//GEN-LAST:event_jLabel3MouseExited
+
+    private void btnNoivoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoivoMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNoivoMousePressed
 
     /**
      * @param args the command line arguments

@@ -510,11 +510,11 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
     Color myUnSelect = new Color(253, 214, 218);
     Color mySubUnSelect = new Color(232, 194, 194);
     private void btnNoivoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoivoMouseEntered
-
+        btnNoivo.setBackground(mySelect);
     }//GEN-LAST:event_btnNoivoMouseEntered
 
     private void btnNoivoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoivoMouseExited
-
+        btnNoivo.setBackground(myUnSelect);
     }//GEN-LAST:event_btnNoivoMouseExited
 
     private void btnEventoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEventoMouseEntered

@@ -556,6 +556,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     Color mySelect = new Color(255, 161, 170);
     Color myUnSelect = new Color(253, 214, 218);
     Color mySubUnSelect = new Color(232, 194, 194);
+
     private void btnNoivoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoivoMouseEntered
         btnNoivo.setBackground(mySelect);
     }//GEN-LAST:event_btnNoivoMouseEntered
@@ -618,7 +619,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNoivaMouseClicked
 
     private void btnEventoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEventoMouseClicked
-        new Menu_Orcamento().setVisible(true);
+     new Menu_Evento().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnEventoMouseClicked
 
@@ -647,14 +648,14 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         try {
-            
+
             double gastoEvento = Orcamento.instancia.getGastoEvento();
             double gastoNoivo = Orcamento.instancia.getGastoNoivo();
             double gastoNoiva = Orcamento.instancia.getGastoNoiva();
             double gastoTotal = gastoEvento + gastoNoivo + gastoNoiva;
-            
+
             DecimalFormat decimalFormat = new DecimalFormat("#.00");
-            
+
             String noivaFormatado = decimalFormat.format(gastoNoiva);
             String noivoFormatado = decimalFormat.format(gastoNoivo);
             String eventoFormatado = decimalFormat.format(gastoEvento);
