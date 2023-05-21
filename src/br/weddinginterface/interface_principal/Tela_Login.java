@@ -184,15 +184,12 @@ public class Tela_Login extends javax.swing.JFrame {
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         Usuario user = new Usuario();
 
-        Color color_green = new Color(102, 255, 102);
         Color color_red = new Color(255, 102, 102);
         Color color_white = new Color(255, 255, 255);
         int senha;
         senha = Integer.parseInt(jPasswordField1.getText());
 
-        if (user.checarSenha(senha)) {
-            jPasswordField1.setBackground(color_green);
-        } else if (!(user.checarSenha(senha))) {
+        if (!(user.checarSenha(senha))) {
             jPasswordField1.setBackground(color_red);
         } else {
             jPasswordField1.setBackground(color_white);
@@ -208,16 +205,14 @@ public class Tela_Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         Usuario user = new Usuario();
 
-        Color color_green = new Color(102, 255, 102);
+        //Color color_green = new Color(102, 255, 102);
         Color color_red = new Color(255, 102, 102);
         Color color_white = new Color(255, 255, 255);
 
         String usuario;
         usuario = jTextField1.getText();
 
-        if (user.checarLogin(usuario)) {
-            jTextField1.setBackground(color_green);
-        } else if (!(user.checarLogin(usuario))) {
+        if (!(user.checarLogin(usuario))) {
             jTextField1.setBackground(color_red);
         } else {
             jTextField1.setBackground(color_white);
@@ -234,7 +229,7 @@ public class Tela_Login extends javax.swing.JFrame {
         senha = Integer.parseInt(jPasswordField1.getText());
 
         Color color_red = new Color(240, 128, 128);
-        Color color_green = new Color(144, 238, 144);
+     //   Color color_green = new Color(144, 238, 144);
         Color color_white = new Color(255, 255, 255);
 
         if (user.checarLoginESenha(usuario, senha)) {
@@ -243,21 +238,11 @@ public class Tela_Login extends javax.swing.JFrame {
 
         }
 
-        if (user.checarLogin(usuario) && user.checarSenha(senha)) {
-            jTextField1.setBackground(color_green);
-            jPasswordField1.setBackground(color_green);
-        } else if (!(user.checarLogin(usuario) && user.checarSenha(senha))) {
+        if (!(user.checarLogin(usuario) && user.checarSenha(senha))) {
             jTextField1.setBackground(color_red);
             jPasswordField1.setBackground(color_red);
-            JOptionPane.showMessageDialog(null, "Login e senha incorretos!");
-        } else if (user.checarLogin(usuario) && !(user.checarSenha(senha))) {
-            jTextField1.setBackground(color_green);
-            jPasswordField1.setBackground(color_red);
-            JOptionPane.showMessageDialog(null, "Senha incorreta!");
-        } else if (user.checarSenha(senha) && !(user.checarLogin(usuario))) {
-            jTextField1.setBackground(color_red);
-            jPasswordField1.setBackground(color_green);
-            JOptionPane.showMessageDialog(null, "Login incorreto!");
+            JOptionPane.showMessageDialog(null, "Login e/ou senha incorretos!");
+
         } else {
             jPasswordField1.setBackground(color_white);
             jTextField1.setBackground(color_white);
@@ -267,14 +252,15 @@ public class Tela_Login extends javax.swing.JFrame {
 
     private void jPasswordField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyTyped
         // TODO add your handling code here:
-    /*    try {
+        /*    try {
             if (evt.getKeyCode() == KeyEvent.VK_ENTER) LerTabelaConvidados("");
         } */
-    Usuario user = new Usuario();
-    String usuario;
-    
+        Usuario user = new Usuario();
+        String usuario;
+
         usuario = jTextField1.getText();
-    if (evt.getKeyCode() == KeyEvent.VK_ENTER) user.checarLogin(usuario);
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
+            user.checarLogin(usuario);
     }//GEN-LAST:event_jPasswordField1KeyTyped
 
     /**
