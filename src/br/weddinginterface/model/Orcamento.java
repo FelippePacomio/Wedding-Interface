@@ -9,8 +9,9 @@ import java.util.Objects;
 public class Orcamento {
 
     public static Orcamento instancia;
-    
-    private double gastoPrevisto, gastoNoiva, gastoNoivo, gastoEvento, gastoTotal;
+
+    private double gastoPrevisto, gastoNoiva = 0, gastoNoivo = 0, gastoEvento = 0, gastoTotal = 0;
+    public double valorRestante;
 
     public double getGastoPrevisto() {
         return gastoPrevisto;
@@ -50,6 +51,14 @@ public class Orcamento {
 
     public void setGastoTotal(double gastoTotal) {
         this.gastoTotal = gastoTotal;
+    }
+
+    public double getValorRestante() {
+        return valorRestante;
+    }
+
+    public void setValorRestante(double valorRestante) {
+        this.valorRestante = valorRestante;
     }
 
     @Override
@@ -101,6 +110,5 @@ public class Orcamento {
         }
 
     }
-
 
 }

@@ -24,6 +24,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
      */
     public Menu_Orcamento() {
         initComponents();
+        mostrarOrcamento();
     }
 
     /**
@@ -695,35 +696,41 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
 
+        mostrarOrcamento();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    public void mostrarOrcamento() {
+        
         try {
-            
+
             double gastoPrevisto = Orcamento.instancia.getGastoPrevisto();
             double gastoEvento = Orcamento.instancia.getGastoEvento();
             double gastoNoivo = Orcamento.instancia.getGastoNoivo();
             double gastoNoiva = Orcamento.instancia.getGastoNoiva();
             double gastoTotal = gastoEvento + gastoNoivo + gastoNoiva;
             double valorRestante = gastoPrevisto - gastoTotal;
-            
+
             Orcamento.instancia.setGastoTotal(gastoTotal);
+            Orcamento.instancia.setValorRestante(valorRestante);
 
-            DecimalFormat decimalFormat = new DecimalFormat("#.00");
+            DecimalFormat decimalFormat = new DecimalFormat("0.00");
 
-            String restanteFormatado = decimalFormat.format(valorRestante);
-            String noivaFormatado = decimalFormat.format(gastoNoiva);
-            String noivoFormatado = decimalFormat.format(gastoNoivo);
-            String eventoFormatado = decimalFormat.format(gastoEvento);
+            String restanteFormatado = decimalFormat.format(Orcamento.instancia.getValorRestante());
+            String noivaFormatado = decimalFormat.format(Orcamento.instancia.getGastoNoiva());
+            String noivoFormatado = decimalFormat.format(Orcamento.instancia.getGastoNoivo());
+            String eventoFormatado = decimalFormat.format(Orcamento.instancia.getGastoEvento());
+            String totalFormatado = decimalFormat.format(Orcamento.instancia.getGastoTotal());
 
             jLabel40.setText("R$ " + restanteFormatado);
             jLabel19.setText("R$ " + noivaFormatado);
             jLabel17.setText("R$ " + eventoFormatado);
             jLabel7.setText("R$ " + noivoFormatado);
-            jLabel18.setText("R$ " + gastoTotal);
+            jLabel18.setText("R$ " + totalFormatado);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+    }
 
     private void jLabel40InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jLabel40InputMethodTextChanged
         // TODO add your handling code here:
@@ -785,6 +792,39 @@ public class Menu_Orcamento extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Menu_Orcamento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -821,6 +861,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Menu_Orcamento().setVisible(true);
+
             }
         });
     }
@@ -845,8 +886,8 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
+    public javax.swing.JLabel jLabel17;
+    public javax.swing.JLabel jLabel18;
     public javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -870,7 +911,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    public javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField2;

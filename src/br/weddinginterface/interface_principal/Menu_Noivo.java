@@ -6,6 +6,7 @@ package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
 import java.awt.Color;
+import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -675,7 +676,6 @@ public class Menu_Noivo extends javax.swing.JFrame {
             noi.setTransporteNoivo(transporteNoivo);
             noi.setAcessorios(acessorios);
             noi.insereNoivo(noi);
-    
 
             Orcamento.instancia.setGastoNoivo(terno + sapato + diaDoNoivo + transporteNoivo);
 
@@ -688,6 +688,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
     private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
         btnNoivo.setBackground(mySelect);
     }//GEN-LAST:event_jLabel3MouseEntered
+
 
     private void jLabel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseExited
         btnNoivo.setBackground(myUnSelect);

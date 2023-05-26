@@ -4,17 +4,16 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/interface_principal/Menu_Noiva.java</file>
-            <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/interface_principal/Tela_EditarConvidado.java</file>
             <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/model/Usuario.java</file>
             <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/model/Noiva.java</file>
             <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/controller/Conexao.java</file>
-            <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/interface_principal/Menu_Noivo.java</file>
             <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/interface_principal/Interface_Principal.java</file>
+            <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/interface_principal/Menu_Noivo.java</file>
             <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/interface_principal/Menu_Evento.java</file>
-            <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/interface_principal/Tela_Cadastro.java</file>
             <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/model/Orcamento.java</file>
             <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/model/Evento.java</file>
             <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/model/Convidados.java</file>
+            <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/model/Noivo.java</file>
             <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/interface_principal/Menu_GerenciarConvidados.java</file>
             <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/interface_principal/Tela_Login.java</file>
             <file>file:/C:/Users/felip/OneDrive/Documentos/NetBeansProjects/Wedding_Interface/src/br/weddinginterface/interface_principal/Menu_Orcamento.java</file>
