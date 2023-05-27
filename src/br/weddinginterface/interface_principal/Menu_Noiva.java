@@ -6,6 +6,11 @@ package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
 import java.awt.Color;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
+import java.util.Currency;
+import java.util.Locale;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -15,11 +20,14 @@ import javax.swing.JPanel;
  */
 public class Menu_Noiva extends javax.swing.JFrame {
 
+    Noiva noiva = new Noiva();
+
     /**
      * Creates new form Menu_Noiva
      */
     public Menu_Noiva() {
         initComponents();
+        mostrarNoiva();
     }
 
     /**
@@ -412,6 +420,11 @@ public class Menu_Noiva extends javax.swing.JFrame {
         jTextField2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField2.setToolTipText("Informe o valor gasto com sapatos. (Opcional)");
+        jTextField2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField2MouseClicked(evt);
+            }
+        });
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -424,6 +437,14 @@ public class Menu_Noiva extends javax.swing.JFrame {
         jTextField3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField3.setToolTipText("Informe o valor gasto com vestido. (Opcional).");
         jTextField3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jTextField3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField3MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jTextField3MouseExited(evt);
+            }
+        });
         background.add(jTextField3);
         jTextField3.setBounds(520, 290, 220, 30);
 
@@ -436,6 +457,11 @@ public class Menu_Noiva extends javax.swing.JFrame {
         jTextField4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField4.setToolTipText("Informe o valor gasto com o buquê. (Opcional)");
+        jTextField4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField4MouseClicked(evt);
+            }
+        });
         background.add(jTextField4);
         jTextField4.setBounds(520, 500, 220, 30);
 
@@ -448,6 +474,11 @@ public class Menu_Noiva extends javax.swing.JFrame {
         jTextField5.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField5.setToolTipText("Informe o valor gasto com acessórios. (Opcional)");
+        jTextField5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField5MouseClicked(evt);
+            }
+        });
         background.add(jTextField5);
         jTextField5.setBounds(930, 290, 220, 30);
 
@@ -460,6 +491,11 @@ public class Menu_Noiva extends javax.swing.JFrame {
         jTextField6.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField6.setToolTipText("Informe o valor gasto com maquiagem, cabelo, etc. (Opcional)");
+        jTextField6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField6MouseClicked(evt);
+            }
+        });
         background.add(jTextField6);
         jTextField6.setBounds(930, 390, 220, 30);
 
@@ -472,6 +508,11 @@ public class Menu_Noiva extends javax.swing.JFrame {
         jTextField7.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField7.setToolTipText("Informe o valor gasto com transporte. (Opcional)");
+        jTextField7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField7MouseClicked(evt);
+            }
+        });
         background.add(jTextField7);
         jTextField7.setBounds(930, 500, 220, 30);
 
@@ -678,39 +719,81 @@ public class Menu_Noiva extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        Noiva noiva = new Noiva();
+        adicionarNoiva();
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    public void mostrarNoiva() {
+        try {
+            if (Noiva.instancia.id > 0) {
+
+                Locale locale = new Locale("en", "US"); // Locale personalizado para usar ponto como separador decimal
+                DecimalFormatSymbols symbols = new DecimalFormatSymbols(locale);
+                symbols.setDecimalSeparator('.'); // Define o ponto como separador decimal
+                DecimalFormat decimalFormat = new DecimalFormat("0.00", symbols);
+
+                String acessoriosFormatado = decimalFormat.format(Noiva.instancia.getAcessorios());
+                String vestidoFormatado = decimalFormat.format(Noiva.instancia.getVestido());
+                String sapatoFormatado = decimalFormat.format(Noiva.instancia.getSapato());
+                String buqueFormatado = decimalFormat.format(Noiva.instancia.getBuque());
+                String diaDaNoivaFormatado = decimalFormat.format(Noiva.instancia.getDiaDaNoiva());
+                String transporteNoivaFormatado = decimalFormat.format(Noiva.instancia.getTransporteNoiva());
+
+                jTextField5.setText(acessoriosFormatado);
+                jTextField3.setText(vestidoFormatado);
+                jTextField2.setText(sapatoFormatado);
+                jTextField4.setText(buqueFormatado);
+                jTextField6.setText(diaDaNoivaFormatado);
+                jTextField7.setText(transporteNoivaFormatado);
+            } else {
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void adicionarNoiva() {
 
         try {
 
-            double vestido;
-            double sapato;
-            double buque;
-            double diaDaNoiva;
-            double transporteNoiva;
+            double acessorios = Double.parseDouble(jTextField5.getText());
+            double vestido = Double.parseDouble(jTextField3.getText());
+            double sapato = Double.parseDouble(jTextField2.getText());
+            double buque = Double.parseDouble(jTextField4.getText());
+            double diaDaNoiva = Double.parseDouble(jTextField6.getText());
+            double transporteNoiva = Double.parseDouble(jTextField7.getText());
 
-            vestido = Double.parseDouble(jTextField3.getText());
-            sapato = Double.parseDouble(jTextField2.getText());
-            buque = Double.parseDouble(jTextField4.getText());
-            diaDaNoiva = Double.parseDouble(jTextField6.getText());
-            transporteNoiva = Double.parseDouble(jTextField7.getText());
-
+            noiva.setAcessorios(acessorios);
             noiva.setVestido(vestido);
             noiva.setSapato(sapato);
             noiva.setBuque(buque);
             noiva.setDiaDaNoiva(diaDaNoiva);
             noiva.setTransporteNoiva(transporteNoiva);
+
+            Noiva.instancia.setAcessorios(acessorios);
+            Noiva.instancia.setBuque(buque);
+            Noiva.instancia.setDiaDaNoiva(diaDaNoiva);
+            Noiva.instancia.setSapato(sapato);
+            Noiva.instancia.setTransporteNoiva(transporteNoiva);
+            Noiva.instancia.setVestido(vestido);
+
             noiva.insereNoiva(noiva);
 
             Orcamento.instancia.setGastoNoiva(vestido + sapato + buque + diaDaNoiva + transporteNoiva);
 
+            /*Noiva.instancia.setVestido(vestido);
+            Noiva.instancia.setSapato(sapato);
+            Noiva.instancia.setTransporteNoiva(transporteNoiva);
+            Noiva.instancia.setDiaDaNoiva(diaDaNoiva);
+            Noiva.instancia.setBuque(buque);
+            Noiva.instancia.setAcessorios(acessorios);*/
             JOptionPane.showMessageDialog(null, "Noiva inserida com sucesso!");
+            mostrarNoiva();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
-
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+    }
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         // TODO add your handling code here:
 
@@ -723,6 +806,42 @@ public class Menu_Noiva extends javax.swing.JFrame {
     private void jLabel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseExited
         btnNoivo.setBackground(myUnSelect);
     }//GEN-LAST:event_jLabel3MouseExited
+
+    private void jTextField3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField3MouseClicked
+        // TODO add your handling code here:
+        jTextField3.setText("");
+    }//GEN-LAST:event_jTextField3MouseClicked
+
+    private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
+        // TODO add your handling code here:
+        jTextField2.setText("");
+    }//GEN-LAST:event_jTextField2MouseClicked
+
+    private void jTextField4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField4MouseClicked
+        // TODO add your handling code here:
+        jTextField4.setText("");
+    }//GEN-LAST:event_jTextField4MouseClicked
+
+    private void jTextField5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField5MouseClicked
+        // TODO add your handling code here:
+        jTextField5.setText("");
+    }//GEN-LAST:event_jTextField5MouseClicked
+
+    private void jTextField6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField6MouseClicked
+        // TODO add your handling code here:
+        jTextField6.setText("");
+    }//GEN-LAST:event_jTextField6MouseClicked
+
+    private void jTextField7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField7MouseClicked
+        // TODO add your handling code here:
+        jTextField7.setText("");
+    }//GEN-LAST:event_jTextField7MouseClicked
+
+    private void jTextField3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField3MouseExited
+        // TODO add your handling code here:
+        // String vestidoFormatado = decimalFormat.format(Noiva.instancia.getVestido());
+        //jTextField3.setText(vestidoFormatado);
+    }//GEN-LAST:event_jTextField3MouseExited
 
     /**
      * @param args the command line arguments

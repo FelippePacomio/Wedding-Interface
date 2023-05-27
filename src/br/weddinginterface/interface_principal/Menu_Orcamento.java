@@ -751,6 +751,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
             Orcamento.instancia.setGastoPrevisto(valorPrevisto);
 
             JOptionPane.showMessageDialog(null, "Orçamento inserido com sucesso!");
+            mostrarOrcamento();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

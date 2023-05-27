@@ -186,6 +186,7 @@ public class Interface_Principal extends javax.swing.JFrame {
             public void run() {
                 new Interface_Principal().setVisible(true);
                 Orcamento.instancia = new Orcamento();
+                Noiva.instancia = new Noiva();
                 
             }
         });
