@@ -77,6 +77,11 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jLabel31 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -415,14 +420,14 @@ public class Menu_Noivo extends javax.swing.JFrame {
             }
         });
         background.add(jTextField2);
-        jTextField2.setBounds(540, 400, 220, 30);
+        jTextField2.setBounds(570, 400, 190, 30);
 
         jTextField3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField3.setToolTipText("Informe o valor gasto com o terno. (Opcional)");
         jTextField3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         background.add(jTextField3);
-        jTextField3.setBounds(540, 290, 220, 30);
+        jTextField3.setBounds(570, 290, 190, 30);
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -432,7 +437,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel7.setText("DIA DA NOIVO");
+        jLabel7.setText("DIA DO NOIVO");
         background.add(jLabel7);
         jLabel7.setBounds(970, 270, 120, 21);
 
@@ -440,7 +445,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField5.setToolTipText("Informe o valor gasto com acessórios. (Opcional)");
         background.add(jTextField5);
-        jTextField5.setBounds(540, 510, 220, 30);
+        jTextField5.setBounds(570, 510, 190, 30);
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -452,13 +457,13 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField6.setToolTipText("Informe o valor gasto com barbearia, maquiagem, etc. (Opcional)");
         background.add(jTextField6);
-        jTextField6.setBounds(970, 290, 220, 30);
+        jTextField6.setBounds(1000, 290, 190, 30);
 
         jTextField7.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField7.setToolTipText("Informe o valor gasto com o transporte. (Opcional)");
         background.add(jTextField7);
-        jTextField7.setBounds(970, 390, 220, 30);
+        jTextField7.setBounds(1000, 390, 190, 30);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel11);
@@ -562,6 +567,36 @@ public class Menu_Noivo extends javax.swing.JFrame {
         });
         background.add(jButton2);
         jButton2.setBounds(720, 610, 110, 23);
+
+        jLabel35.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel35.setText("R$");
+        background.add(jLabel35);
+        jLabel35.setBounds(950, 390, 62, 30);
+
+        jLabel36.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel36.setText("R$");
+        background.add(jLabel36);
+        jLabel36.setBounds(520, 290, 62, 30);
+
+        jLabel37.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel37.setText("R$");
+        background.add(jLabel37);
+        jLabel37.setBounds(520, 400, 62, 30);
+
+        jLabel38.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel38.setText("R$");
+        background.add(jLabel38);
+        jLabel38.setBounds(520, 510, 62, 30);
+
+        jLabel39.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel39.setText("R$");
+        background.add(jLabel39);
+        jLabel39.setBounds(950, 290, 62, 30);
 
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -796,6 +831,11 @@ public class Menu_Noivo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

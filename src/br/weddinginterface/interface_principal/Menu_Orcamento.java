@@ -83,6 +83,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -566,7 +567,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
             }
         });
         background.add(jTextField2);
-        jTextField2.setBounds(490, 400, 180, 30);
+        jTextField2.setBounds(520, 400, 150, 30);
 
         jLabel19.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel19.setText("R$ 0,00");
@@ -579,6 +580,12 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         });
         background.add(jLabel19);
         jLabel19.setBounds(810, 400, 100, 20);
+
+        jLabel36.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel36.setText("R$");
+        background.add(jLabel36);
+        jLabel36.setBounds(472, 400, 60, 30);
 
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1910, 1080));
 
@@ -888,6 +895,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel4;
     public javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;

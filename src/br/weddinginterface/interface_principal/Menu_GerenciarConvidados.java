@@ -461,7 +461,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Nome", "Telefone", "Restrição", "Parentesco"
+                "Nome", "Telefone", "Restrição Alimentar", "Parentesco"
             }
         ));
         jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));

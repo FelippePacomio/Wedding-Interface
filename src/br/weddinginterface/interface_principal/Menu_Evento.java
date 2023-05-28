@@ -106,6 +106,12 @@ public class Menu_Evento extends javax.swing.JFrame {
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -470,7 +476,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         });
         background.add(jTextField1);
-        jTextField1.setBounds(400, 730, 220, 30);
+        jTextField1.setBounds(430, 730, 190, 30);
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel7.setText("ANOTAÇÕES");
@@ -486,7 +492,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         });
         background.add(jTextField2);
-        jTextField2.setBounds(730, 630, 220, 30);
+        jTextField2.setBounds(760, 630, 190, 30);
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel8.setText("BUFFET");
@@ -502,7 +508,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         });
         background.add(jTextField3);
-        jTextField3.setBounds(400, 630, 220, 30);
+        jTextField3.setBounds(430, 630, 190, 30);
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel9.setText("HORÁRIO DA CERIMÔNIA");
@@ -563,7 +569,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         });
         background.add(jTextField7);
-        jTextField7.setBounds(730, 730, 220, 30);
+        jTextField7.setBounds(760, 730, 190, 30);
 
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/placeholder (2).png"))); // NOI18N
@@ -624,7 +630,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         });
         background.add(jTextField8);
-        jTextField8.setBounds(1060, 630, 220, 30);
+        jTextField8.setBounds(1090, 630, 190, 30);
 
         jLabel30.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel30.setText("LOCAÇÃO");
@@ -735,7 +741,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         });
         background.add(jTextField13);
-        jTextField13.setBounds(1060, 730, 220, 30);
+        jTextField13.setBounds(1090, 730, 190, 30);
 
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/presente.png"))); // NOI18N
@@ -783,6 +789,42 @@ public class Menu_Evento extends javax.swing.JFrame {
         });
         background.add(jButton2);
         jButton2.setBounds(690, 930, 110, 23);
+
+        jLabel48.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel48.setText("R$");
+        background.add(jLabel48);
+        jLabel48.setBounds(1040, 630, 62, 30);
+
+        jLabel49.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel49.setText("R$");
+        background.add(jLabel49);
+        jLabel49.setBounds(1040, 730, 62, 30);
+
+        jLabel50.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel50.setText("R$");
+        background.add(jLabel50);
+        jLabel50.setBounds(710, 630, 62, 30);
+
+        jLabel51.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel51.setText("R$");
+        background.add(jLabel51);
+        jLabel51.setBounds(710, 730, 62, 30);
+
+        jLabel52.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel52.setText("R$");
+        background.add(jLabel52);
+        jLabel52.setBounds(380, 630, 62, 30);
+
+        jLabel53.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel53.setText("R$");
+        background.add(jLabel53);
+        jLabel53.setBounds(380, 730, 62, 30);
 
         jScrollPane2.setViewportView(background);
 
@@ -1167,7 +1209,13 @@ public void limparTelaCadastroEvento(){
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
