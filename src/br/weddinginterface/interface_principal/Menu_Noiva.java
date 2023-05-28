@@ -86,6 +86,13 @@ public class Menu_Noiva extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -411,11 +418,11 @@ public class Menu_Noiva extends javax.swing.JFrame {
         background.add(barraMenu);
         barraMenu.setBounds(0, 0, 300, 1080);
 
-        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("VESTIDO");
+        jLabel5.setText("R$");
         background.add(jLabel5);
-        jLabel5.setBounds(520, 270, 62, 21);
+        jLabel5.setBounds(500, 500, 62, 30);
 
         jTextField2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -431,7 +438,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
             }
         });
         background.add(jTextField2);
-        jTextField2.setBounds(520, 390, 220, 30);
+        jTextField2.setBounds(550, 390, 190, 30);
 
         jTextField3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -446,7 +453,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
             }
         });
         background.add(jTextField3);
-        jTextField3.setBounds(520, 290, 220, 30);
+        jTextField3.setBounds(550, 290, 190, 30);
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -463,7 +470,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
             }
         });
         background.add(jTextField4);
-        jTextField4.setBounds(520, 500, 220, 30);
+        jTextField4.setBounds(550, 500, 190, 30);
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -480,7 +487,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
             }
         });
         background.add(jTextField5);
-        jTextField5.setBounds(930, 290, 220, 30);
+        jTextField5.setBounds(960, 290, 190, 30);
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -497,7 +504,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
             }
         });
         background.add(jTextField6);
-        jTextField6.setBounds(930, 390, 220, 30);
+        jTextField6.setBounds(960, 390, 190, 30);
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -514,7 +521,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
             }
         });
         background.add(jTextField7);
-        jTextField7.setBounds(930, 500, 220, 30);
+        jTextField7.setBounds(960, 500, 190, 30);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel11);
@@ -550,7 +557,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
             }
         });
         background.add(jButton1);
-        jButton1.setBounds(760, 600, 110, 23);
+        jButton1.setBounds(630, 600, 110, 23);
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/vestido-de-casamento.png"))); // NOI18N
         background.add(jLabel17);
@@ -610,6 +617,54 @@ public class Menu_Noiva extends javax.swing.JFrame {
         jLabel31.setToolTipText("");
         background.add(jLabel31);
         jLabel31.setBounds(1730, 620, 280, 300);
+
+        jLabel32.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel32.setText("VESTIDO");
+        background.add(jLabel32);
+        jLabel32.setBounds(520, 270, 62, 21);
+
+        jLabel33.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel33.setText("R$");
+        background.add(jLabel33);
+        jLabel33.setBounds(910, 500, 62, 30);
+
+        jLabel34.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel34.setText("R$");
+        background.add(jLabel34);
+        jLabel34.setBounds(500, 390, 62, 30);
+
+        jLabel35.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel35.setText("R$");
+        background.add(jLabel35);
+        jLabel35.setBounds(500, 290, 62, 30);
+
+        jLabel36.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel36.setText("R$");
+        background.add(jLabel36);
+        jLabel36.setBounds(910, 290, 62, 30);
+
+        jLabel37.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel37.setText("R$");
+        background.add(jLabel37);
+        jLabel37.setBounds(910, 390, 62, 30);
+
+        jButton2.setBackground(new java.awt.Color(204, 0, 51));
+        jButton2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("LIMPAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        background.add(jButton2);
+        jButton2.setBounds(880, 600, 110, 23);
 
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -752,6 +807,15 @@ public class Menu_Noiva extends javax.swing.JFrame {
         }
     }
 
+    public void limparTelaCadastroNoiva() {
+        jTextField6.setText("");
+        jTextField5.setText("");
+        jTextField7.setText("");
+        jTextField4.setText("");
+        jTextField3.setText("");
+        jTextField2.setText("");
+    }
+
     public void adicionarNoiva() {
 
         try {
@@ -843,6 +907,10 @@ public class Menu_Noiva extends javax.swing.JFrame {
         //jTextField3.setText(vestidoFormatado);
     }//GEN-LAST:event_jTextField3MouseExited
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        limparTelaCadastroNoiva();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -890,6 +958,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
     private javax.swing.JPanel btnNoivo;
     private javax.swing.JPanel btnOrcamento;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -915,6 +984,12 @@ public class Menu_Noiva extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
