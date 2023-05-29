@@ -663,7 +663,6 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOrcamentoMouseClicked
 
     private void btnGerenciarConvidadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGerenciarConvidadosMouseClicked
-
         new Menu_GerenciarConvidados().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
@@ -699,7 +698,6 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
           int confirma = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja alterar este convidado?");
         if (confirma == JOptionPane.YES_OPTION) {
             new Tela_EditarConvidado().setVisible(true);
-            this.dispose();
         }
     }//GEN-LAST:event_jLabel5MouseClicked
 

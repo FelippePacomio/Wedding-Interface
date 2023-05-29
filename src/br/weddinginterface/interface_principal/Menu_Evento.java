@@ -6,6 +6,9 @@ package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
 import java.awt.Color;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -15,11 +18,14 @@ import javax.swing.JPanel;
  */
 public class Menu_Evento extends javax.swing.JFrame {
 
+    Evento eve = new Evento();
+
     /**
      * Creates new form Menu_Noiva
      */
     public Menu_Evento() {
         initComponents();
+        mostrarEvento();
     }
 
     /**
@@ -57,11 +63,11 @@ public class Menu_Evento extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtBuffet = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtConvites = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txtLocacao = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -69,7 +75,7 @@ public class Menu_Evento extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        txtLembrancas = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
@@ -80,7 +86,7 @@ public class Menu_Evento extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        txtMusica = new javax.swing.JTextField();
         jLabel30 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -98,7 +104,7 @@ public class Menu_Evento extends javax.swing.JFrame {
         jLabel40 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel41 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
+        txtCustoCerimonia = new javax.swing.JTextField();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
@@ -467,48 +473,48 @@ public class Menu_Evento extends javax.swing.JFrame {
         background.add(jLabel5);
         jLabel5.setBounds(1060, 610, 100, 21);
 
-        jTextField1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField1.setToolTipText("Informe o valor gasto com o buffet.");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtBuffet.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        txtBuffet.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtBuffet.setToolTipText("Informe o valor gasto com o buffet.");
+        txtBuffet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtBuffetActionPerformed(evt);
             }
         });
-        background.add(jTextField1);
-        jTextField1.setBounds(430, 730, 190, 30);
+        background.add(txtBuffet);
+        txtBuffet.setBounds(430, 730, 190, 30);
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel7.setText("ANOTAÇÕES");
         background.add(jLabel7);
         jLabel7.setBounds(640, 800, 100, 21);
 
-        jTextField2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField2.setToolTipText("Informe o valor gasto com convites.");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtConvites.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        txtConvites.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtConvites.setToolTipText("Informe o valor gasto com convites.");
+        txtConvites.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtConvitesActionPerformed(evt);
             }
         });
-        background.add(jTextField2);
-        jTextField2.setBounds(760, 630, 190, 30);
+        background.add(txtConvites);
+        txtConvites.setBounds(760, 630, 190, 30);
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel8.setText("BUFFET");
         background.add(jLabel8);
         jLabel8.setBounds(400, 710, 100, 21);
 
-        jTextField3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField3.setToolTipText("Informe o valor gasto com a locação.");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        txtLocacao.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        txtLocacao.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtLocacao.setToolTipText("Informe o valor gasto com a locação.");
+        txtLocacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                txtLocacaoActionPerformed(evt);
             }
         });
-        background.add(jTextField3);
-        jTextField3.setBounds(430, 630, 190, 30);
+        background.add(txtLocacao);
+        txtLocacao.setBounds(430, 630, 190, 30);
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel9.setText("HORÁRIO DA CERIMÔNIA");
@@ -560,16 +566,16 @@ public class Menu_Evento extends javax.swing.JFrame {
         background.add(jLabel18);
         jLabel18.setBounds(730, 320, 220, 21);
 
-        jTextField7.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jTextField7.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField7.setToolTipText("Informe o valor gasto com lembranças.");
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        txtLembrancas.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        txtLembrancas.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtLembrancas.setToolTipText("Informe o valor gasto com lembranças.");
+        txtLembrancas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                txtLembrancasActionPerformed(evt);
             }
         });
-        background.add(jTextField7);
-        jTextField7.setBounds(760, 730, 190, 30);
+        background.add(txtLembrancas);
+        txtLembrancas.setBounds(760, 730, 190, 30);
 
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/placeholder (2).png"))); // NOI18N
@@ -621,16 +627,16 @@ public class Menu_Evento extends javax.swing.JFrame {
         background.add(jLabel32);
         jLabel32.setBounds(400, 410, 220, 21);
 
-        jTextField8.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jTextField8.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField8.setToolTipText("Informe o valor gasto com músicos/DJ's.");
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        txtMusica.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        txtMusica.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtMusica.setToolTipText("Informe o valor gasto com músicos/DJ's.");
+        txtMusica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                txtMusicaActionPerformed(evt);
             }
         });
-        background.add(jTextField8);
-        jTextField8.setBounds(1090, 630, 190, 30);
+        background.add(txtMusica);
+        txtMusica.setBounds(1090, 630, 190, 30);
 
         jLabel30.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel30.setText("LOCAÇÃO");
@@ -732,16 +738,16 @@ public class Menu_Evento extends javax.swing.JFrame {
         background.add(jLabel41);
         jLabel41.setBounds(1060, 710, 210, 21);
 
-        jTextField13.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jTextField13.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField13.setToolTipText("Informe o valor gasto com a cerimônia.");
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+        txtCustoCerimonia.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        txtCustoCerimonia.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtCustoCerimonia.setToolTipText("Informe o valor gasto com a cerimônia.");
+        txtCustoCerimonia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
+                txtCustoCerimoniaActionPerformed(evt);
             }
         });
-        background.add(jTextField13);
-        jTextField13.setBounds(1090, 730, 190, 30);
+        background.add(txtCustoCerimonia);
+        txtCustoCerimonia.setBounds(1090, 730, 190, 30);
 
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/presente.png"))); // NOI18N
@@ -901,10 +907,10 @@ public class Menu_Evento extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnNoivaMouseClicked
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtBuffetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuffetActionPerformed
         // TODO add your handling code here:
 
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtBuffetActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
@@ -915,9 +921,9 @@ public class Menu_Evento extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void txtLembrancasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLembrancasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_txtLembrancasActionPerformed
 
     private void btnEventoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEventoMouseClicked
         new Menu_Evento().setVisible(true);
@@ -934,13 +940,11 @@ public class Menu_Evento extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnNoivoMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void adicionarEvento() {
 
         String enderecoCerimonia, enderecoBuffet, horaCerimonia, horaRecepcao,
                 dataRecepcao, dataCerimonia, cardapio, anotacoes;
         Double valorBuffet, valorCerimonia, lembrancas, musica, locacao, convites;
-
-        Evento eve = new Evento();
 
         try {
 
@@ -951,13 +955,13 @@ public class Menu_Evento extends javax.swing.JFrame {
             horaRecepcao = jTextField11.getText();
             cardapio = jTextField12.getText();
             anotacoes = jTextArea1.getText();
-            locacao = Double.parseDouble(jTextField3.getText());
-            convites = Double.parseDouble(jTextField2.getText());
-            musica = Double.parseDouble(jTextField8.getText());
-            valorBuffet = Double.parseDouble(jTextField1.getText());
-            lembrancas = Double.parseDouble(jTextField7.getText());
+            locacao = Double.parseDouble(txtLocacao.getText());
+            convites = Double.parseDouble(txtConvites.getText());
+            musica = Double.parseDouble(txtMusica.getText());
+            valorBuffet = Double.parseDouble(txtBuffet.getText());
+            lembrancas = Double.parseDouble(txtLembrancas.getText());
             horaCerimonia = jTextField6.getText();
-            valorCerimonia = Double.parseDouble(jTextField13.getText());
+            valorCerimonia = Double.parseDouble(txtCustoCerimonia.getText());
 
             eve.setEnderecoCerimonia(enderecoCerimonia);
             eve.setCardapio(cardapio);
@@ -973,17 +977,85 @@ public class Menu_Evento extends javax.swing.JFrame {
             eve.setValorBuffet(valorBuffet);
             eve.setMusica(musica);
             eve.setConvites(convites);
+
+            Evento.instancia.setAnotacoes(anotacoes);
+            Evento.instancia.setEnderecoCerimonia(enderecoCerimonia);
+            Evento.instancia.setCardapio(cardapio);
+            Evento.instancia.setConvites(convites);
+            Evento.instancia.setDataCerimonia(dataCerimonia);
+            Evento.instancia.setDataRecepcao(dataRecepcao);
+            Evento.instancia.setEnderecoBuffet(enderecoBuffet);
+            Evento.instancia.setHoraCerimonia(horaCerimonia);
+            Evento.instancia.setHoraRecepcao(horaRecepcao);
+            Evento.instancia.setLembrancas(lembrancas);
+            Evento.instancia.setLocacao(locacao);
+            Evento.instancia.setMusica(musica);
+            Evento.instancia.setValorBuffet(valorBuffet);
+            Evento.instancia.setValorCerimonia(valorCerimonia);
+
             eve.inserirEvento(eve);
 
             Orcamento.instancia.setGastoEvento(locacao + valorBuffet + valorCerimonia + lembrancas + musica + convites);
 
             JOptionPane.showMessageDialog(
                     null, "Evento inserido com sucesso!");
+            mostrarEvento();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public void mostrarEvento() {
+        try {
+            if (Evento.instancia.id > 0) {
+
+                Locale locale = new Locale("en", "US"); // Locale personalizado para usar ponto como separador decimal
+                DecimalFormatSymbols symbols = new DecimalFormatSymbols(locale);
+                symbols.setDecimalSeparator('.'); // Define o ponto como separador decimal
+                DecimalFormat decimalFormat = new DecimalFormat("0.00", symbols);
+
+                String enderecoCerimonia = Evento.instancia.getEnderecoCerimonia();
+                String enderecoBuffet = Evento.instancia.getEnderecoBuffet();
+                String horaCerimonia = Evento.instancia.getHoraCerimonia();
+                String horaRecepcao = Evento.instancia.getHoraRecepcao();
+                String dataRecepcao = Evento.instancia.getDataRecepcao();
+                String dataCerimonia = Evento.instancia.getDataCerimonia();
+                String cardapio = Evento.instancia.getCardapio();
+                String anotacoes = Evento.instancia.getAnotacoes();
+
+                String musicaFormatado = decimalFormat.format(Evento.instancia.getMusica());
+                String lembrancasFormatado = decimalFormat.format(Evento.instancia.getLembrancas());
+                String convitesFormatado = decimalFormat.format(Evento.instancia.getConvites());
+                String custoFormatado = decimalFormat.format(Evento.instancia.getValorCerimonia());
+                String buffetFormatado = decimalFormat.format(Evento.instancia.getValorBuffet());
+                String locacaoFormatado = decimalFormat.format(Evento.instancia.getLocacao());
+
+                txtMusica.setText(musicaFormatado);
+                txtLembrancas.setText(lembrancasFormatado);
+                txtConvites.setText(convitesFormatado);
+                txtCustoCerimonia.setText(custoFormatado);
+                txtBuffet.setText(buffetFormatado);
+                txtLocacao.setText(locacaoFormatado);
+                jTextField4.setText(enderecoCerimonia);
+                jTextField5.setText(enderecoBuffet);
+                jTextField12.setText(cardapio);
+                jTextField10.setText(dataRecepcao);
+                jTextField9.setText(dataCerimonia);
+                jTextField6.setText(horaCerimonia);
+                jTextField11.setText(horaRecepcao);
+                jTextArea1.setText(anotacoes);
+                
+            } else {
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        adicionarEvento();
     }//GEN-LAST:event_jButton1ActionPerformed
-public void limparTelaCadastroEvento(){
+    public void limparTelaCadastroEvento() {
         jTextField4.setText("");
         jTextField9.setText("");
         jTextField5.setText("");
@@ -991,14 +1063,14 @@ public void limparTelaCadastroEvento(){
         jTextField11.setText("");
         jTextField12.setText("");
         jTextArea1.setText("");
-        jTextField3.setText("");
-        jTextField2.setText("");
-        jTextField8.setText("");
-        jTextField1.setText("");
-        jTextField7.setText("");
+        txtLocacao.setText("");
+        txtConvites.setText("");
+        txtMusica.setText("");
+        txtBuffet.setText("");
+        txtLembrancas.setText("");
         jTextField6.setText("");
-        jTextField13.setText("");
-      }
+        txtCustoCerimonia.setText("");
+    }
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField9ActionPerformed
@@ -1011,9 +1083,9 @@ public void limparTelaCadastroEvento(){
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField12ActionPerformed
 
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    private void txtCustoCerimoniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCustoCerimoniaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_txtCustoCerimoniaActionPerformed
 
     private void btnOrcamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOrcamentoMouseClicked
         new Menu_Orcamento().setVisible(true);
@@ -1033,17 +1105,17 @@ public void limparTelaCadastroEvento(){
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField11ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void txtLocacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLocacaoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_txtLocacaoActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtConvitesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConvitesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtConvitesActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void txtMusicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMusicaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_txtMusicaActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         limparTelaCadastroEvento();
@@ -1224,18 +1296,18 @@ public void limparTelaCadastroEvento(){
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField txtBuffet;
+    private javax.swing.JTextField txtConvites;
+    private javax.swing.JTextField txtCustoCerimonia;
+    private javax.swing.JTextField txtLembrancas;
+    private javax.swing.JTextField txtLocacao;
+    private javax.swing.JTextField txtMusica;
     // End of variables declaration//GEN-END:variables
 }

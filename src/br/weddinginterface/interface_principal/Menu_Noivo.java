@@ -7,6 +7,8 @@ package br.weddinginterface.interface_principal;
 import br.weddinginterface.model.*;
 import java.awt.Color;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -16,11 +18,14 @@ import javax.swing.JPanel;
  */
 public class Menu_Noivo extends javax.swing.JFrame {
 
+    Noivo noivo = new Noivo();
+
     /**
      * Creates new form Menu_Noiva
      */
     public Menu_Noivo() {
         initComponents();
+        mostrarNoivo();
     }
 
     /**
@@ -51,14 +56,14 @@ public class Menu_Noivo extends javax.swing.JFrame {
         btnNoivo = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        txtSapato = new javax.swing.JTextField();
+        txtTerno = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        txtAcessorios = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        txtDiaDoNoivo = new javax.swing.JTextField();
+        txtTransporte = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -411,23 +416,23 @@ public class Menu_Noivo extends javax.swing.JFrame {
         background.add(jLabel5);
         jLabel5.setBounds(540, 270, 62, 21);
 
-        jTextField2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField2.setToolTipText("Informe o valor gasto com o sapato. (Opcional)");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtSapato.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        txtSapato.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtSapato.setToolTipText("Informe o valor gasto com o sapato. (Opcional)");
+        txtSapato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtSapatoActionPerformed(evt);
             }
         });
-        background.add(jTextField2);
-        jTextField2.setBounds(570, 400, 190, 30);
+        background.add(txtSapato);
+        txtSapato.setBounds(570, 400, 190, 30);
 
-        jTextField3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField3.setToolTipText("Informe o valor gasto com o terno. (Opcional)");
-        jTextField3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        background.add(jTextField3);
-        jTextField3.setBounds(570, 290, 190, 30);
+        txtTerno.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        txtTerno.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtTerno.setToolTipText("Informe o valor gasto com o terno. (Opcional)");
+        txtTerno.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        background.add(txtTerno);
+        txtTerno.setBounds(570, 290, 190, 30);
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -441,11 +446,11 @@ public class Menu_Noivo extends javax.swing.JFrame {
         background.add(jLabel7);
         jLabel7.setBounds(970, 270, 120, 21);
 
-        jTextField5.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jTextField5.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField5.setToolTipText("Informe o valor gasto com acessórios. (Opcional)");
-        background.add(jTextField5);
-        jTextField5.setBounds(570, 510, 190, 30);
+        txtAcessorios.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        txtAcessorios.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtAcessorios.setToolTipText("Informe o valor gasto com acessórios. (Opcional)");
+        background.add(txtAcessorios);
+        txtAcessorios.setBounds(570, 510, 190, 30);
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -453,17 +458,17 @@ public class Menu_Noivo extends javax.swing.JFrame {
         background.add(jLabel8);
         jLabel8.setBounds(540, 490, 95, 21);
 
-        jTextField6.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jTextField6.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField6.setToolTipText("Informe o valor gasto com barbearia, maquiagem, etc. (Opcional)");
-        background.add(jTextField6);
-        jTextField6.setBounds(1000, 290, 190, 30);
+        txtDiaDoNoivo.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        txtDiaDoNoivo.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtDiaDoNoivo.setToolTipText("Informe o valor gasto com barbearia, maquiagem, etc. (Opcional)");
+        background.add(txtDiaDoNoivo);
+        txtDiaDoNoivo.setBounds(1000, 290, 190, 30);
 
-        jTextField7.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jTextField7.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField7.setToolTipText("Informe o valor gasto com o transporte. (Opcional)");
-        background.add(jTextField7);
-        jTextField7.setBounds(1000, 390, 190, 30);
+        txtTransporte.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        txtTransporte.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtTransporte.setToolTipText("Informe o valor gasto com o transporte. (Opcional)");
+        background.add(txtTransporte);
+        txtTransporte.setBounds(1000, 390, 190, 30);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel11);
@@ -603,9 +608,36 @@ public class Menu_Noivo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    public void mostrarNoivo() {
+        try {
+            if (Noivo.instancia.id > 0) {
+
+                Locale locale = new Locale("en", "US"); // Locale personalizado para usar ponto como separador decimal
+                DecimalFormatSymbols symbols = new DecimalFormatSymbols(locale);
+                symbols.setDecimalSeparator('.'); // Define o ponto como separador decimal
+                DecimalFormat decimalFormat = new DecimalFormat("0.00", symbols);
+
+                String acessoriosFormatado = decimalFormat.format(Noivo.instancia.getAcessorios());
+                String ternoFormatado = decimalFormat.format(Noivo.instancia.getTerno());
+                String sapatoFormatado = decimalFormat.format(Noivo.instancia.getSapato());
+                String diaDoNoivoFormatado = decimalFormat.format(Noivo.instancia.getDiaDoNoivo());
+                String transporteNoivaFormatado = decimalFormat.format(Noivo.instancia.getTransporteNoivo());
+
+                txtAcessorios.setText(acessoriosFormatado);
+                txtTerno.setText(ternoFormatado);
+                txtSapato.setText(sapatoFormatado);
+                txtDiaDoNoivo.setText(diaDoNoivoFormatado);
+                txtTransporte.setText(transporteNoivaFormatado);
+            } else {
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private void txtSapatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSapatoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtSapatoActionPerformed
 
     private void btnEventoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEventoMousePressed
 
@@ -699,48 +731,50 @@ public class Menu_Noivo extends javax.swing.JFrame {
         new Menu_GerenciarConvidados().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        Noivo noi = new Noivo();
+    public void adicionarNoivo() {
 
         try {
 
-            double terno;
-            double sapato;
-            double diaDoNoivo;
-            double transporteNoivo;
-            double acessorios;
+            double acessorios = Double.parseDouble(txtAcessorios.getText());
+            double terno = Double.parseDouble(txtTerno.getText());
+            double sapato = Double.parseDouble(txtSapato.getText());
+            double diaDoNoivo = Double.parseDouble(txtDiaDoNoivo.getText());
+            double transporteNoivo = Double.parseDouble(txtTransporte.getText());
 
-            terno = Double.parseDouble(jTextField3.getText());
-            sapato = Double.parseDouble(jTextField2.getText());
-            diaDoNoivo = Double.parseDouble(jTextField6.getText());
-            transporteNoivo = Double.parseDouble(jTextField7.getText());
-            acessorios = Double.parseDouble(jTextField5.getText());
+            noivo.setAcessorios(acessorios);
+            noivo.setTerno(terno);
+            noivo.setSapato(sapato);
+            noivo.setDiaDoNoivo(diaDoNoivo);
+            noivo.setTransporteNoivo(transporteNoivo);
 
-            noi.setTerno(terno);
-            noi.setSapato(sapato);
-            noi.setDiaDoNoivo(diaDoNoivo);
-            noi.setTransporteNoivo(transporteNoivo);
-            noi.setAcessorios(acessorios);
-            noi.insereNoivo(noi);
+            Noivo.instancia.setAcessorios(acessorios);
+            Noivo.instancia.setDiaDoNoivo(diaDoNoivo);
+            Noivo.instancia.setSapato(sapato);
+            Noivo.instancia.setTransporteNoivo(transporteNoivo);
+            Noivo.instancia.setTerno(terno);
+
+            noivo.insereNoivo(noivo);
 
             Orcamento.instancia.setGastoNoivo(terno + sapato + diaDoNoivo + transporteNoivo);
 
             JOptionPane.showMessageDialog(null, "Noivo inserido com sucesso!");
+            mostrarNoivo();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        
+
+    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        adicionarNoivo();
     }//GEN-LAST:event_jButton1ActionPerformed
- 
-    public void limparTelaCadastroNoivo(){
-        jTextField3.setText("");
-        jTextField2.setText("");
-        jTextField6.setText("");
-        jTextField7.setText("");
-        jTextField5.setText("");
-      }
+
+    public void limparTelaCadastroNoivo() {
+        txtTerno.setText("");
+        txtSapato.setText("");
+        txtDiaDoNoivo.setText("");
+        txtTransporte.setText("");
+        txtAcessorios.setText("");
+    }
     private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
         btnNoivo.setBackground(mySelect);
     }//GEN-LAST:event_jLabel3MouseEntered
@@ -842,10 +876,10 @@ public class Menu_Noivo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField txtAcessorios;
+    private javax.swing.JTextField txtDiaDoNoivo;
+    private javax.swing.JTextField txtSapato;
+    private javax.swing.JTextField txtTerno;
+    private javax.swing.JTextField txtTransporte;
     // End of variables declaration//GEN-END:variables
 }

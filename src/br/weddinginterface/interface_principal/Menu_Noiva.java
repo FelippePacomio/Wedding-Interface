@@ -1,30 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
 import java.awt.Color;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
-import java.text.NumberFormat;
-import java.util.Currency;
 import java.util.Locale;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
-/**
- *
- * @author Tips
- */
 public class Menu_Noiva extends javax.swing.JFrame {
 
     Noiva noiva = new Noiva();
 
-    /**
-     * Creates new form Menu_Noiva
-     */
     public Menu_Noiva() {
         initComponents();
         mostrarNoiva();
@@ -773,9 +759,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
 
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
         adicionarNoiva();
-
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public void mostrarNoiva() {

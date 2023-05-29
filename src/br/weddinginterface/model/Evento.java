@@ -8,9 +8,11 @@ import java.util.Objects;
 
 public class Evento {
 
+    public static Evento instancia;
     private String enderecoCerimonia, enderecoBuffet, horaCerimonia, horaRecepcao,
             dataRecepcao, dataCerimonia, cardapio, anotacoes;
     private Double valorBuffet, valorCerimonia, lembrancas, musica, convites, locacao;
+    public int id;
 
     public String getHoraRecepcao() {
         return horaRecepcao;
@@ -185,10 +187,11 @@ public class Evento {
             if (linhasAfetadas > 0) {
                 ResultSet rs = st.getGeneratedKeys();
                 if (rs.next()) {
-                    Double musica = rs.getDouble(1);
-                    eve.setMusica(musica);
+                    int novoId = rs.getInt(1);
+                    id = novoId;
                 }
                 rs.close();
+                Evento.instancia.id = id;
             } else {
                 throw new SQLException("Erro inesperado! Nenhuma linha afetada!");
             }
