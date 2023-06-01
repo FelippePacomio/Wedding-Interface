@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package br.weddinginterface.interface_principal;
 
 import br.weddinginterface.model.*;
@@ -10,19 +6,14 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
-/**
- *
- * @author Tips
- */
 public class Menu_Noivo extends javax.swing.JFrame {
 
+    Color mySelect = new Color(255, 161, 170);
+    Color myUnSelect = new Color(253, 214, 218);
+    Color mySubUnSelect = new Color(232, 194, 194);
     Noivo noivo = new Noivo();
 
-    /**
-     * Creates new form Menu_Noiva
-     */
     public Menu_Noivo() {
         initComponents();
         mostrarNoivo();
@@ -636,16 +627,11 @@ public class Menu_Noivo extends javax.swing.JFrame {
     }
 
     private void txtSapatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSapatoActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtSapatoActionPerformed
 
     private void btnEventoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEventoMousePressed
-
     }//GEN-LAST:event_btnEventoMousePressed
 
-    Color mySelect = new Color(255, 161, 170);
-    Color myUnSelect = new Color(253, 214, 218);
-    Color mySubUnSelect = new Color(232, 194, 194);
     private void btnNoivoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoivoMouseEntered
         btnNoivo.setBackground(mySelect);
     }//GEN-LAST:event_btnNoivoMouseEntered
@@ -731,10 +717,10 @@ public class Menu_Noivo extends javax.swing.JFrame {
         new Menu_GerenciarConvidados().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
+   
     public void adicionarNoivo() {
 
         try {
-
             double acessorios = Double.parseDouble(txtAcessorios.getText());
             double terno = Double.parseDouble(txtTerno.getText());
             double sapato = Double.parseDouble(txtSapato.getText());
@@ -788,11 +774,8 @@ public class Menu_Noivo extends javax.swing.JFrame {
         limparTelaCadastroNoivo();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -814,15 +797,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Menu_Noivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
+ 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Menu_Noivo().setVisible(true);

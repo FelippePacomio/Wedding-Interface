@@ -4,7 +4,6 @@ import br.weddinginterface.controller.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Objects;
 
 public class Orcamento {
 

@@ -165,6 +165,47 @@ public class Convidados {
         }
     }
       
+      public List<Convidados> listarConvidadosInteiros() throws SQLException {
+    Conexao con = new Conexao();
+    con.getConexao();
+    PreparedStatement stmt = null;
+    ResultSet resultado = null;
+
+    List<Convidados> listaConvidados = new ArrayList<>();
+
+    try {
+        String sql = "SELECT * FROM tb_convidados";
+
+        stmt = con.getConexao().prepareStatement(sql);
+        resultado = stmt.executeQuery();
+
+        while (resultado.next()) {
+            Convidados conv = new Convidados();
+            conv.setNome(resultado.getString("c_nome"));
+            conv.setTelefone(resultado.getString("c_telefone"));
+            conv.setRestricao(resultado.getString("c_restricao_alimentar"));
+            conv.setParentesco(resultado.getString("c_parentesco"));
+            listaConvidados.add(conv);
+        }
+
+        return listaConvidados;
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+        return null;
+
+    } finally {
+        if (resultado != null) {
+            resultado.close();
+        }
+        if (stmt != null) {
+            stmt.close();
+        }
+        con.getConexao().close();
+    }
+}
+
+      
     public void atualizaConvidados(Convidados con) throws SQLException {
 
         Conexao conexao = new Conexao();
