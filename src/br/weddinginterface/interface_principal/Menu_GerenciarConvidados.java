@@ -685,11 +685,12 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         if (jTable1.getSelectedRowCount() > 0) {
             int confirma = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja remover este convidado?");
             if (confirma == JOptionPane.YES_OPTION) {
+                String nomeConvidado = jTable1.getValueAt(jTable1.getSelectedRow(), 0).toString();
                 String sql = "DELETE FROM tb_convidados WHERE c_Nome = ?";
                 try {
                     PreparedStatement stmt = null;
                     stmt = conexao.getConexao().prepareStatement(sql);
-                    stmt.setString(1, jTextField1.getText());
+                    stmt.setString(1, nomeConvidado);
                     int apagado = stmt.executeUpdate();
                     if (apagado > 0) {
                         JOptionPane.showMessageDialog(null, "Convidado Removido com Sucesso!");
