@@ -7,6 +7,10 @@ import javax.swing.JOptionPane;
 
 public class Tela_Login extends javax.swing.JFrame {
 
+    Usuario user = new Usuario();
+    Color color_red = new Color(255, 102, 102);
+    Color color_white = new Color(255, 255, 255);
+
     public Tela_Login() {
         initComponents();
     }
@@ -85,6 +89,11 @@ public class Tela_Login extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField1KeyPressed(evt);
+            }
+        });
         jPanel1.add(jTextField1);
         jTextField1.setBounds(677, 294, 300, 30);
 
@@ -100,6 +109,9 @@ public class Tela_Login extends javax.swing.JFrame {
             }
         });
         jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPasswordField1KeyPressed(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jPasswordField1KeyTyped(evt);
             }
@@ -236,10 +248,6 @@ public class Tela_Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        Usuario user = new Usuario();
-
-        Color color_red = new Color(255, 102, 102);
-        Color color_white = new Color(255, 255, 255);
         int senha;
         senha = Integer.parseInt(jPasswordField1.getText());
 
@@ -256,11 +264,6 @@ public class Tela_Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        Usuario user = new Usuario();
-
-        Color color_red = new Color(255, 102, 102);
-        Color color_white = new Color(255, 255, 255);
-
         String usuario;
         usuario = jTextField1.getText();
 
@@ -272,21 +275,27 @@ public class Tela_Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Usuario user = new Usuario();
+        tratamentoUsuario();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jPasswordField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyTyped
+        String usuario;
+
+        usuario = jTextField1.getText();
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
+            user.checarLogin(usuario);
+    }//GEN-LAST:event_jPasswordField1KeyTyped
+
+    private void tratamentoUsuario() {
         String usuario;
         int senha;
 
         usuario = jTextField1.getText();
         senha = Integer.parseInt(jPasswordField1.getText());
 
-        Color color_red = new Color(240, 128, 128);
-        Color color_white = new Color(255, 255, 255);
-
         if (user.checarLoginESenha(usuario, senha)) {
             new Menu_Orcamento().setVisible(true);
             this.dispose();
-
         }
 
         if (!(user.checarLogin(usuario) && user.checarSenha(senha))) {
@@ -294,22 +303,46 @@ public class Tela_Login extends javax.swing.JFrame {
             jPasswordField1.setBackground(color_red);
             JOptionPane.showMessageDialog(null, "Login e/ou senha incorretos!");
 
+        } else if (jTextField1.getText() == null || jPasswordField1.getText() == null) {
+            jTextField1.setBackground(color_red);
+            jPasswordField1.setBackground(color_red);
+            JOptionPane.showMessageDialog(null, "Login e/ou senha incorretos!");
+        } else if (jTextField1.getText() == null && jPasswordField1.getText() == null) {
+            jTextField1.setBackground(color_red);
+            jPasswordField1.setBackground(color_red);
+            JOptionPane.showMessageDialog(null, "Login e/ou senha incorretos!");
         } else {
             jPasswordField1.setBackground(color_white);
             jTextField1.setBackground(color_white);
         }
+    }
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
 
-    private void jPasswordField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyTyped
+        try {
+            if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+                tratamentoUsuario();
+            }
 
-        Usuario user = new Usuario();
-        String usuario;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            jTextField1.setBackground(color_red);
+            jPasswordField1.setBackground(color_red);
+        }
+    }//GEN-LAST:event_jTextField1KeyPressed
 
-        usuario = jTextField1.getText();
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-            user.checarLogin(usuario);
-    }//GEN-LAST:event_jPasswordField1KeyTyped
+    private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
+        try {
+            if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+                tratamentoUsuario();
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            jTextField1.setBackground(color_red);
+            jPasswordField1.setBackground(color_red);
+        }
+    }//GEN-LAST:event_jPasswordField1KeyPressed
 
     public static void main(String args[]) {
 
