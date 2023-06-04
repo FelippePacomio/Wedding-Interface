@@ -409,7 +409,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
 
         txtSapato.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         txtSapato.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtSapato.setToolTipText("Informe o valor gasto com o sapato. (Opcional)");
+        txtSapato.setToolTipText("Informe o valor gasto com o sapato.");
         txtSapato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSapatoActionPerformed(evt);
@@ -420,7 +420,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
 
         txtTerno.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         txtTerno.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtTerno.setToolTipText("Informe o valor gasto com o terno. (Opcional)");
+        txtTerno.setToolTipText("Informe o valor gasto com o terno.");
         txtTerno.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         background.add(txtTerno);
         txtTerno.setBounds(570, 290, 190, 30);
@@ -439,7 +439,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
 
         txtAcessorios.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         txtAcessorios.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtAcessorios.setToolTipText("Informe o valor gasto com acessórios. (Opcional)");
+        txtAcessorios.setToolTipText("Informe o valor gasto com acessórios.");
         background.add(txtAcessorios);
         txtAcessorios.setBounds(570, 510, 190, 30);
 
@@ -451,13 +451,13 @@ public class Menu_Noivo extends javax.swing.JFrame {
 
         txtDiaDoNoivo.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         txtDiaDoNoivo.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtDiaDoNoivo.setToolTipText("Informe o valor gasto com barbearia, maquiagem, etc. (Opcional)");
+        txtDiaDoNoivo.setToolTipText("Informe o valor gasto com barbearia, maquiagem, etc.");
         background.add(txtDiaDoNoivo);
         txtDiaDoNoivo.setBounds(1000, 290, 190, 30);
 
         txtTransporte.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         txtTransporte.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtTransporte.setToolTipText("Informe o valor gasto com o transporte. (Opcional)");
+        txtTransporte.setToolTipText("Informe o valor gasto com o transporte.");
         background.add(txtTransporte);
         txtTransporte.setBounds(1000, 390, 190, 30);
 
@@ -599,10 +599,20 @@ public class Menu_Noivo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void checarCampos() {
+        try {
+            if (txtAcessorios.getText() == null || txtTerno.getText() == null || txtSapato.getText() == null
+                    || txtDiaDoNoivo.getText() == null || txtTransporte.getText() == null) {
+                JOptionPane.showMessageDialog(null, "Todos os campos devem ser preenchidos!");
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     public void mostrarNoivo() {
         try {
             if (Noivo.instancia.id > 0) {
-
                 Locale locale = new Locale("en", "US"); // Locale personalizado para usar ponto como separador decimal
                 DecimalFormatSymbols symbols = new DecimalFormatSymbols(locale);
                 symbols.setDecimalSeparator('.'); // Define o ponto como separador decimal
@@ -717,7 +727,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
         new Menu_GerenciarConvidados().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGerenciarConvidadosMouseClicked
-   
+
     public void adicionarNoivo() {
 
         try {
@@ -747,6 +757,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
             mostrarNoivo();
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, "Todos os campos devem ser preenchidos!");
         }
 
     }
@@ -797,7 +808,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Menu_Noivo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
- 
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Menu_Noivo().setVisible(true);

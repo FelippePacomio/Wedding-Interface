@@ -298,7 +298,37 @@ public class Tela_Cadastro extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+   
+    
+    public boolean verificarEmail(String email) {
+        // Verifica se o email contém "@"
+        if (!email.contains("@")) {
+            return false;
+        }
 
+        // Verifica se o email contém um dos domínios permitidos
+        if (!email.endsWith("@gmail.com") && !email.endsWith("@outlook.com") && !email.endsWith("@hotmail.com")) {
+            return false;
+        }
+
+        // Verifica se o email termina com ".com" ou ".br"
+        if (!email.endsWith(".com") && !email.endsWith(".br")) {
+            return false;
+        }
+
+        return true;
+    }
+
+ public boolean verificarSenha(String senha) {
+    try {
+        Integer.parseInt(senha);
+        return true;
+    } catch (NumberFormatException e) {
+        return false;
+    }
+}
+
+    
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         new Interface_Principal().setVisible(true);
         this.dispose();
@@ -311,29 +341,40 @@ public class Tela_Cadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-         Usuario us = new Usuario();
+                                          
+    try {
+        String email = jTextField3.getText();
+        String login = jTextField2.getText();
+        String senhaStr = jPasswordField1.getText();
 
-        try {
-            String email;
-            String login;
-            int senha;
-
-            email = jTextField3.getText();
-            login = jTextField2.getText();
-            senha = Integer.parseInt(jPasswordField1.getText());
-
-            us.setEmail(email);
-            us.setLogin(login);
-            us.setSenha(senha);
-
-            us.insereUsuario(us);
-
-            JOptionPane.showMessageDialog(null, "Usuário inserido com sucesso!");
-             new Tela_Login().setVisible(true);
-             this.dispose();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        // Verifica se o email é válido
+        if (!verificarEmail(email)) {
+            JOptionPane.showMessageDialog(this, "Email inválido. Apenas @gmail/@outlook/@hotmail com .com/.br são permitidos", "Erro", JOptionPane.ERROR_MESSAGE);
+            return; // Retorna sem prosseguir com o login
         }
+
+        // Verifica se a senha contém apenas números
+         if (!verificarSenha(senhaStr)) {
+            JOptionPane.showMessageDialog(this, "Senha inválida. Apenas números são permitidos.", "Erro", JOptionPane.ERROR_MESSAGE);
+            return; // Retorna sem prosseguir com o login
+        }
+
+        int senha = Integer.parseInt(senhaStr);
+
+        Usuario us = new Usuario();
+        us.setEmail(email);
+        us.setLogin(login);
+        us.setSenha(senha);
+
+        us.insereUsuario(us);
+
+        JOptionPane.showMessageDialog(null, "Usuário inserido com sucesso!");
+        new Tela_Login().setVisible(true);
+        this.dispose();
+        
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public static void main(String args[]) {

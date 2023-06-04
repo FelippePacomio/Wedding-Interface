@@ -978,6 +978,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             mostrarEvento();
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, "Todos os campos devem ser preenchidos!");
         }
     }
 
@@ -1025,7 +1026,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
-        }
+        } 
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

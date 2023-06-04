@@ -410,7 +410,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
 
         jTextField2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField2.setToolTipText("Informe o valor gasto com sapatos. (Opcional)");
+        jTextField2.setToolTipText("Informe o valor gasto com sapatos.");
         jTextField2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTextField2MouseClicked(evt);
@@ -426,7 +426,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
 
         jTextField3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField3.setToolTipText("Informe o valor gasto com vestido. (Opcional).");
+        jTextField3.setToolTipText("Informe o valor gasto com vestido.");
         jTextField3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTextField3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -447,7 +447,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
 
         jTextField4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField4.setToolTipText("Informe o valor gasto com o buquê. (Opcional)");
+        jTextField4.setToolTipText("Informe o valor gasto com o buquê.");
         jTextField4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTextField4MouseClicked(evt);
@@ -464,7 +464,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
 
         jTextField5.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField5.setToolTipText("Informe o valor gasto com acessórios. (Opcional)");
+        jTextField5.setToolTipText("Informe o valor gasto com acessórios.");
         jTextField5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTextField5MouseClicked(evt);
@@ -481,7 +481,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
 
         jTextField6.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField6.setToolTipText("Informe o valor gasto com maquiagem, cabelo, etc. (Opcional)");
+        jTextField6.setToolTipText("Informe o valor gasto com maquiagem, cabelo, etc.");
         jTextField6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTextField6MouseClicked(evt);
@@ -498,7 +498,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
 
         jTextField7.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField7.setToolTipText("Informe o valor gasto com transporte. (Opcional)");
+        jTextField7.setToolTipText("Informe o valor gasto com transporte.");
         jTextField7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTextField7MouseClicked(evt);
@@ -831,6 +831,7 @@ public class Menu_Noiva extends javax.swing.JFrame {
             mostrarNoiva();
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, "Todos os campos devem ser preenchidos!");
         }
     }
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
