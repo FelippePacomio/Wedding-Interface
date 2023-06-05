@@ -19,6 +19,7 @@ public class Tela_Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel9 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -32,17 +33,16 @@ public class Tela_Login extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
+        jLabel9.setToolTipText("");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1900, 1080));
@@ -65,7 +65,7 @@ public class Tela_Login extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 601, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -81,7 +81,7 @@ public class Tela_Login extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel2.setText("Login");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(677, 265, 46, 23);
+        jLabel2.setBounds(677, 265, 300, 23);
 
         jTextField1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -100,7 +100,7 @@ public class Tela_Login extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jLabel3.setText("Senha");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(677, 463, 55, 23);
+        jLabel3.setBounds(680, 440, 300, 23);
 
         jPasswordField1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -117,7 +117,7 @@ public class Tela_Login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jPasswordField1);
-        jPasswordField1.setBounds(677, 492, 300, 30);
+        jPasswordField1.setBounds(680, 460, 300, 30);
 
         jButton1.setBackground(new java.awt.Color(204, 0, 51));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -129,7 +129,7 @@ public class Tela_Login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(777, 621, 105, 23);
+        jButton1.setBounds(780, 590, 110, 30);
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -141,7 +141,7 @@ public class Tela_Login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(780, 530, 200, 16);
+        jLabel7.setBounds(780, 500, 200, 16);
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -155,79 +155,49 @@ public class Tela_Login extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel6.setToolTipText("");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(1226, 343, 280, 300);
+        jLabel6.setBounds(1350, 343, 280, 300);
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel8.setToolTipText("");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(1226, 649, 280, 300);
-
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
-        jLabel9.setToolTipText("");
-        jPanel1.add(jLabel9);
-        jLabel9.setBounds(1237, 26, 280, 300);
+        jLabel8.setBounds(1350, 649, 280, 300);
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel10.setToolTipText("");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(1520, 10, 280, 300);
+        jLabel10.setBounds(1630, 20, 280, 300);
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel11.setToolTipText("");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(1520, 920, 280, 180);
+        jLabel11.setBounds(1650, 950, 280, 180);
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel12.setToolTipText("");
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(1530, 330, 280, 300);
-
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
-        jLabel13.setToolTipText("");
-        jPanel1.add(jLabel13);
-        jLabel13.setBounds(1520, 610, 280, 300);
+        jLabel12.setBounds(1620, 340, 280, 300);
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel14.setToolTipText("");
         jPanel1.add(jLabel14);
-        jLabel14.setBounds(1520, 610, 280, 300);
+        jLabel14.setBounds(1620, 650, 280, 300);
 
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
-        jLabel15.setToolTipText("");
-        jPanel1.add(jLabel15);
-        jLabel15.setBounds(1810, 10, 280, 300);
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
+        jLabel20.setToolTipText("");
+        jPanel1.add(jLabel20);
+        jLabel20.setBounds(1350, 26, 280, 300);
 
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
-        jLabel16.setToolTipText("");
-        jPanel1.add(jLabel16);
-        jLabel16.setBounds(1800, 920, 280, 180);
-
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
-        jLabel17.setToolTipText("");
-        jPanel1.add(jLabel17);
-        jLabel17.setBounds(1820, 320, 280, 300);
-
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
-        jLabel18.setToolTipText("");
-        jPanel1.add(jLabel18);
-        jLabel18.setBounds(1810, 610, 280, 300);
-
-        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
-        jLabel19.setToolTipText("");
-        jPanel1.add(jLabel19);
-        jLabel19.setBounds(1810, 610, 280, 300);
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
+        jLabel21.setToolTipText("");
+        jPanel1.add(jLabel21);
+        jLabel21.setBounds(1370, 930, 280, 180);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -235,7 +205,7 @@ public class Tela_Login extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 292, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -382,14 +352,10 @@ public class Tela_Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;

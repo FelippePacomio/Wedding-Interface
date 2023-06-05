@@ -385,21 +385,21 @@ public class Menu_Orcamento extends javax.swing.JFrame {
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel11);
-        jLabel11.setBounds(1450, 980, 280, 180);
+        jLabel11.setBounds(1350, 980, 280, 180);
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel12);
-        jLabel12.setBounds(1420, 0, 280, 320);
+        jLabel12.setBounds(1350, 0, 280, 320);
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel13.setFocusable(false);
         background.add(jLabel13);
-        jLabel13.setBounds(1440, 340, 280, 320);
+        jLabel13.setBounds(1350, 340, 280, 320);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel14);
-        jLabel14.setBounds(1450, 670, 280, 320);
+        jLabel14.setBounds(1350, 670, 280, 320);
 
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Wedding Interface(red).png"))); // NOI18N
@@ -492,31 +492,31 @@ public class Menu_Orcamento extends javax.swing.JFrame {
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel29.setToolTipText("");
         background.add(jLabel29);
-        jLabel29.setBounds(1720, 40, 280, 300);
+        jLabel29.setBounds(1640, 10, 280, 300);
 
         jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel30.setToolTipText("");
         background.add(jLabel30);
-        jLabel30.setBounds(1710, 950, 280, 180);
+        jLabel30.setBounds(1800, 950, 280, 180);
 
         jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel31.setToolTipText("");
         background.add(jLabel31);
-        jLabel31.setBounds(1730, 360, 280, 300);
+        jLabel31.setBounds(1650, 330, 280, 300);
 
         jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel32.setToolTipText("");
         background.add(jLabel32);
-        jLabel32.setBounds(1720, 640, 280, 300);
+        jLabel32.setBounds(1640, 610, 280, 300);
 
         jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel33.setToolTipText("");
         background.add(jLabel33);
-        jLabel33.setBounds(1720, 640, 280, 300);
+        jLabel33.setBounds(1640, 610, 280, 300);
 
         jButton2.setBackground(new java.awt.Color(204, 0, 51));
         jButton2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -528,7 +528,7 @@ public class Menu_Orcamento extends javax.swing.JFrame {
             }
         });
         background.add(jButton2);
-        jButton2.setBounds(780, 620, 110, 23);
+        jButton2.setBounds(780, 620, 110, 30);
 
         jLabel34.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);

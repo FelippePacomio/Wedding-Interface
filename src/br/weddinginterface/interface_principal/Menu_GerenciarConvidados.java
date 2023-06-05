@@ -5,6 +5,7 @@ import java.awt.Color;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import br.weddinginterface.controller.Conexao;
+import java.awt.Font;
 import java.awt.event.KeyEvent;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -432,21 +433,21 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel11);
-        jLabel11.setBounds(1450, 980, 280, 180);
+        jLabel11.setBounds(1350, 980, 280, 180);
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel12);
-        jLabel12.setBounds(1420, 0, 280, 320);
+        jLabel12.setBounds(1350, 0, 280, 320);
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel13.setFocusable(false);
         background.add(jLabel13);
-        jLabel13.setBounds(1440, 340, 280, 320);
+        jLabel13.setBounds(1350, 340, 280, 320);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel14);
-        jLabel14.setBounds(1450, 670, 280, 320);
+        jLabel14.setBounds(1350, 670, 280, 320);
 
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Wedding Interface(red).png"))); // NOI18N
@@ -475,13 +476,23 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("EDITAR");
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel5MouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel5MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel5MousePressed(evt);
+            }
         });
         background.add(jLabel5);
-        jLabel5.setBounds(1160, 290, 80, 21);
+        jLabel5.setBounds(1140, 290, 80, 21);
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -530,9 +541,16 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel8.setText("REMOVER");
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel8MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel8MouseExited(evt);
             }
         });
         background.add(jLabel8);
@@ -547,7 +565,7 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel17.setToolTipText("");
         background.add(jLabel17);
-        jLabel17.setBounds(1740, 10, 280, 300);
+        jLabel17.setBounds(1660, 10, 280, 300);
 
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
@@ -559,19 +577,19 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel19.setToolTipText("");
         background.add(jLabel19);
-        jLabel19.setBounds(1740, 330, 280, 300);
+        jLabel19.setBounds(1660, 330, 280, 300);
 
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel21.setToolTipText("");
         background.add(jLabel21);
-        jLabel21.setBounds(1740, 610, 280, 300);
+        jLabel21.setBounds(1660, 610, 280, 300);
 
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel22.setToolTipText("");
         background.add(jLabel22);
-        jLabel22.setBounds(1740, 610, 280, 300);
+        jLabel22.setBounds(1660, 610, 280, 300);
 
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -694,6 +712,12 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
                     int apagado = stmt.executeUpdate();
                     if (apagado > 0) {
                         JOptionPane.showMessageDialog(null, "Convidado Removido com Sucesso!");
+                        try {
+                    LerTabelaConvidadosInteiro(); // Chama o método LerTabelaConvidados ao abrir a janela
+                } catch (SQLException ex) {
+                    // Trate a exceção aqui, se necessário
+                    ex.printStackTrace();
+                }
                     }
                 } catch (Exception e) {
                     JOptionPane.showMessageDialog(null, e);
@@ -776,6 +800,30 @@ public class Menu_GerenciarConvidados extends javax.swing.JFrame {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_jLabel9MouseClicked
+
+    String editarsub = "<HTML><u><b>EDITAR</b></u></HTML>";
+    String editar = "<HTML><b>EDITAR</b></HTML>";
+    String removersub = "<HTML><u><b>REMOVER</b></u></HTML>";
+    String remover = "<HTML><b>REMOVER</b></HTML>";
+    private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
+    jLabel5.setText(editarsub);
+    }//GEN-LAST:event_jLabel5MouseEntered
+
+    private void jLabel5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MousePressed
+        
+    }//GEN-LAST:event_jLabel5MousePressed
+
+    private void jLabel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseExited
+    jLabel5.setText(editar);
+    }//GEN-LAST:event_jLabel5MouseExited
+
+    private void jLabel8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseEntered
+    jLabel8.setText(removersub);
+    }//GEN-LAST:event_jLabel8MouseEntered
+
+    private void jLabel8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseExited
+     jLabel8.setText(remover);
+    }//GEN-LAST:event_jLabel8MouseExited
 
     public void LerTabelaConvidadosInteiro() throws SQLException {
         DefaultTableModel c_nome = (DefaultTableModel) jTable1.getModel();

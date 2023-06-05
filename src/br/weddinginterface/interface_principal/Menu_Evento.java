@@ -156,7 +156,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             .addGroup(btnOrcamentoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
         btnOrcamentoLayout.setVerticalGroup(
             btnOrcamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,7 +197,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             .addGroup(btnNoivaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
         btnNoivaLayout.setVerticalGroup(
             btnNoivaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,7 +237,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             .addGroup(btnNoivoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         btnNoivoLayout.setVerticalGroup(
             btnNoivoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -280,7 +280,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnEventoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel15)
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
         btnEventoLayout.setVerticalGroup(
             btnEventoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -320,7 +320,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             .addGroup(btnConvidadosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addComponent(jLabel26)
                 .addGap(31, 31, 31))
         );
@@ -364,7 +364,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             .addGroup(btnAdicionarConvidadoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel25)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         btnAdicionarConvidadoLayout.setVerticalGroup(
             btnAdicionarConvidadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -374,7 +374,7 @@ public class Menu_Evento extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        barraMenu.add(btnAdicionarConvidado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, -1, -1));
+        barraMenu.add(btnAdicionarConvidado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 300, -1));
 
         btnGerenciarConvidados.setBackground(new java.awt.Color(232, 194, 194));
         btnGerenciarConvidados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -404,7 +404,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             .addGroup(btnGerenciarConvidadosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel20)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         btnGerenciarConvidadosLayout.setVerticalGroup(
             btnGerenciarConvidadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -425,17 +425,17 @@ public class Menu_Evento extends javax.swing.JFrame {
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel12);
-        jLabel12.setBounds(1420, 0, 280, 320);
+        jLabel12.setBounds(1350, 0, 280, 320);
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel13.setFocusable(false);
         background.add(jLabel13);
-        jLabel13.setBounds(1440, 340, 280, 320);
+        jLabel13.setBounds(1350, 340, 280, 320);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel14);
-        jLabel14.setBounds(1450, 670, 280, 320);
+        jLabel14.setBounds(1350, 670, 280, 320);
 
         jButton1.setBackground(new java.awt.Color(204, 0, 51));
         jButton1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -447,7 +447,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         });
         background.add(jButton1);
-        jButton1.setBounds(880, 930, 110, 23);
+        jButton1.setBounds(880, 930, 110, 30);
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/notas-musicais.png"))); // NOI18N
@@ -780,7 +780,7 @@ public class Menu_Evento extends javax.swing.JFrame {
             }
         });
         background.add(jButton2);
-        jButton2.setBounds(690, 930, 110, 23);
+        jButton2.setBounds(690, 930, 110, 30);
 
         jLabel48.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -820,7 +820,7 @@ public class Menu_Evento extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(background);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 820));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 830));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

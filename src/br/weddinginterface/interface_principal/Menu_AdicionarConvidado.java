@@ -376,21 +376,21 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel11);
-        jLabel11.setBounds(1450, 980, 280, 180);
+        jLabel11.setBounds(1350, 980, 280, 180);
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel12);
-        jLabel12.setBounds(1420, 0, 280, 320);
+        jLabel12.setBounds(1350, 0, 280, 320);
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel13.setFocusable(false);
         background.add(jLabel13);
-        jLabel13.setBounds(1440, 340, 280, 320);
+        jLabel13.setBounds(1350, 340, 280, 320);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel14);
-        jLabel14.setBounds(1450, 670, 280, 320);
+        jLabel14.setBounds(1350, 670, 280, 320);
 
         jButton1.setBackground(new java.awt.Color(204, 0, 51));
         jButton1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -402,7 +402,7 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
             }
         });
         background.add(jButton1);
-        jButton1.setBounds(960, 570, 110, 23);
+        jButton1.setBounds(960, 570, 110, 30);
 
         jTextField4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jTextField4.setToolTipText("Informe as restrições alimentares de convidado (se houver).");
@@ -489,31 +489,31 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel6.setToolTipText("");
         background.add(jLabel6);
-        jLabel6.setBounds(1730, 0, 280, 300);
+        jLabel6.setBounds(1660, 0, 280, 300);
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel7.setToolTipText("");
         background.add(jLabel7);
-        jLabel7.setBounds(1730, 910, 280, 180);
+        jLabel7.setBounds(1660, 910, 280, 180);
 
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel17.setToolTipText("");
         background.add(jLabel17);
-        jLabel17.setBounds(1740, 320, 280, 300);
+        jLabel17.setBounds(1670, 320, 280, 300);
 
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel18.setToolTipText("");
         background.add(jLabel18);
-        jLabel18.setBounds(1730, 600, 280, 300);
+        jLabel18.setBounds(1660, 600, 280, 300);
 
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel19.setToolTipText("");
         background.add(jLabel19);
-        jLabel19.setBounds(1730, 600, 280, 300);
+        jLabel19.setBounds(1660, 600, 280, 300);
 
         jButton2.setBackground(new java.awt.Color(204, 0, 51));
         jButton2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -525,7 +525,7 @@ public class Menu_AdicionarConvidado extends javax.swing.JFrame {
             }
         });
         background.add(jButton2);
-        jButton2.setBounds(700, 570, 110, 23);
+        jButton2.setBounds(700, 570, 110, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

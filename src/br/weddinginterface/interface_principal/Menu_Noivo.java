@@ -405,7 +405,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("TERNO");
         background.add(jLabel5);
-        jLabel5.setBounds(540, 270, 62, 21);
+        jLabel5.setBounds(540, 270, 190, 21);
 
         txtSapato.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         txtSapato.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -426,16 +426,16 @@ public class Menu_Noivo extends javax.swing.JFrame {
         txtTerno.setBounds(570, 290, 190, 30);
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel6.setText("SAPATO");
         background.add(jLabel6);
-        jLabel6.setBounds(540, 380, 61, 21);
+        jLabel6.setBounds(540, 380, 190, 21);
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel7.setText("DIA DO NOIVO");
         background.add(jLabel7);
-        jLabel7.setBounds(970, 270, 120, 21);
+        jLabel7.setBounds(970, 270, 190, 21);
 
         txtAcessorios.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         txtAcessorios.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -444,10 +444,10 @@ public class Menu_Noivo extends javax.swing.JFrame {
         txtAcessorios.setBounds(570, 510, 190, 30);
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel8.setText("ACESSÓRIOS");
         background.add(jLabel8);
-        jLabel8.setBounds(540, 490, 95, 21);
+        jLabel8.setBounds(540, 490, 190, 21);
 
         txtDiaDoNoivo.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         txtDiaDoNoivo.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -463,27 +463,27 @@ public class Menu_Noivo extends javax.swing.JFrame {
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel11);
-        jLabel11.setBounds(1450, 980, 280, 180);
+        jLabel11.setBounds(1350, 980, 280, 180);
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel12);
-        jLabel12.setBounds(1420, 0, 280, 320);
+        jLabel12.setBounds(1350, 0, 280, 320);
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel13.setFocusable(false);
         background.add(jLabel13);
-        jLabel13.setBounds(1440, 340, 280, 320);
+        jLabel13.setBounds(1350, 340, 280, 320);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         background.add(jLabel14);
-        jLabel14.setBounds(1450, 670, 280, 320);
+        jLabel14.setBounds(1350, 670, 280, 320);
 
         jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel10.setText("TRANSPORTE");
         background.add(jLabel10);
-        jLabel10.setBounds(970, 370, 94, 21);
+        jLabel10.setBounds(970, 370, 190, 21);
 
         jButton1.setBackground(new java.awt.Color(204, 0, 51));
         jButton1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -495,7 +495,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
             }
         });
         background.add(jButton1);
-        jButton1.setBounds(910, 610, 110, 23);
+        jButton1.setBounds(930, 600, 110, 30);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/terno.png"))); // NOI18N
         background.add(jLabel9);
@@ -518,31 +518,31 @@ public class Menu_Noivo extends javax.swing.JFrame {
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel22.setToolTipText("");
         background.add(jLabel22);
-        jLabel22.setBounds(1730, 10, 280, 300);
+        jLabel22.setBounds(1650, 0, 280, 300);
 
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel23.setToolTipText("");
         background.add(jLabel23);
-        jLabel23.setBounds(1720, 920, 280, 180);
+        jLabel23.setBounds(1640, 910, 280, 180);
 
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel27.setToolTipText("");
         background.add(jLabel27);
-        jLabel27.setBounds(1730, 330, 280, 300);
+        jLabel27.setBounds(1650, 320, 280, 300);
 
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel28.setToolTipText("");
         background.add(jLabel28);
-        jLabel28.setBounds(1730, 610, 280, 300);
+        jLabel28.setBounds(1650, 600, 280, 300);
 
         jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flores3 (180 × 200 px) (280 × 300 px).png"))); // NOI18N
         jLabel29.setToolTipText("");
         background.add(jLabel29);
-        jLabel29.setBounds(1730, 610, 280, 300);
+        jLabel29.setBounds(1650, 600, 280, 300);
 
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sapato-inteligente.png"))); // NOI18N
         background.add(jLabel31);
@@ -562,7 +562,7 @@ public class Menu_Noivo extends javax.swing.JFrame {
             }
         });
         background.add(jButton2);
-        jButton2.setBounds(720, 610, 110, 23);
+        jButton2.setBounds(690, 600, 110, 30);
 
         jLabel35.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
